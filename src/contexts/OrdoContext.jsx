@@ -17,12 +17,7 @@ export function OrdoProvider({ children }) {
                 const data = await evangelizoService.getDailyReadings();
                 if (data) {
                     setOrdoData(data);
-
-                    // 🚀 Trigger background prefetch of all contexts
-                    fetch(`${BACKEND_URL}/api/prefetch`, { method: 'POST' })
-                        .then(() => console.log('🚀 Prefetch triggered'))
-                        .catch(() => { }); // Non-blocking
-                } else {
+                    // Prefetch deactivated to prevent Gemini quota exhaustion (Error 429) on Vercel Serverless
                     setError("No se pudieron obtener los datos litúrgicos de hoy.");
                 }
             } catch (err) {
