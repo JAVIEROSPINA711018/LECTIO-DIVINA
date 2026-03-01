@@ -1,0 +1,849 @@
+Arquitectura Teológica e Histórica del Pentateuco: Un Micro-análisis Exegético del Libro del Génesis
+
+La aproximación científica y creyente a la Sagrada Escritura exige un rigor que trascienda la mera lectura superficial, adentrándose en la densidad de los lenguajes originales, la materialidad de los hallazgos arqueológicos y la profundidad de la tradición viva de la Iglesia. Para iniciar este viaje de conocimiento total, se establece como punto de partida el estudio sistemático del Pentateuco, centrando este primer micro-análisis granular en el Libro del Génesis, analizando sus unidades temáticas y versículos clave bajo la metodología de la hermenéutica católica integral.
+
+Estructura y División Literaria del Pentateuco y el Génesis
+
+El Pentateuco, unidad fundacional de la Biblia Católica, se presenta como una composición compleja que los judíos denominan 
+
+Torá
+
+ y la tradición griega tradujo como "cinco estuches" o volúmenes.[1, 2] Su estructura no es una simple cronología, sino una pedagogía divina que transita desde la creación del cosmos hasta la formación de un pueblo sacerdotal en las estepas de Moab. El Libro del Génesis, como pórtico de esta obra, se divide canónicamente en dos grandes secciones: la Historia Primitiva (1-11) y la Historia de los Patriarcas (12-50).[2, 3]
+
+La Historia Primitiva utiliza un lenguaje mítico-sapidencial para abordar las cuestiones existenciales del ser humano: el origen, el mal, el trabajo y la muerte. Por su parte, la Historia Patriarcal se ancla en el tiempo de la promesa, donde la figura de Abraham rompe la espiral de pecado de Babel para instaurar una nueva relación de fe.[2] Dentro de esta estructura, el capítulo 1 del Génesis funciona como una obertura solemne, redactada principalmente por la tradición Sacerdotal (P), caracterizada por un estilo rítmico, repetitivo y profundamente litúrgico que busca santificar el tiempo a través del descanso sabático.[4, 5, 6]
+
+Esquema Estructural de la Creación (Gn 1:1-2:3)
+
+Fase
+
+Día
+
+Elemento Creado
+
+Función Teológica
+
+Formación (Espacios)
+
+1
+
+Luz / Tinieblas
+
+Establecimiento del Tiempo
+
+2
+
+Firmamento / Aguas
+
+Establecimiento del Espacio Vital
+
+3
+
+Tierra seca / Vegetación
+
+Preparación del Hábitat
+
+Llenado (Habitantes)
+
+4
+
+Lumbreras (Sol y Luna)
+
+Regencia del Tiempo y Culto
+
+5
+
+Aves y Peces
+
+Bendición de la Fecundidad
+
+6
+
+Animales y el Hombre
+
+Coronación de la Creación
+
+Culmen
+
+7
+
+Descanso (Shabbat)
+
+Santificación y Comunión con Dios
+
+Este orden simétrico demuestra que el universo no es fruto del azar, sino de un diseño inteligente y amoroso de 
+
+Elohim
+
+.[7, 8]
+
+Análisis Filológico y Literal: El Misterio del Bereshit y el Acto de Bará
+
+El análisis del primer versículo del Génesis, 
+
+Bereshit bará Elohim et hashamáyim ve'et ha'áretz
+
+, revela matices técnicos que a menudo se pierden en la traducción al castellano.[9, 10] La palabra 
+
+Bereshit
+
+ (בְּרֵאשִׁית) plantea un debate gramatical de primer orden: si se encuentra en estado absoluto ("En el principio...") o en estado constructo ("En el principio de..."). La exégesis técnica más rigurosa sugiere que, aunque gramaticalmente puede ser constructo, teológicamente señala un comienzo absoluto del tiempo y la materia junto con la acción divina.[8, 9, 11] La raíz 
+
+Resh-Aleph-Shin
+
+ (ראש) significa "cabeza", indicando que Dios no solo crea al inicio del tiempo, sino que es la "cabeza" o el fundamento ontológico de todo lo existente.[12]
+
+El verbo 
+
+bará
+
+ (בָּרָא) es un término exclusivo del Creador en el Antiguo Testamento. A diferencia de 
+
+asah
+
+ (hacer) o 
+
+yatsar
+
+ (formar), que pueden implicar el uso de materia preexistente, 
+
+bará
+
+ nunca menciona material previo, lo que sustenta la doctrina de la 
+
+creatio ex nihilo
+
+.[7, 13] En el sentido técnico, solo Dios puede "barar", produciendo el ser desde la nada por el solo poder de su palabra.[14] Por otro lado, el nombre 
+
+Elohim
+
+ (אֱלֹהִים), siendo un plural de majestad, abre una brecha exegética hacia la revelación trinitaria: aunque el nombre es plural, el verbo 
+
+bará
+
+ está en singular, sugiriendo una unidad de acción en una pluralidad de personas que se revelará plenamente en el Nuevo Testamento como Padre, Hijo y Espíritu Santo.[7, 15, 16]
+
+"In principio creavit Deus caelum et terram." (Vulgata, Gn 1:1)
+
+Esta frase latina, que ha modelado la teología occidental, captura la simplicidad majestuosa del hebreo, donde el objeto directo es introducido por la partícula 
+
+et
+
+ (אֵת), compuesta por la primera (
+
+Aleph
+
+) y la última (
+
+Tav
+
+) letra del alfabeto hebreo, lo cual ha llevado a algunos comentaristas místicos y patrísticos a ver en este versículo al Mesías, el "Alfa y la Omega", presente en el acto mismo de la creación.[10]
+
+Contexto Histórico-Arqueológico Radical: La Polemización contra Mesopotamia
+
+Para comprender por qué el Génesis fue escrito de esta manera, es necesario contrastarlo con el entorno cultural del Próximo Oriente Antiguo. Los hallazgos de la Biblioteca de Asurbanipal en Nínive, que contenían las tablillas del 
+
+Enuma Elish
+
+, proporcionan el contrapunto arqueológico necesario.[17, 18] Mientras que en el mito babilónico el mundo surge de una teomaquia (guerra entre dioses) donde Marduk despedaza a la diosa-monstruo Tiamat, el Génesis presenta un proceso sereno y soberano.[17, 19, 20]
+
+El término hebreo 
+
+Tehom
+
+ (abismo) en Gn 1:2 es un cognado lingüístico de 
+
+Tiamat
+
+, pero en la Biblia, el "abismo" no es una deidad enemiga, sino simplemente agua inerte bajo el dominio de Dios.[20] Esta desmitologización es un hito de la razón iluminada por la fe: los astros, que en Egipto y Babilonia eran dioses temibles, en el Génesis son reducidos a "lumbreras" o lámparas de servicio.[16, 21] La arqueología confirma que Israel vivía inmerso en una cultura que divinizaba la naturaleza, y el relato de la creación es un manifiesto de libertad teológica que proclama que solo el Creador es digno de adoración.[22]
+
+Comparativa: Cosmogonía Bíblica vs. Mitología Mesopotámica
+
+Elemento
+
+Enuma Elish (Babilónico)
+
+Génesis (Israelita)
+
+Origen del Mundo
+
+Lucha violenta entre deidades.
+
+Palabra soberana de un único Dios.
+
+Naturaleza de la Materia
+
+Cuerpo de una diosa muerta.
+
+Materia creada o gobernada por Dios.
+
+El Sol y la Luna
+
+Dioses con poder sobre el destino.
+
+Objetos creados para medir el tiempo.
+
+Propósito del Hombre
+
+Esclavo para alimentar a los dioses.
+
+Imagen de Dios, señor de la creación.
+
+Estado Inicial
+
+Caos ruidoso e ingobernable.
+
+Tinieblas sobre el abismo bajo el Espíritu.
+
+La estela de Tel Dan, aunque posterior (siglo IX a.C.), es un hallazgo crucial que confirma la historicidad de la dinastía davídica, el linaje que eventualmente daría forma final a estas tradiciones escritas para preservar la identidad de Israel frente al paganismo.[23, 24] La precisión histórica de los nombres geográficos y personales en el Génesis, corroborada por las tablillas de Mari y Ebla, sitúa estos relatos no en el vacío de la fábula, sino en la densidad de la historia del Levante antiguo.[19]
+
+Exégesis de la Biblia de Navarra y Patrística: La Creación como Templo y el Espíritu que Vuela
+
+La Biblia de Navarra subraya que el mensaje del Génesis no es científico, sino religioso: Dios es el autor de todo lo existente y el hombre ocupa un lugar central en sus planes.[25, 26] Este comentario, enriquecido por el Magisterio de la Iglesia, enfatiza que la creación es un acto libre de amor, no una necesidad divina.[13] La mención del 
+
+Ruaj Elohim
+
+ (Espíritu de Dios) que se cernía sobre las aguas (Gn 1:2) es interpretada por los Padres de la Iglesia como una prefiguración del Bautismo. San Jerónimo y San Agustín ven en este movimiento del Espíritu la preparación de la materia para recibir la forma y la vida, de igual manera que el Espíritu Santo desciende sobre las aguas bautismales para engendrar una nueva criatura.[7]
+
+San Agustín, en su obra 
+
+De Genesi ad litteram
+
+, se detiene en la creación de la luz antes que el sol. Para Agustín, esta es la creación de la "luz intelectual" o el mundo de los ángeles, que participan de la iluminación divina antes de que se establezca la luz física.[27, 28] Esta interpretación patrística evita las contradicciones literales y busca el sentido espiritual profundo: la creación tiene una jerarquía donde lo espiritual precede y ordena a lo material.[27]
+
+"La Biblia de Navarra resalta que el mundo ha sido creado para la gloria de Dios y para que el hombre, mediante su trabajo y su vida en el mundo, pueda santificarse y elevar la creación a su Creador.".[25, 26]
+
+La tipología es aquí fundamental: Adán es el "tipo" de Cristo. Así como el primer Adán fue creado en el sexto día para reinar sobre el mundo, el Nuevo Adán, Jesucristo, consuma la nueva creación en su sacrificio y resurrección.[29, 30] La creación es, por tanto, el primer paso de un pacto que Dios establece con la humanidad, un pacto que no se romperá a pesar del pecado.[14]
+
+Contraste Crítico-Teológico: El Problema de la Ciencia y los "Días" de 24 Horas
+
+Una de las mayores dificultades del texto es la aparente contradicción entre los siete días de la creación y la edad geológica del universo. La exégesis católica moderna, respaldada por la Pontificia Comisión Bíblica, resuelve este dilema mediante la distinción de géneros literarios.[31] El relato de los seis días es una estructura literaria mnemotécnica y litúrgica destinada a justificar el descanso del sábado (
+
+Shabbat
+
+) como una ley divina.[5, 32] No se trata de una crónica cronológica de 144 horas, sino de una enseñanza teológica sobre el orden y la finalidad de la creación.[16]
+
+El Magisterio, especialmente desde la encíclica 
+
+Divino afflante Spiritu
+
+ hasta la constitución 
+
+Dei Verbum
+
+, aclara que el autor sagrado no pretendía enseñar ciencias naturales, sino verdades necesarias para la salvación.[33, 34, 35] Por tanto, la inerrancia bíblica se refiere a la verdad teológica: que Dios es el Creador, que el hombre es su imagen y que el mundo es bueno.[36] La ciencia puede explicar el "cómo" del proceso evolutivo (causas segundas), mientras que la teología explica el "quién" y el "para qué" (Causa Primera).[4, 15]
+
+Desafío Interpretativo
+
+Solución Crítico-Teológica
+
+Documento de Referencia
+
+Días literales de 24h
+
+Uso de marco literario y litúrgico (Hexaemeron).
+
+PCB 1993: La Interpretación de la Biblia.
+
+Luz antes que el Sol
+
+Distinción entre luz primordial/espiritual y lumbreras.
+
+San Agustín: 
+
+De Genesi ad litteram
+
+.
+
+Anacronismos biológicos
+
+Adaptación del mensaje al conocimiento de la época.
+
+PCB 2014: Inspiración y Verdad.
+
+Plural "Hagamos"
+
+Plural de majestad o prefiguración trinitaria.
+
+Santo Tomás de Aquino: 
+
+Summa Theologiae
+
+.
+
+Esta "condescendencia" divina (
+
+synkatabasis
+
+) permite que la palabra eterna de Dios se encarne en el lenguaje limitado de los hombres de una época determinada sin perder su veracidad salvífica.[36]
+
+El Mensaje Profundo: El Sentido Pleno de la Creación
+
+El sentido pleno (
+
+sensus plenior
+
+) de Génesis 1 es la revelación de la soberanía absoluta de Dios y la bondad intrínseca del universo. En un mundo que a menudo ve la materia como una cárcel o un error, el Génesis clama siete veces que "Dios vio que era bueno" (
+
+Ki Tov
+
+).[21, 22] Esta afirmación es la base del optimismo cristiano y de la moralidad: el ser es mejor que el no-ser, y la vida es un don precioso.[13]
+
+El mensaje central es la centralidad del ser humano. Creado "a imagen y semejanza", el hombre no es un accidente biológico, sino un interlocutor de Dios.[37, 38] Esta dignidad es la fuente de los derechos humanos y de la responsabilidad ecológica: el hombre debe dominar la tierra como un administrador sabio, no como un explotador despótico, reflejando el mismo cuidado que el Creador tiene por sus criaturas.[4, 6] Finalmente, la creación está orientada al descanso y al culto; el universo entero es un templo donde la liturgia del tiempo debe conducir al hombre a la comunión eterna con su Hacedor.[5]
+
+Micro-análisis del Génesis 2-3: La Antropología del Barro y el Misterio del Mal
+
+Siguiendo el protocolo sistemático, pasamos a la segunda unidad narrativa, conocida como el relato Yahvista (J). A diferencia del capítulo 1, aquí el enfoque es geocéntrico y antropológico.[2, 16] Mientras que en el primer relato Dios crea mediante la palabra (
+
+fiat
+
+), aquí Dios "modela" (
+
+yatsar
+
+) al hombre como un alfarero, soplando en su nariz el aliento de vida (
+
+nishmat hayyim
+
+).
+
+Estructura y División del Relato del Edén
+
+El capítulo 2 establece la armonía original: el hombre en paz con Dios, con la naturaleza y consigo mismo. El capítulo 3 narra la ruptura de esta armonía por la desobediencia. Esta sección es el núcleo de la doctrina del Pecado Original y de la promesa del Redentor.
+
+Escena
+
+Versículos
+
+Concepto Teológico
+
+Formación del Hombre
+
+Gn 2:7
+
+Dualidad: Barro (Materia) y Aliento (Espíritu).
+
+El Jardín del Edén
+
+Gn 2:8-15
+
+Vocación al trabajo y custodia de la creación.
+
+La Soledad y la Mujer
+
+Gn 2:18-25
+
+Igualdad ontológica y comunión matrimonial.
+
+La Tentación y Caída
+
+Gn 3:1-7
+
+El pecado como desconfianza en la bondad divina.
+
+Sentencia y Promesa
+
+Gn 3:8-24
+
+Consecuencias del mal y el Protoevangelio.
+
+Análisis Filológico: Adam, Adamah y la Costilla
+
+El nombre 
+
+Adam
+
+ (אָדָם) es un juego de palabras con 
+
+Adamah
+
+ (אֲדָמָה), que significa "tierra roja" o "suelo". El hombre es, literalmente, el "terrestre".[37] Sin embargo, su identidad no se agota en su origen biológico, pues recibe el espíritu que lo hace capaz de diálogo con el Absoluto. La formación de la mujer a partir de la "costilla" (
+
+tsela
+
+) no debe entenderse en sentido anatómico-quirúrgico, sino filológico: 
+
+tsela
+
+ significa también "lado" o "flanco". La mujer es el "lado" del hombre, es decir, alguien que está a su misma altura y dignidad, a diferencia de los animales sobre los cuales el hombre ejerce dominio al nombrarlos.[6, 38]
+
+Contexto Histórico-Arqueológico: Los Jardines Reales y la Serpiente
+
+La iconografía del Próximo Oriente está llena de jardines sagrados y serpientes asociadas a la inmortalidad o al caos. Los sellos cilíndricos sumerios y babilónicos muestran frecuentemente árboles de la vida flanqueados por figuras humanas y serpientes.[19] El Génesis utiliza estos símbolos conocidos para subvertirlos: la serpiente no es un dios, sino una criatura astuta que cuestiona la palabra de Dios.[16] El Edén evoca los jardines colgantes de Babilonia o los oasis del desierto, representando la plenitud de la vida que Dios desea para sus hijos.
+
+Exégesis de Navarra y Patrística: El Protoevangelio
+
+La Biblia de Navarra comenta que el pecado de Adán y Eva es un acto de soberbia: querer ser "como dioses" pero sin Dios.[39] Los Padres de la Iglesia ven en Gn 3:15 el 
+
+Protoevangelio
+
+: la primera promesa de salvación. La "mujer" que aplastará la cabeza de la serpiente es prefigurada como la Virgen María, y su descendencia es Cristo. San Ireneo de Lyon desarrolla aquí la teoría de la "recapitulación": lo que Adán perdió por su desobediencia en un árbol, Cristo lo recuperó por su obediencia en el árbol de la Cruz.
+
+El Mensaje Profundo: La Libertad y la Gracia
+
+La verdad inmutable de Gn 2-3 es que el hombre es libre. El mal no fue creado por Dios, sino que es el resultado del mal uso de la libertad humana. Sin embargo, el juicio de Dios siempre está acompañado por la gracia. Al vestir a Adán y Eva con pieles tras la caída, Dios muestra que, aunque hay consecuencias para el pecado, su solicitud paternal permanece activa, iniciando el largo camino de la economía de la salvación que culminará en la Encarnación.[13, 14]
+
+Estudio de la Historia de los Patriarcas (Gn 12-50): La Arqueología de la Fe
+
+El paso de la prehistoria bíblica a la historia de los patriarcas marca un cambio en el registro exegético. Aquí, el micro-análisis se centra en la figura de Abraham y la veracidad histórica de las narraciones nómadas.
+
+Análisis Filológico: El Cambio de Nombre y el Pacto
+
+La transición de 
+
+Abram
+
+ ("Padre exaltado") a 
+
+Abraham
+
+ ("Padre de una multitud") es el signo lingüístico del pacto (
+
+Berit
+
+). En el pensamiento semítico, el cambio de nombre implica una nueva misión y una nueva esencia otorgada por Dios. El término 
+
+Hineni
+
+ ("Aquí estoy"), respuesta constante de los patriarcas, define la actitud de la fe: disponibilidad absoluta frente a la llamada trascendente.
+
+Contexto Arqueológico: De Ur de los Caldeos a Canaán
+
+Las excavaciones en Ur (Sir Leonard Woolley) y el estudio de las leyes de parentesco en las tablillas de Nuzi confirman que las costumbres de los patriarcas (como la adopción de esclavos o la entrega de una sierva para tener descendencia) encajan perfectamente con el contexto socio-legal del II milenio a.C..[19, 40] La 
+
+Estela de Tel Dan
+
+, con su referencia a la "Casa de David", valida indirectamente la continuidad histórica del pueblo que nace de Abraham, Isaac y Jacob.[23, 24]
+
+Tabla de Sincronía: Los Patriarcas y el Contexto Regional
+
+Personaje Bíblico
+
+Contexto Histórico-Arqueológico
+
+Evidencia Extrabíblica Relacionada
+
+Abraham
+
+Edad del Bronce Medio (c. 2000-1800 a.C.)
+
+Tablillas de Mari; rutas comerciales de Ur y Jarán.
+
+José en Egipto
+
+Período de los Hicsos o Imperio Medio
+
+Pinturas de Beni Hassan (comerciantes semitas en Egipto).[41]
+
+Moisés
+
+Época Ramésida (XIX Dinastía)
+
+Estela de Merneptah (primera mención de "Israel" en 1208 a.C.).[41]
+
+Bibliografía y Documentación Académica Integrada
+
+Este estudio se sustenta en el análisis de las siguientes fuentes de autoridad exegética y magisterial:
+
+Biblia de Navarra:
+
+ Comentarios de la Facultad de Teología de la Universidad de Navarra, fundamentales para el sentido espiritual y la aplicación teológica dogmática.[25, 26]
+
+1.
+
+Biblia de Jerusalén:
+
+ Introducciones y notas técnicas sobre géneros literarios y crítica textual de la Escuela Bíblica de Jerusalén.[1]
+
+2.
+
+Nuevo Comentario Bíblico San Jerónimo:
+
+ Análisis crítico-histórico de Raymond E. Brown, Joseph Fitzmyer y Roland Murphy.[42, 43, 44]
+
+3.
+
+Pontificia Comisión Bíblica (PCB):
+
+ Documentos "La Interpretación de la Biblia en la Iglesia" (1993) e "Inspiración y Verdad de la Sagrada Escritura" (2014).[31, 36]
+
+4.
+
+Magisterio de la Iglesia:
+
+ Constitución Dogmática 
+
+Dei Verbum
+
+ y Exhortación Apostólica 
+
+Verbum Domini
+
+ de Benedicto XVI.[34, 35]
+
+5.
+
+Este reporte constituye una síntesis del primer bloque del Génesis. Para continuar con la profundidad doctoral exigida, el siguiente paso será el análisis granular del 
+
+Libro del Éxodo
+
+, examinando la filología del Nombre Divino (
+
+YHWH
+
+) y la arqueología de la teofanía en el Sinaí.
+
+
+--------------------------------------------------------------------------------
+
+
+biblia - Mercaba.org, 
+
+https://www.mercaba.org/K/asagrada%20escritura/biblia%20de%20jerusalen%20comentarios.htm
+
+https://www.mercaba.org/K/asagrada%20escritura/biblia%20de%20jerusalen%20comentarios.htm
+
+1.
+
+El Pentateuco - COLECCION BIBLIA No, 
+
+https://nuestrabiblia.org/contenido/uploads/2015/05/El-Pentateuco.pdf
+
+https://nuestrabiblia.org/contenido/uploads/2015/05/El-Pentateuco.pdf
+
+2.
+
+introducción al pentateuco génesis - Editorial Verbo Divino, 
+
+https://verbodivino.es/hojear/2047/introduccion-al-pentateuco-genesis.pdf
+
+https://verbodivino.es/hojear/2047/introduccion-al-pentateuco-genesis.pdf
+
+3.
+
+11: El relato del Génesis como caso de prueba para la hermenéutica bíblica - YouTube, 
+
+https://www.youtube.com/watch?v=J7M2GzR_qQA
+
+https://www.youtube.com/watch?v=J7M2GzR_qQA
+
+4.
+
+¿Hay paralelos entre los mitos del Antiguo Cercano Oriente y Génesis 1? | Dr. William Lane Craig - YouTube, 
+
+https://www.youtube.com/watch?v=dV0_PZ8elxs
+
+https://www.youtube.com/watch?v=dV0_PZ8elxs
+
+5.
+
+Génesis 1:1 – 2:4a - Sermon Writer, 
+
+https://sermonwriter.com/espanol-exegesis/genesis-11-24a/
+
+https://sermonwriter.com/espanol-exegesis/genesis-11-24a/
+
+6.
+
+Enduring Word Bible Commentary Génesis 1, 
+
+https://es.enduringword.com/comentario-biblico/genesis-01/
+
+https://es.enduringword.com/comentario-biblico/genesis-01/
+
+7.
+
+Interpretation of Bereʼšît in the Context of Genesis 1:1-3, 
+
+https://digitalcommons.andrews.edu/cgi/viewcontent.cgi?article=1002&context=old-testament-pubs
+
+https://digitalcommons.andrews.edu/cgi/viewcontent.cgi?article=1002&context=old-testament-pubs
+
+8.
+
+¿QUÉ DICE REALMENTE GÉNESIS 1:1? - YouTube, 
+
+https://www.youtube.com/watch?v=HZkckwyJ1ok
+
+https://www.youtube.com/watch?v=HZkckwyJ1ok
+
+9.
+
+Sobre la Parashat Bereshit (El Reshit «El Principio» – Génesis 1:1), 
+
+https://atravesdelasescrituras.com/2020/10/12/sobre-la-parashat-bereshit/
+
+https://atravesdelasescrituras.com/2020/10/12/sobre-la-parashat-bereshit/
+
+10.
+
+Genesis 1:1: A Textual Analysis - YouTube, 
+
+https://www.youtube.com/watch?v=7looT8fo0gk
+
+https://www.youtube.com/watch?v=7looT8fo0gk
+
+11.
+
+Estudio de Genesis 1:1 en Hebreo Bíblico | Los 6000 años - YouTube, 
+
+https://www.youtube.com/watch?v=G8O-SYiszP4
+
+https://www.youtube.com/watch?v=G8O-SYiszP4
+
+12.
+
+TEMA 16 LA CREACION - Mercaba.org, 
+
+https://www.mercaba.org/TEOLOGIA/APUNTES/tema_16_la_creacion.htm
+
+https://www.mercaba.org/TEOLOGIA/APUNTES/tema_16_la_creacion.htm
+
+13.
+
+En contraste con las creencias paganas la Torá empieza a destacar el hecho de que el universo tiene un principio y que hay Uno que está por encima del universo, y que ha dado inicio a todas las cosas. Este conocimiento evita toda adoración a las cosas creadas en lugar del Creador, que es la misma esencia de la idolatría, como está escrito en Romanos 1:20-25 - www.messianictorah.org, 
+
+https://www.messianictorah.org/es/parasha_es/sp01.htm
+
+https://www.messianictorah.org/es/parasha_es/sp01.htm
+
+14.
+
+David Guzik Génesis 1 – El Reporte de la Creación de Dios - Blue Letter Bible, 
+
+https://www.blueletterbible.org/Comm/guzik_david/spanish/StudyGuide_Gen/Gen_01.cfm
+
+https://www.blueletterbible.org/Comm/guzik_david/spanish/StudyGuide_Gen/Gen_01.cfm
+
+15.
+
+GÉNESIS 1:1-2:3 - Free Bible Commentary, 
+
+http://www.freebiblecommentary.org/intl_studies/spa/ot_studies/VOL01AOT/VOL01AOT_01.pdf
+
+http://www.freebiblecommentary.org/intl_studies/spa/ot_studies/VOL01AOT/VOL01AOT_01.pdf
+
+16.
+
+Enûma Elish, 
+
+https://www.lavia.org/espanol/archivo/EnumaElishsp.html
+
+https://www.lavia.org/espanol/archivo/EnumaElishsp.html
+
+17.
+
+Enūma Eliš - Wikipedia, la enciclopedia libre, 
+
+https://es.wikipedia.org/wiki/En%C5%ABma_Eli%C5%A1
+
+https://es.wikipedia.org/wiki/En%C5%ABma_Eli%C5%A1
+
+18.
+
+Tema Especial: Las Narraciones de la Creación y del Diluvio en el Antiguo Cercano Oriente - Free Bible Commentary, 
+
+http://www.freebiblecommentary.org/special_topics/spa/las_narraciones_de_la_creacion_y_del_diluvio_en_el_antiguo_cercano_oriente.html
+
+http://www.freebiblecommentary.org/special_topics/spa/las_narraciones_de_la_creacion_y_del_diluvio_en_el_antiguo_cercano_oriente.html
+
+19.
+
+Enuma Elish y el Génesis : r/AcademicBiblical - Reddit, 
+
+https://www.reddit.com/r/AcademicBiblical/comments/16sky99/enuma_elish_creation_and_genesis/?tl=es-419
+
+https://www.reddit.com/r/AcademicBiblical/comments/16sky99/enuma_elish_creation_and_genesis/?tl=es-419
+
+20.
+
+Lección 2 - Génesis Ch 1 - Torah Class, 
+
+https://www.torahclass.com/lessons/es/old-testament-es/g%C3%A9nesis/leccion-2/
+
+https://www.torahclass.com/lessons/es/old-testament-es/g%C3%A9nesis/leccion-2/
+
+21.
+
+¿Qué significa Génesis 1:1? - BibleRef.com, 
+
+https://www.bibleref.com/espanol/Genesis/1/Genesis-1-1.html
+
+https://www.bibleref.com/espanol/Genesis/1/Genesis-1-1.html
+
+22.
+
+La estela de Tel Dan, la primera evidencia histórica del rey David - La Corriente, 
+
+https://lacorriente.com/la-estela-de-tel-dan-la-primera-evidencia-historica-del-rey-david/
+
+https://lacorriente.com/la-estela-de-tel-dan-la-primera-evidencia-historica-del-rey-david/
+
+23.
+
+La historicidad del rey David bíblico: Estela de Tel Dan - MurciaEconomía.com, 
+
+https://murciaeconomia.com/art/102830/la-historicidad-del-rey-david-biblico-estela-de-tel-dan
+
+https://murciaeconomia.com/art/102830/la-historicidad-del-rey-david-biblico-estela-de-tel-dan
+
+24.
+
+Biblia de Navarra by Various - Goodreads, 
+
+https://www.goodreads.com/book/show/22738506-biblia-de-navarra
+
+https://www.goodreads.com/book/show/22738506-biblia-de-navarra
+
+25.
+
+Biblia de Navarra, Comentarios (Navarre Bible, Commentaries) - Catholic Books Direct, 
+
+https://catholicbooksdirect.com/products/biblia-de-navarra-comentarios-navarre-bible-commentaries
+
+https://catholicbooksdirect.com/products/biblia-de-navarra-comentarios-navarre-bible-commentaries
+
+26.
+
+Exégesis patrística y exégesis narrativa. Un aporte a la relación exégesis-hermenéutica - SciELO, 
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007
+
+27.
+
+Redalyc.La «Biblia Comentada por los Padres de la Iglesia», 
+
+https://www.redalyc.org/pdf/355/35501219.pdf
+
+https://www.redalyc.org/pdf/355/35501219.pdf
+
+28.
+
+¿Qué es la tipología bíblica? - Coalición por el Evangelio, 
+
+https://www.coalicionporelevangelio.org/articulo/tipologia-biblica/
+
+https://www.coalicionporelevangelio.org/articulo/tipologia-biblica/
+
+29.
+
+Exegesis Bíblica-Teologica y la Naturaleza de la Tipologia - blog teologia para vivir, 
+
+https://semperreformandaperu.org/2019/03/25/exegesis-biblica-teologica-y-la-naturaleza-de-la-tipologia/
+
+https://semperreformandaperu.org/2019/03/25/exegesis-biblica-teologica-y-la-naturaleza-de-la-tipologia/
+
+30.
+
+Esta actualización está destinada únicamente para ordenadores ..., 
+
+https://www.servicioskoinonia.org/biblioteca/biblica/InterpretacionBibliaIglesia1993.pdf
+
+https://www.servicioskoinonia.org/biblioteca/biblica/InterpretacionBibliaIglesia1993.pdf
+
+31.
+
+En el Principio: Cómo Interpretar Génesis 1, 
+
+https://www.grisda.org/espanol/la-interpretaci%C3%B3n-de-g%C3%A9nesis-1.pdf
+
+https://www.grisda.org/espanol/la-interpretaci%C3%B3n-de-g%C3%A9nesis-1.pdf
+
+32.
+
+LA, INTERPR,ETACION DE ,LA BIBLIA EN LA IGLESIA, 
+
+https://revistas.celam.org/index.php/medellin/article/download/872/790
+
+https://revistas.celam.org/index.php/medellin/article/download/872/790
+
+33.
+
+Principios específicos de la hermenéutica bíblica (Repaso ..., 
+
+https://rsanzcarrera2.wordpress.com/2016/12/05/11-principios-especificos-de-la-hermeneutica-biblica-repaso/
+
+https://rsanzcarrera2.wordpress.com/2016/12/05/11-principios-especificos-de-la-hermeneutica-biblica-repaso/
+
+11.
+
+Verbum Domini, exhortación apostólica postsinodal sobre la Palabra de Dios en la vida y en la misión de la Iglesia (30 de septiembre de 2010) - The Holy See, 
+
+https://www.vatican.va/content/benedict-xvi/es/apost_exhortations/documents/hf_ben-xvi_exh_20100930_verbum-domini.html
+
+https://www.vatican.va/content/benedict-xvi/es/apost_exhortations/documents/hf_ben-xvi_exh_20100930_verbum-domini.html
+
+34.
+
+La inspiración y la verdad de la Sagrada Escritura - Pontificia ..., 
+
+https://www.vatican.va/roman_curia/congregations/cfaith/pcb_documents/rc_con_cfaith_doc_20140222_ispirazione-verita-sacra-scrittura_sp.html
+
+https://www.vatican.va/roman_curia/congregations/cfaith/pcb_documents/rc_con_cfaith_doc_20140222_ispirazione-verita-sacra-scrittura_sp.html
+
+35.
+
+Comienzos (3): Génesis 1 - Israel Institute of Biblical Studies, 
+
+https://israelbiblicalstudies.com/es/blog/category/jewish-studies/comienzos-3-genesis-1/
+
+https://israelbiblicalstudies.com/es/blog/category/jewish-studies/comienzos-3-genesis-1/
+
+36.
+
+Comienzos (4): Génesis 1 - Israel Institute of Biblical Studies, 
+
+https://israelbiblicalstudies.com/es/blog/category/jewish-studies/comienzos-4-genesis-1/
+
+https://israelbiblicalstudies.com/es/blog/category/jewish-studies/comienzos-4-genesis-1/
+
+37.
+
+¿Opiniones sobre la Biblia de Navarra? : r/Catholicism - Reddit, 
+
+https://www.reddit.com/r/Catholicism/comments/7qvoeg/navarre_bible_opinions/?tl=es-419
+
+https://www.reddit.com/r/Catholicism/comments/7qvoeg/navarre_bible_opinions/?tl=es-419
+
+38.
+
+Arqueología Bíblica en Israel - Moriah International Center, 
+
+https://moriacenter.com/programa-arqueologia-biblica-en-israel/
+
+https://moriacenter.com/programa-arqueologia-biblica-en-israel/
+
+39.
+
+Únete a la Inmersión en Arqueología Bíblica: Explorando los tesoros de la Tierra Santa, 
+
+https://www.youtube.com/watch?v=3r5yS6vQbqU
+
+https://www.youtube.com/watch?v=3r5yS6vQbqU
+
+40.
+
+Nuevo Comentario Bíblico San Jerónimo - Editorial Verbo Divino, 
+
+https://verbodivino.es/libro/42/nuevo-comentario-biblico-san-jeronimo
+
+https://verbodivino.es/libro/42/nuevo-comentario-biblico-san-jeronimo
+
+41.
+
+Nuevo Comentario Bíblico San Jerónimo, 
+
+http://mty.sanjuan.org.mx/dki/Raymond_E_Brown-Nuevo_Comentario_Biblico_San_Jeronimo-NT.pdf
+
+http://mty.sanjuan.org.mx/dki/Raymond_E_Brown-Nuevo_Comentario_Biblico_San_Jeronimo-NT.pdf
+
+42.
+
+Nuevo Comentario Bíblico San Jerónimo Nuevo Testamento, 
+
+https://www.centrobiblicoquito.org/producto/nuevo-comentario-biblico-san-jeronimo-nuevo-testamento/
+
+https://www.centrobiblicoquito.org/producto/nuevo-comentario-biblico-san-jeronimo-nuevo-testamento/
+
+43.

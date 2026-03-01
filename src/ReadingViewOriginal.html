@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ordo Vivo - Lectura Inmersiva</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Young+Serif&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8B2E2E", // Liturgical Red from PRD
+                        "background-light": "#F9F5EF", // Vellum from PRD
+                        "background-dark": "#221010",
+                        "surface": "#FFFDF9",
+                        "ink": "#2C2424",
+                        "gold": "#D4AF37",
+                        "marian-blue": "#4A6FA5",
+                        "stone": "#8C8580"
+                    },
+                    fontFamily: {
+                        "display": ["Young Serif", "serif"],
+                        "body": ["Lora", "serif"],
+                        "ui": ["Newsreader", "serif"] // Fallback/Alternative
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                    backgroundImage: {
+                        'vellum-texture': "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjRjlGNUVGIi8+CjxyZWN0IHdpZHRoPSI0IiBoZWlnaHQ9IjQiIGZpbGw9IiM4QzI4MjgiIG9wYWNpdHk9IjAuMDIiLz4KPC9zdmc+')",
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for clean reading */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Drop cap styling */
+        .drop-cap::first-letter {
+            float: left;
+            font-family: 'Young Serif', serif;
+            font-size: 3.5rem;
+            line-height: 0.85;
+            padding-right: 0.5rem;
+            padding-top: 0.1rem;
+            color: #8B2E2E;
+        }
+
+        /* Dotted underline for interactive terms */
+        .interactive-term {
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            text-decoration-color: #4A6FA5;
+            text-decoration-thickness: 2px;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .interactive-term:hover {
+            color: #4A6FA5;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light text-ink antialiased font-body min-h-screen relative selection:bg-primary/20">
+<!-- Sticky Header -->
+<header class="sticky top-0 z-50 w-full bg-background-light/95 backdrop-blur-sm border-b border-stone/20 transition-all duration-300">
+<div class="max-w-md mx-auto relative">
+<!-- Top Bar Content -->
+<div class="flex items-center justify-between px-4 h-16">
+<!-- Back Button -->
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-stone/10 text-ink transition-colors group">
+<span class="material-symbols-outlined text-[24px] group-hover:-translate-x-0.5 transition-transform">arrow_back</span>
+</button>
+<!-- Chapter Reference -->
+<div class="flex flex-col items-center justify-center opacity-100 transition-opacity">
+<span class="font-display text-primary text-lg leading-none">Mateo 18</span>
+<span class="font-ui text-stone text-xs tracking-wider uppercase mt-0.5">Evangelio</span>
+</div>
+<!-- Settings/Font Size -->
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-stone/10 text-ink transition-colors">
+<span class="material-symbols-outlined text-[24px]">text_fields</span>
+</button>
+</div>
+<!-- Progress Bar -->
+<div class="absolute bottom-0 left-0 w-full h-[2px] bg-stone/20">
+<div class="h-full bg-primary w-[35%] rounded-r-full"></div>
+</div>
+</div>
+</header>
+<!-- Main Reading Content -->
+<main class="max-w-md mx-auto px-6 pb-32 pt-8 relative">
+<!-- Contextual Header inside content flow -->
+<div class="mb-8 text-center">
+<h1 class="font-display text-3xl text-ink mb-2">La oveja perdida</h1>
+<div class="flex items-center justify-center gap-2 text-stone text-sm italic font-ui">
+<span class="material-symbols-outlined text-[16px] text-gold">church</span>
+<span>Martes, II Semana de Adviento</span>
+</div>
+</div>
+<!-- Scripture Text Body -->
+<article class="prose prose-lg prose-stone mx-auto text-ink">
+<div class="relative drop-cap text-[20px] leading-relaxed text-justify font-normal">
+<!-- Drop Cap Wrapper -->
+<p class="mb-6 relative">
+<span class="absolute -left-4 top-1 text-[10px] font-bold text-stone font-ui select-none">12</span>
+                    En aquel tiempo, Jesús dijo a sus discípulos: «¿Qué les parece? Si un hombre tiene cien ovejas y se le pierde una de ellas, ¿no deja las noventa y nueve en los montes y va a buscar la extraviada?
+                </p>
+<p class="mb-6 relative group">
+<span class="absolute -left-4 top-1 text-[10px] font-bold text-stone font-ui select-none">13</span>
+                    Y si llega a encontrarla, les aseguro que se alegra más por ella que por las noventa y nueve que no se extraviaron. 
+                    
+                    <!-- Inline Commentary Icon (Hover/Tap target) -->
+<button aria-label="Ver comentario" class="absolute -right-5 top-1 w-6 h-6 flex items-center justify-center rounded-full bg-gold/10 text-gold hover:bg-gold/20 transition-colors">
+<span class="material-symbols-outlined text-[16px]">search</span>
+</button>
+</p>
+<p class="mb-6 relative">
+<span class="absolute -left-4 top-1 text-[10px] font-bold text-stone font-ui select-none">14</span>
+                    De la misma manera, no es voluntad de su Padre celestial que se pierda uno solo de estos pequeños.
+                </p>
+<hr class="border-stone/30 w-1/3 mx-auto my-8"/>
+<h3 class="font-display text-xl text-primary mb-4 mt-8">Corrección fraterna</h3>
+<p class="mb-6 relative">
+<span class="absolute -left-4 top-1 text-[10px] font-bold text-stone font-ui select-none">15</span>
+                    Si tu hermano peca contra ti, ve y corrígele a solas. Si te escucha, habrás ganado a tu hermano.
+                </p>
+<p class="mb-6 relative">
+<span class="absolute -left-4 top-1 text-[10px] font-bold text-stone font-ui select-none">16</span>
+                    Si no te escucha, toma contigo uno o dos, para que cualquier asunto se resuelva por la declaración de dos o tres testigos.
+                </p>
+<p class="mb-6 relative">
+<span class="absolute -left-4 top-1 text-[10px] font-bold text-stone font-ui select-none">17</span>
+                    Si no les hace caso a ellos, díselo a la <span class="interactive-term" title="Tap for definition">comunidad</span>. Y si tampoco hace caso a la comunidad, considéralo como un pagano o un <span class="interactive-term" title="Tap for definition">publicano</span>.
+                </p>
+<p class="mb-6 relative">
+<span class="absolute -left-4 top-1 text-[10px] font-bold text-stone font-ui select-none">18</span>
+                    Les aseguro que todo lo que aten en la tierra quedará atado en el cielo, y todo lo que desaten en la tierra quedará desatado en el cielo.
+                </p>
+</div>
+<!-- Footer / Citation -->
+<div class="mt-12 pt-6 border-t border-stone/20 text-center">
+<p class="text-stone text-sm font-ui">Palabra del Señor</p>
+<p class="font-display text-primary text-lg mt-1">Gloria a ti, Señor Jesús</p>
+</div>
+</article>
+</main>
+<!-- Floating Action Button (FAB) - Modo Niños -->
+<div class="fixed bottom-6 right-6 z-40">
+<button class="group flex items-center justify-center w-14 h-14 bg-primary text-white rounded-full shadow-lg shadow-primary/30 hover:shadow-xl hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+<span class="material-symbols-outlined text-[28px] group-hover:rotate-12 transition-transform">child_care</span>
+<span class="absolute right-full mr-3 bg-ink text-surface text-xs font-bold py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-sm">
+                Modo Niños
+            </span>
+</button>
+</div>
+<!-- Context Overlay (Visual Representation - Hidden/Collapsed State) -->
+<!-- In a real implementation this would slide up. Here we simulate the trigger elements existing in the text above. -->
+</body></html>

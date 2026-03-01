@@ -1,0 +1,2831 @@
+Exégesis patrística y exégesis narrativa. Un aporte a la relación exégesis-hermenéutica
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Services on Demand
+
+Journal
+
+SciELO Analytics
+
+http://analytics.scielo.org/?journal=0120-1468&collection=col
+
+-
+
+Google Scholar H5M5 ( 2019)
+
+https://scholar.google.com/citations?view_op=list_hcore&venue=SAIcJ1iNgXYJ.2019&hl=en
+
+-
+
+Article
+
+Spanish (pdf)
+
+http://www.scielo.org.co/pdf/frcn/v57n164/v57n164a07.pdf
+
+-
+
+Article in xml format
+
+http://www.scielo.org.co/scieloOrg/php/articleXML.php?pid=S0120-14682015000200007&lang=en
+
+-
+
+Article references
+
+javascript:%20void(0);
+
+-
+
+How to cite this article
+
+javascript:void(0);
+
+-
+
+SciELO Analytics
+
+http://analytics.scielo.org/?document=S0120-14682015000200007&collection=col
+
+-
+
+Automatic translation
+
+javascript:%20void(0);
+
+-
+
+Send this article by e-mail
+
+javascript:void(0);
+
+-
+
+Indicators
+
+ Cited by SciELO
+
+-
+
+Access statistics
+
+http://analytics.scielo.org/w/accesses?document=S0120-14682015000200007&collection=col
+
+-
+
+Related links
+
+ Cited by Google
+
+-
+
+ Similars in SciELO
+
+-
+
+ Similars in Google
+
+-
+
+Share
+
+More
+
+http://www.addthis.com/bookmark.php?v=250&username=xa-4c347ee4422c56df
+
+-
+
+More
+
+http://www.addthis.com/bookmark.php?v=250&username=xa-4c347ee4422c56df
+
+-
+
+Permalink
+
+javascript:void(0);
+
+ 
+
+-
+
+Franciscanum. Revista de las Ciencias del Espíritu
+
+http://www.scielo.org.co/scielo.php?script=sci_serial&pid=0120-1468&lng=en&nrm=iso
+
+Print version
+
+ ISSN 0120-1468
+
+Franciscanum vol.57 no.164 Bogotá July/Dec. 2015
+
+Exégesis patrística y exégesis narrativa. Un aporte a la relación exégesis-hermenéutica
+
+ 
+
+*
+
+Patristic exegesis and narrative exegesis.
+
+ A 
+
+contribution to the relationship exegesis-hermeneutic
+
+Hernando Barrios Tao 
+
+**
+
+Universidad Militar Nueva Granada - Bogotá - Colombia 
+
+*
+
+El artículo de reflexión se deriva del Proyecto de investigación «Metodología patrística e interpretación bíblica hoy», financiado por la Fundación Universitaria Cervantina San Agustín (Bogotá). 
+
+**
+
+Doctor en Teología y Magíster en Teología Bíblica. Docente Investigador de la Facultad de Educación y Humanidades, Universidad Militar Nueva Granada (Bogotá); Fundación Universitaria Cervantina San Agustín (Bogotá). Contacto: 
+
+hernando.barrios@unimilitar.edu.co
+
+mailto:hernando.barrios@unimilitar.edu.co
+
+; 
+
+hebata@yahoo.com
+
+mailto:hebata@yahoo.com
+
+.
+
+Para citar este artículo: Barrios Tao, Hernando. «Exégesis patrística y exégesis narrativa. Un aporte a la relación exégesis-hermenéutica». 
+
+Franciscanum
+
+ 164, Vol. LVII (2015): 171-210.
+
+Recibido: 10 de diciembre de 2014 Aceptado: 29 de diciembre de 2014
+
+Resumen
+
+En el contexto de la problemática de la dicotomía entre exégesis y hermenéutica bíblica, el artículo de reflexión derivado de una investigación presenta un análisis en la relación entre la exégesis patrística, delimitada en dos autores representativos de las tradiciones griega y latina, Orígenes y Agustín, y la exégesis narrativa. Las categorías autor-lector-texto articulan y demarcan la propuesta que se sustenta metodológicamente en el análisis documental de fuentes primarias y secundarias. El estudio apunta a determinar líneas fundamentales de la exégesis patrística como elementos sugerentes para consolidar la propuesta de una exégesis narrativa «en el espíritu de los Padres».
+
+Palabras clave
+
+: Biblia, exégesis, hermenéutica, patrística, narrativa.
+
+Abstract
+
+Within the context of the dichotomy problem between biblical exegesis and hermeneutics, this reflective paper derived from a research project, presents an analysis of the relationship between the defined patristic exegesis in two representative authors of the Greek and Latin traditions, Origen and Augustine, and the narrative exegesis. The author-reader-text categories articulate and demarcate the proposal which is methodologically based on the analysis of primary and secondary sources. The study aims to assess fundamental lines of patristic exegesis as suggestive elements to strengthen the proposal narrative exegesis «in the spirit of the Fathers».
+
+Keywords
+
+: Bible, Exegesis, Hermeneutic, Patristic, Narrative.
+
+Introducción
+
+Exégesis-hermenéutica, exégesis-teología, exégesis-pastoral, son binomios cuyas relaciones no están del todo articuladas en los escenarios globales de los inicios del siglo XXI. Procesos, acciones y actores, inmersos en estas categorías todavía no caminan juntos y sus miradas aún se concentran en sus mundos particulares. La problemática de fondo se establece por la dicotomía en la relación entre exégesis y hermenéutica bíblica, que impacta en la interpretación de la Biblia y cuyo mensaje aún no impacta los escenarios en los cuales se vive la experiencia religiosa subyacente en el mundo bíblico.
+
+Los estudios bíblicos exegéticos son innumerables pero en su mayoría no transparentan la Escritura como Palabra de Dios. La indispensable labor académica-científica para la interpretación bíblica ha entrado en diálogo con el 
+
+autor
+
+ (sentido literal) del 
+
+texto
+
+ pero ha obviado el encuentro con el 
+
+Autor
+
+ (sentidos supraliterales) que determina la Escritura como la voz de la revelación para el mundo de hoy. Sin el paso de la exégesis a la hermenéutica no se permite que el mensaje de la Palabra de Dios llegue a su destinatario, el pueblo de Dios. Asimismo, sin una exégesis que desemboque en una teología iluminadora para la experiencia cristiana, la interpretación bíblica podrá escrutar el texto bíblico pero el mensaje de la Palabra seguirá lejos de sus destinatarios. Sin embargo, la problemática se puede considerar en la otra vía. Tanto la teología como los escenarios comunitarios que interactúan con la Palabra también estarían llamados a entrar en diálogo con la labor de los exégetas que caminan hacia los sentidos del texto, fundamentales para escuchar la voz de Dios dirigida a sus hijos en los nuevos escenarios.
+
+Teología, exégesis, hermenéutica, son tres campos específicos en los cuales se ubican el estudio, la investigación y la interpretación en torno de la Biblia. Tres ámbitos que se fueron separando progresivamente a medida que se desarrollaron los estudios y las investigaciones bíblicas. En los inicios mismos de la interpretación bíblica esta problemática trazada por la división entre exégesis y teología, entre exégesis y vida cristiana, no tenía cabida. La labor exegética de los Padres al comienzo de los estudios bíblicos fue afortunada en abordar el texto bíblico y lograr una lectura en la cual el acercamiento al texto bíblico desembocaba en una hermenéutica teológica que interpretaba e iluminaba la situación de sus oyentes.
+
+En los albores del cristianismo se ha iniciado en el ámbito cristiano el proceso de elaboración de métodos para leer e interpretar los textos bíblicos de los dos testamentos. La exégesis griega y oriental en torno del siglo IV orienta sus lineamientos con figuras representativas ubicadas en los espacios de Alejandría y Antioquía de Siria. El influjo de personajes como Filón y las obras de Orígenes marcan estos primeros acercamientos metódicos a la interpretación de la Biblia. Más cercanos a nosotros los nombres de Teodoro de Mopsuestia y Eusebio de Cesarea retomarán y ofrecerán sus apuntes a esta obra exegética. Por otra parte, en el contexto de la exégesis latina occidental los nombres precursores que marcan el trabajo exegético son Tertuliano, Novaciano y Cipriano, y sus labores responden al debate y a la reflexión teológica de su tiempo. Un aporte a la crítica textual y al aspecto teológico-pastoral de la interpretación bíblica, en este marco latino, se destaca con las figuras de Jerónimo y Agustín. En la edad media la exégesis bíblica va a buscar la recolección y sistematización de los aportes de los padres.
+
+En la época moderna los inicios de la crítica literaria y el fortalecimiento de la crítica histórica en la interpretación bíblica arriban hasta la segunda mitad del siglo XX con los métodos histórico-críticos que fueron exclusivos en el estudio científico de la Biblia. En el ámbito católico su resonancia se consolidó en la Constitución 
+
+Dei Verbum
+
+ del Concilio Vaticano II. Los estudios relacionados con la aplicación de estos métodos a los textos bíblicos abundan y sus resultados siguen marcando la base fundamental para cualquier acercamiento exegético. A partir de la década del 70 los estudios bíblicos fortalecen el camino de los métodos de corte sincrónico, influenciados y fundamentados por las racionalidades de talante literario. Los acercamientos sincrónicos: análisis narrativo, retórico, estructuralista, semiótico, pragmalingüístico, saltan a la palestra con aportes que buscan la interpretación del texto y reactivan el rol del lector en su ejercicio hermenéutico 
+
+1
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num1
+
+.
+
+Las metodologías diacrónica y sincrónica se utilizan en los actuales estudios científicos del texto de la Biblia. La primera se preocupa por la cercanía al sentido literal del texto para lo cual opera los instrumentos propios de los métodos histórico-críticos: crítica del texto, crítica de las formas literarias, crítica de los géneros literarios, crítica de las tradiciones, crítica de la redacción. Por su parte, los métodos sincrónicos, sobre la base de la diacronía, se encaminan en la búsqueda de los sentidos supraliterales, a partir de la crítica literaria, el lenguaje y la estructura del texto. Los análisis especializados de estos acercamientos, narrativa, retórica, estructuralismo, utilizan sus propios procedimientos en la búsqueda de la interpretación del texto. Sin embargo, unos y otros corren el riesgo de arribar en sus procedimientos a operaciones científicas históricas y literarias sin la consideración del mensaje del texto en su dimensión existencial y transformadora para el mundo de hoy.
+
+De ahí que el clamor insistente para los estudios contemporáneos se oriente a que la interpretación del texto llegue a las comunidades que pretenden su vivencia existencial. Este propósito, en forma de llamado, a la actualización del mensaje del texto escriturístico y a su mayor asequibilidad para las nuevas comunidades, se determina como uno de los retos para la exégesis contemporánea y justifica cualquier intento por consolidar la relación complementaria entre teología, exégesis y hermenéutica. Tres ámbitos separados aún y que sería necesario seguir repensando.
+
+Ante la problemática planteada, el artículo de reflexión se encamina a posibles líneas que la exégesis patrística representada en las obras de Orígenes y Agustín 
+
+2
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num2
+
+, podrían coadyuvar a la consolidación de una hermenéutica bíblica como punto de llegada de la labor exegética. De manera particular, considerar elementos de la exégesis patrística vinculados con las categorías 
+
+autor, lector, texto,
+
+ que podrían orientar el trabajo exegético de la crítica narrativa hacia la hermenéutica del texto. Considerar la relación entre exégesis patrística y la exégesis narrativa podría abrir la puerta para «aprender» del trabajo exegético en el «espíritu de los padres».
+
+Seguir la huella de la metodología y la lectura exegética de algunos exponentes de la patrología primitiva para fortalecer el quehacer de la exégesis actual es una propuesta pertinente y necesaria para los estudios bíblicos hoy. Más allá de responder a la posibilidad de realizar una exégesis al estilo de la lectura de los Padres se buscan en fuentes primarias y secundarias elementos del método patrístico de lectura de la Escritura, que permitan consolidar una hermenéutica bíblica como punto de llegada de la labor exegética y del quehacer teológico.
+
+El artículo de reflexión derivado de investigación presenta un análisis en la relación entre la exégesis patrística de dos autores representativos y la exégesis narrativa, a partir de las categorías autor-lector-texto, mediante el estudio de fuentes primarias y secundarias. Las líneas fundamentales de la exégesis patrística son elementos sugerentes para consolidar la propuesta de una exégesis narrativa «en el espíritu de los Padres».
+
+1. Interpretación bíblica o la problemática de las dicotomías
+
+El significado de la Escritura para el mundo, para los creyentes, para la comunidad, es un reto a la vez que un horizonte para los estudios bíblicos de todos los tiempos. Exégesis y hermenéutica continúan sus miradas divergentes con las consecuencias consignadas en denominaciones como «inconsciencia epistemológica» (C. Boff), determinada como cierta incapacidad para escrutar la dimensión profunda del texto: la vida del texto (Ricoeur) 
+
+3
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num3
+
+. Distinción de fuentes, definición de formas y explicación de procedimientos literarios refieren una labor exegética aún no terminada e incompleta si no desemboca en la iluminación del «sentido del texto bíblico como actual Palabra de Dios» 
+
+4
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num4
+
+.
+
+No está lejana de la realidad hodierna la voz de F. Dreyfus en su artículo «Exégèse en Sorbonne, exégèse en Église» 
+
+5
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num5
+
+, cuyo clamor aún resonó en el Sínodo sobre la 
+
+Interpretación de la Biblia en la Iglesia,
+
+ con algunas ideas plasmadas en el documento 
+
+Verbum Domini.
+
+ La denominada 
+
+exégesis científica,
+
+ distanciada considerablemente de una ansiada 
+
+exégesis pastoral,
+
+ que conduzca a la comprensión del contenido del texto bíblico y su actualización en los ámbitos comunitarios, es una dicotomía que todavía merece atención. Asimismo, la yuxtaposición entre la labor de los exégetas y la reflexión de los teólogos marca unos niveles que no permiten aún resultados hermenéuticos integradores:
+
+A este propósito hay que señalar el groave riesgo de dualismo que hoy se produce al abordar las Sagradas Escrituras. En efecto, al distinguir los dos niveles mencionados del estudio de la Biblia, en modo alguno se pretende separarlos, ni contraponerlos, ni simplemente yuxtaponerlos. Estos se dan solo en reciprocidad. Lamentablemente, sucede más de una vez que una estéril separación entre ellos genera una separación entre exégesis y teología, que «se produce incluso en los niveles académicos más elevados». Quisiera recordar aquí las consecuencias más preocupantes que se han de evitar. a) Ante todo, si la actividad exegética se reduce únicamente al primer nivel, la Escritura misma se convierte solo en 
+
+un texto del pasado:
+
+ «Se pueden extraer de él consecuencias morales, se puede aprender la historia, pero el libro como tal habla solo del pasado y la exégesis ya no es realmente teológica, sino que se convierte en pura historiografía, en historia de la literatura». Está claro que con semejante reducción no se puede de ningún modo comprender el evento de la revelación de Dios mediante su Palabra que se nos transmite en la Tradición viva y en la Escritura 
+
+6
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num6
+
+.
+
+El balance de algunos biblistas latinoamericanos concuerda con las voces acerca de la dicotomía entre los estudios bíblicos y su apropiación en las comunidades cristianas, escenarios en los cuales se busca vivenciar su sentido existencial. «La ciencia bíblica se ha desarrollado en forma extraordinaria y positiva en los últimos 50 años, pero casi nada de esa producción ha llegado al pueblo de Dios. Los exégetas escriben para los exégetas y se mueven en un mundo académico cerrado» 
+
+7
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num7
+
+, son afirmaciones que denotan la abundancia de operaciones científicas exegéticas realizadas con rigor pero con el infortunio de que el mensaje de la Escritura sigue todavía lejos. Una mirada desde la otra orilla permite constatar la sospecha de algunas comunidades y de particulares cristianos con relación a la necesidad de fundamentar su acercamiento a la Biblia con aspectos históricos y literarios.
+
+La sospecha de la labor exegética en la interpretación bíblica ha llegado por igual al mundo de los connotados exégetas como al espacio sencillo de las comunidades cristianas. En esta dicotomía, los primeros se sienten amos y señores de las técnicas, metodologías e instrumentos exegéticos, por tanto, sospechan de quienes supuestamente no tienen aptitudes académicas elevadas para manejar esos requerimientos, mientras los segundos, se sienten aislados e incapaces y muchas veces no se preocupan por estudiar los aspectos fundamentales de carácter contextual, literario o lingüístico para abordar el estudio del texto bíblico.
+
+Exégetas y teólogos, por una parte, pueden caer en la tentación de considerar, estudiar, profundizar, investigar la Biblia como simples 
+
+palabras humanas,
+
+ y por otra, pastores y pueblo de Dios pueden estar en el peligro de manipular la 
+
+Palabra de Dios
+
+ cuando descuidan el asunto de que esa Palabra se comunica con palabras humanas, para lo cual son indispensables asuntos relacionados con la comunicación humana: contexto, cuestiones históricas y literarias.
+
+Las comunidades, lugar de 
+
+lectura
+
+ de la Palabra de Dios, no pueden cerrar el diálogo con la labor de los exégetas que profundizan el sentido literal del texto, fundamental para escuchar la voz de Dios a sus hijos en los nuevos escenarios. Algunos espacios han iniciado la ruptura de esta barrera superable, y comienzan a generar acercamientos. Pastores, exégetas y fieles escuchan la invitación de los Padres sinodales, con propuestas sugerentes que merecen una atenta lectura:
+
+Los Padres sinodales, además, han recomendado que, potenciando en lo posible las estructuras académicas ya existentes, se establezcan centros de formación para laicos y misioneros, en los que se aprenda a comprender, vivir y anunciar la Palabra de Dios y, donde sea necesario, «se creen institutos especializados con el fin de que los exégetas tengan una sólida comprensión teológica y una adecuada sensibilidad para los contextos de su misión» 
+
+8
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num8
+
+.
+
+Innumerables estudios exegéticos científicos no han sido garantía para la interpretación bíblica y la hermenéutica de la Escritura como Palabra de Dios. La indispensable labor académica-científica para la interpretación bíblica abrió el diálogo con el autor y su contexto (sentido literal), pero aún no rompe las fronteras para dialogar con el 
+
+Autor,
+
+ (hermenéutica-sentidos supraliterales), cuya voz es reveladora para el mundo de hoy y procura que el mensaje de la Palabra de Dios llegue a su destinatario privilegiado, el pueblo de Dios.
+
+En el fondo de la división entre biblistas y teólogos subyace la separación entre exégesis y teología. Biblia y teología, otrora unidad indisoluble, entraron en el mundo moderno de las especializaciones y marcan su territorio a partir de supuestos aspectos científicos. Para algunas labores exegéticas todavía la dimensión científica se evalúa mediada por aspectos histórico-críticos, mientras que una posible labor hermenéutica teológica no correspondería con esa etiqueta científica. De ahí que algunas expresiones surgidas en escenarios académicos, pastorales y comunitarios con relación a la interpretación bíblica, generan recelos y sospechas: 
+
+exégesis teológica, exégesis pastoral, exégesis existencial, exégesis narrativa, exégesis canónica
+
+ 
+
+9
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num9
+
+.
+
+El conocimiento de los criterios y métodos exegéticos, los cuales están en la base de la lectura e interpretación de los textos bíblicos, posibilita al quehacer teológico la valoración correcta de los fundamentos escriturísticos en sus diferentes articulaciones: fundamental, pastoral, bíblica. Así, la teología no será una elaboración teórica abstracta o una producción sociológica, económica o política. Por otra parte, la teología puede ofrecer una contribución notable a la exégesis bíblica para que esta no se quede en puro historicismo y el texto se considere un objeto inanimado que solo es materia de estudio y no habla al mundo de hoy. La ausencia de diálogo exégesis-teología dificulta el desarrollo de exégesis teológicas y pastorales que puedan valorar su impacto en la tradición eclesial, en la fe y en la experiencia religiosa de las comunidades. El llamado de la 
+
+Verbum Domini,
+
+ tanto para exégetas como para teólogos, es una voz sugestiva para los escenarios académicos: «En definitiva, cuando la exégesis no es teología, la Escritura no puede ser el alma de la teología y, viceversa, cuando la teología no es esencialmente interpretación de la Escritura en la Iglesia, esta teología ya no tiene fundamento» 
+
+10
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num10
+
+.
+
+Exégesis, teología, pastoral, como categorías y espacios separados connotan otra problemática que en algunos escenarios académicos se prefiere ignorar. Tanto la exégesis bíblica como la reflexión teológica pueden llegar, al historicismo científico, la primera, o a la reflexión sociológica, la segunda, cuando el texto bíblico se considera solo como un objeto investigativo o una fuente literaria o histórica. La cuna de la Escritura es la 
+
+comunidad
+
+ y el autor detrás del texto no es solo quien escribe o redacta las tradiciones. Tanto al exégeta como al teólogo, cada uno desde su campo específico, se les requiere escrutar desde la fe para entrar al mundo de la revelación, al misterio de Cristo, para hacerlo asequible para el mundo de hoy. El objeto de la investigación, para exégetas y teólogos, debería llegar a ser el mismo: investigar la Verdad de Cristo, lo cual es el corazón de la Escritura, que a su vez deberá ser el alma de la teología 
+
+11
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num11
+
+.
+
+2. Exégesis narrativa e interpretación bíblica
+
+Finales del siglo XX e inicios del XXI marcan el encuentro entre racionalidades emergentes y estudios bíblicos con el desarrollo de novedosos acercamientos para la interpretación del texto bíblico, con base en ciencias sociales, antropológicas y psicológicas, de manera especial en los campos de la filosofía, sociología, psicología, literatura, comunicación, lingüística, semiótica 
+
+12
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num12
+
+. En este marco, los métodos e instrumentos para la interpretación bíblica abrieron un mundo de posibilidades con el espectro de la sincronía y sus orientaciones hacia el estructuralismo, la semántica, la narrativa, la retórica, que permiten acercamientos al texto bíblico desde ópticas diversas a su proceso de formación, redacción, etc. La configuración de metodologías sincrónicas para el estudio científico del texto ha logrado, en algunos casos, una complementariedad con los estudios diacrónicos que caminan por las sendas de la historia del texto. Estudios contemporáneos acogen la preocupación por interpretar el texto y acercarlo más a las comunidades interesadas por su vivencia existencial.
+
+En su paso de la exégesis a la hermenéutica, los estudios bíblicos han considerado los aspectos literarios y la filosofía hermenéutica como sustento para la interpretación de los textos en su labor de ir más allá de su sentido literal hasta la consideración de sentidos supraliterales, que iluminen la realidad eclesial y social del mundo contemporáneo. En este propósito la crítica narrativa se ha posicionado en la interpretación bíblica por la búsqueda de los sentidos que van más allá de lo que el autor quiso expresar en su texto. Con base en los estudios de formación y redacción del texto, la hermenéutica se encamina hacia el sentido del texto para el lector de hoy. A partir del diálogo del 
+
+lector-autor,
+
+ se realiza el diálogo 
+
+lector-texto.
+
+El análisis narrativo con sus procedimientos aplicados a los relatos y testimonios se desarrolla en los estudios bíblicos, tanto en los relatos del Segundo como del Primer Testamento. El documento 
+
+La interpretación de la Biblia en la Iglesia
+
+ presenta los nuevos métodos de análisis y exégesis bíblica, entre los cuales se encuentra el análisis narrativo: «La exégesis narrativa propone un método de comprensión y de comunicación del mensaje bíblico que corresponde a las formas de relato y de testimonio, modalidades fundamentales de la comunicación entre personas humanas, características también de la Sagrada Escritura» 
+
+13
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num13
+
+. La base hermenéutica de la exégesis narrativa se construye a partir de la finalidad de los relatos o narraciones. Por un lado, contar una 
+
+historia
+
+ mediante la sucesión de acciones enlazadas por el principio causa-efecto; por otra, introducir al lector en el mundo del relato. Los estudios de metodología exegética narrativa resaltan la estrecha relación entre lector y relato: «una narración es un mundo-en-palabras que puede ofrecer una nueva perspectiva para comprender el mundo en que los lectores se encuentran viviendo» 
+
+14
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num14
+
+.
+
+El análisis narrativo ha enriquecido la interpretación bíblica mediante el fortalecimiento del papel del lector en la tarea interpretativa, con base en las propuestas de autores como Schleiermacher en sus lecciones de hermenéutica. El denominado padre de la hermenéutica moderna sostiene que «en el proceso de "comprender" no se puede excluir el aporte activo del lector, que se acerca al texto ya con algunos preconceptos, utilizados para entender el texto, desvía la mirada hacia un necesario encuentro entre lector-texto. El lector se ve implicado en el proceso de comprensión» 
+
+15
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num15
+
+.
+
+La exégesis narrativa considera la categoría 
+
+lector
+
+ con la funcionalidad que sobrepasa el ejercicio de recorrer textos. El papel protagónico del lector en el análisis narrativo se dimensiona en el «acto de lectura» y su rol en la lectura no puede obviar la tarea de examinar los efectos del texto: «El texto es un potencial de efectos, que solo es posible actualizar en el proceso de lectura» 
+
+16
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num16
+
+. En el análisis narrativo el lector no es un receptor pasivo, él es «como arrastrado por el narrador a entrar en un proceso activo, dinámico, de producción de sentido a partir de elementos y signos dispuestos a lo largo de la narración» 
+
+17
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num17
+
+. Esta función lectora sumerge al lector en un verdadero diálogo con el texto para lo cual su competencia y horizonte son dimensiones esenciales: el horizonte se relaciona con la experiencia, la cual se plantea sobre la dimensión relacional-teológica del lector-teólogo: «La vida cristiana constituye el horizonte de comprensión genuino del lenguaje evangélico o paulino o veterotestamentario» 
+
+18
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num18
+
+.
+
+En el marco de los estudios bíblicos la competencia del lector se puede considerar de dos modos, articulados entre sí. Por un lado, la cercanía a la Escritura y a datos e informaciones subyacentes en los textos como el conocimiento de la cultura, lenguas, geografía e historia israelita y judía. Estos aspectos contextuales como aquellos literarios fundamentan la competencia del lector en el proceso de lectura. Por otra parte, una proximidad con el lector ideal apto para leer el texto imaginado así por el autor. El lector implícito al cual se dirige en un primer momento el texto es punto de referencia y fundamento para el lector que hoy realiza el trabajo interpretativo. Esta idoneidad supera la dimensión cognitiva y se plantea como la aptitud del lector para que el texto ejerza en él sus efectos 
+
+19
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num19
+
+. Más aún, la categoría lector se amplía del lector implícito al lector real o lectores reales, inimaginados por el autor. Cuando los textos bíblicos se consideran como lenguaje humano, tienen un amplio horizonte. Dicho lenguaje se abre y toma su propia autonomía cuando el autor lo presenta y llegan a él una serie de lectores ilimitados y en contextos diferentes, los cuales desbordan la proyección imaginada del autor:
+
+«A menudo el autor original no preveía esos lectores futuros, pero sus palabras escritas siguen tendiendo la mano en un diálogo que afronta cuestiones nuevas, un nuevo "mundo enfrente del texto"» 
+
+20
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num20
+
+.
+
+Toda palabra humana de cierto peso encierra en sí un relieve mayor de lo que el autor, en su momento, podía ser consciente. Este valor añadido intrínseco de la palabra, que trasciende su instante histórico, resulta más válido para las palabras que han madurado en el proceso de la historia de la fe. Con ellas, el autor no habla simplemente por sí mismo y para sí mismo. Habla a partir de una historia común en la que está inmerso y en la cual están ya silenciosamente presentes las posibilidades de su futuro, de su camino posterior. El proceso de seguir leyendo y desarrollando las palabras no habría sido posible si en las palabras mismas no hubieran estado ya presentes esas aperturas intrínsecas 
+
+21
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num21
+
+.
+
+En el acto de lectura el lector real no se puede desligar de su contexto. El lector latinoamericano, el exégeta y el lector competente de las nuevas comunidades, poseen un 
+
+horizonte
+
+ propio, a partir del cual se debe entablar la fusión con el 
+
+horizonte del texto
+
+ y a partir del cual se establece el diálogo: «El texto bíblico ha hablado (sentido literal) y habla hoy (sentido supraliteral) en el contexto específico de nuestros pueblos latinoamericanos» 
+
+22
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num22
+
+. En este escenario del nuevo mundo se ha caminado en la búsqueda de nuevos sentidos emanados del diálogo con el texto. La lectura del texto en su contexto ha sido uno de los aportes sobresalientes de este lado del mundo:
+
+Después de diecinueve siglos de lectura «tradicional» (tanto literal como alegórica), los numerosos métodos exegéticos (...) han cambiado radicalmente el horizonte de la lectura bíblica (...) esta lectura se desplegó hacia delante, buscando nuevos sentidos. En lugar de «imponer» al texto un significado, condicionado por la pre-comprensión del lector (concepciones filosóficas, teológicas, experiencia, etc.), se pasó a su 
+
+análisis,
+
+ para descubrir 
+
+su propio sentido,
+
+ definido por los códigos que ese mismo texto establece, y por el contexto de su producción 
+
+23
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num23
+
+.
+
+Con relación al papel del lector en la hermenéutica del texto, los acercamientos sincrónicos también han permitido reconsiderar la visión del 
+
+texto
+
+ en la labor exegética. Mientras que la diacronía se centra en el pasado del texto, lo considera como un 
+
+objeto
+
+ histórico y lo aborda a través de la ventana de su génesis, formación y redacción, la exégesis sincrónica se detiene en el presente del texto y realiza el paso hacia la consideración del texto como un espejo que permite no solo entablar un diálogo frontal sino también un encuentro entre sujetos y horizontes. De ahí que métodos exegéticos como el análisis narrativo, al ubicar en un papel relevante la función del lector en la labor interpretativa, han dimensionado el texto bíblico, de un 
+
+objeto
+
+ de estudio a un 
+
+sujeto
+
+ con el que se puede entablar un diálogo. Un aspecto valorado en la exégesis narrativa es el abordaje del texto no como 
+
+objeto
+
+ del pasado sino más allá, su consideración como un fin en sí mismo. Este «viento nuevo que sopla en el mundo de la crítica literaria (...) ha llevado a algunos lectores de la Biblia a releer los textos no solo como un medio de llegar al pasado, sino también como un fin en sí mismo, como una obra con su valor propio» 
+
+24
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num4
+
+. El texto en su forma final y en el espectro de la revelación traza no solo su horizonte de unidad e integridad sino también un horizonte en el cual la comunidad y su experiencia cualifican su identidad y valor intrínseco.
+
+En el espectro de los métodos sincrónicos, el paso de la exégesis a la hermenéutica exige no solo un papel protagónico del lector sino que abre la posibilidad de que el texto mismo, sujeto en diálogo, cambie sus conceptos, percepciones, criterios, es decir, el texto como sujeto llega a ejercer una labor crítica. En esta fusión de horizontes 
+
+25
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num25
+
+ los estudios bíblicos no se detienen en la pregunta lectora: ¿Qué pienso yo del texto?, sino que avanzan al cuestionamiento textual: ¿Qué piensa el texto de sí mismo en este nuevo contexto?
+
+El escenario dialógico en el que los sujetos 
+
+lector-texto
+
+ asocian sus horizontes considera estrategias y tácticas que posibilitan la interlocución narrativa. El narrador propone al lector labores hermenéuticas determinadas, en algunos casos, como tareas de completar el texto y, en otros, lo induce a establecer juicios críticos que lo induce a fortalecer o contrastar sus principios y valores. El lector debe aceptar el «contrato de lectura» que le propone el narrador: «En cierto modo el autor está 
+
+haciendo
+
+ al lector, lo está modelando como lector en la medida en que lo invita a compartir una cierta experiencia, a recrear el universo de la obra literaria, a entrar en contacto con determinados valores, sentimientos, decisiones» 
+
+26
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num26
+
+.
+
+El acercamiento al sentido literal, asumido como aquello que quiso expresar el autor, es una de las tareas fundamentales de la exégesis bíblica. Sin embargo, la composición de los textos asume la intencionalidad del autor, ligada con su contexto, proyecto teológico y, sobre todo, con sus destinatarios. En la búsqueda de este propósito la exégesis narrativa considera que el narrador o compositor del relato bíblico no solo escribe textos para transmitir un mensaje sino que construye o elabora narraciones para adentrar al lector en el mundo del relato. Esta inmersión del lector se logra a través de técnicas narrativas como las suspensiones narrativas, los comentarios del narrador o las lagunas en el texto 
+
+27
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num27
+
+. Los relatos, no solo por su estructura concisa sino también por la intencionalidad del narrador, dejan muchos elementos en la sombra y algunos eslabones que le corresponden al lector encajarlos en la obra. La finalidad de esta técnica es provocar más directamente al 
+
+narratario 23
+
+ para que intervenga en la construcción de sentido.
+
+El horizonte del texto traza una reconsideración de otra de las categorías planteadas por la exégesis narrativa, la del autor. Autor implícito y autor real son dos entidades que señalan diversidad entre la exégesis diacrónica y la sincrónica. El análisis narrativo se orienta al autor implícito, en el caso de los relatos bíblicos, con un horizonte en el cual la comunidad y su experiencia de fe no se pueden desligar. Aquí la creatividad e imaginación del autor moderno son reconsideradas por categorías como memoria, revelación y relato que se encuentran en la base de los textos bíblicos:
+
+La formación del canon bíblico tanto del Primer Testamento como del Segundo, no fue primeramente una construcción normativa sino más bien un proceso dinámico de la comunidad, que plasmó en sus textos su experiencia de fe y la legó integralmente a sus copartidarios. Conocer el proceso de formación de los textos es fundamental para comprenderlos, pero interpretarlos a partir de su forma final permite no dejar perder la riqueza de la experiencia de fe de sus verdaderos autores 
+
+29
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num29
+
+.
+
+3. Exégesis patrística: líneas fundamentales
+
+El trabajo exegético integrado entre biblistas y patrólogos no recoge abundantes resultados ya que sus labores todavía se realizan de forma independiente. La sospecha mutua pareciera ser un ingrediente suficiente para que se constate la dificultad en la integración entre la exégesis moderna, diacrónica o sincrónica, y la exégesis de los Padres 
+
+30
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num30
+
+. Tanto en ámbitos eclesiales como en algunos académicos, el llamado para considerar en la exégesis bíblica el aporte de los Padres no se ha hecho esperar y el interés por la exégesis patrística muestra brotes sugerentes.
+
+De Margerie considera tres razones para un supuesto renovado interés en la exégesis patrística. Los exégetas modernos están comenzando a sospechar que ellos pueden aprender de los padres sobre puntos particulares cuyas soluciones están aún pendientes. Por otra parte, la nueva mirada de los exégetas por los padres y por sus hermenéuticas se conecta con la importancia que ellos anclan al problema de la relación entre los dos testamentos, al problema del mesianismo y de la cristología en general. Por último, el regreso a los padres puede ayudarlos, tanto como exégetas, en la dirección de una sintética unificación del acto exegético y, como predicadores, en su servicio a la palabra de Dios 
+
+31
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num31
+
+.
+
+En el seno de los mismos exégetas los cuestionamientos a la reducción de la exégesis bíblica a los procedimientos de la crítica histórica, incluso dejando de lado aspectos literarios y hasta la nulidad en la consideración de la labor exegética de los Padres, se plantean con base en el mismo estatuto epistemológico de la exégesis que no podría restringirse solo a una ciencia histórica aparte de una ciencia hermenéutica y teológica 
+
+32
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num32
+
+. En este sentido el n. 54 de la Instrucción 
+
+Sullo studio dei padri della Chiesa nella formazione sacerdotale
+
+ motiva el estudio científico tanto en las ciencias bíblicas como en las patrísticas con la necesidad de integrar al método histórico, el análisis literario y la hermenéutica 
+
+33
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num33
+
+.
+
+El documento 
+
+La interpretación de la Biblia en la Iglesia
+
+ plantea la exégesis de los Padres a partir de sus aportes y contribuciones que podrían coadyuvar a la hermenéutica del texto. En la preocupación constante de la Iglesia subyace el clamor para que el texto llegue a sus destinatarios primarios, el pueblo de Dios, mediante una labor exegética que pase de la exégesis a la teología. A este propósito los Padres «enseñan a leer teológicamente la Biblia en el seno de una tradición viva, con un auténtico espíritu cristiano» 
+
+34
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num34
+
+. La base fundamental para la exégesis bíblica, iluminada por el trabajo interpretativo de la patrística, es la consideración del texto como Escritura, «ante todo como el Libro de Dios, obra única de un único autor» y la no reducción de los autores humanos «como meros instrumentos pasivos» 
+
+35
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num35
+
+.
+
+En este sentido se puede realizar un acercamiento a algunas líneas fundamentales de la exégesis de los Padres y considerar los aspectos relevantes que podrían coadyuvar a la articulación entre exégesis y hermenéutica, de manera particular a fortalecer la exégesis narrativa en relación con las categorías relevantes en el trabajo exegético: autor-lector-texto. De acuerdo con los contextos en los cuales se desarrolla la exégesis patrística, se pueden plantear varios aspectos que marcan el nacimiento de la exégesis de los padres de la Iglesia. La defensa de la identidad del mensaje cristiano, tanto frente a las tradiciones judías como a las provocaciones culturales del mundo griego de su tiempo provoca la necesidad de elaborar una metodología exegética. En este marco griego las corrientes heréticas inducen la necesidad de ofrecer respuestas a quienes intentaban reducir el misterio cristiano a una institución filosófica. El encuentro entre los mundos de los dos testamentos, Antiguo y Nuevo, frente al evento Cristo supone la irrenunciabilidad a la unidad entre los dos testamentos 
+
+36
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num36
+
+.
+
+Orígenes y Agustín se ubican en contextos diversos y su labor se caracteriza y equipara porque uno y otro acopian aspectos fundamentales, el primero de la tradición griega y el segundo de la tradición latina. En este sentido, presentar líneas fundamentales de sus labores exegéticas conlleva, hasta cierto punto, a abrir el panorama de la exégesis patrística al trabajo interpretativo de al menos tres siglos. 
+
+Texto-autor-lector
+
+ son tres categorías que permiten presentar las líneas exegéticas de los Padres, con base en los autores mencionados, que podrían contribuir y orientar la relación entre exégesis y hermenéutica. Los límites y la articulación entre las tres categorías no son fáciles de determinar ya que forman parte de una realidad y, así como en muchos momentos se entrecruzan, en otros se distancian.
+
+Tanto Orígenes como Agustín recogen tradiciones interpretativas de sus contextos y, en cierta forma, sistematizan experiencias exegéticas de autores anteriores a ellos. En uno y otro caso ya se considera la interpretación bíblica como una labor fundamental que debe sustentarse en aspectos lingüísticos y literarios, de acuerdo con el pensamiento de su tiempo. En el caso particular, la actitud del exégeta Orígenes hacia la Escritura es que primero que todo se trata de un texto literario que puede ser estudiado científicamente como cualquier texto literario, a la vez que es palabra de Dios dirigida a la Iglesia, y en ella, a los individuos, y es el punto de partida para una especulación teológica que nos abre una visión total del universo y de la historia 
+
+37
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num37
+
+.
+
+Los tres principios de la exégesis de Orígenes se vinculan con las categorías lector-texto-autor. La utilidad de los lectores, la identidad del texto de la Escritura como revelación y la definición de su autor, se consideran en sus principios 
+
+38
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num38
+
+: El principio de 
+
+Opheleia
+
+ o 
+
+conveniencia,
+
+ según la cual la Escritura siempre tiene una posibilidad de interpretación útil para su destinatario; en el principio de 
+
+misterio
+
+ de la Escritura la interpretación espiritual no solo es el nivel interpretativo máximo de la Palabra de Dios escrita, sino también aquel necesario para la auténtica realización de la economía divina ligada a la revelación escrita; el principio del doble nivel de conocimiento 
+
+sensible
+
+ e 
+
+inteligible,
+
+ en razón del cual es siempre posible pasar de una lectura de la Escritura solamente intramundana a una más adecuada al conocimiento perfecto de la revelación 
+
+39
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num39
+
+.
+
+Identidad y horizonte del texto son quizá los aspectos más claros y relevantes para los autores representativos de la tradición patrística oriental y occidental. Escritura y Palabra de Dios, definen para la exégesis patrística la identidad del texto. Por su parte la unidad, articulada con la diversidad de sentidos, traza el horizonte del texto, a partir de lo cual se fundamenta su interpretación y demarca el comienzo de la exégesis bíblica: «La afirmación irrenunciable de la unidad de los dos testamentos llega a ser el acto de nacimiento de la exégesis cristiana propiamente dicha» 
+
+40
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num40
+
+.
+
+Uno de los estudiosos más representativos de la patrística, Simonetti, con toda su investigación de la tradición de las fuentes primarias ha exaltado en una entrevista varios aspectos de la exégesis patrística, particularmente de Orígenes y Agustín, en relación con la exégesis narrativa hodierna y con la filosofía hermenéutica, en los aspectos que se vinculan con el texto y los sentidos 
+
+supraliterales.
+
+ La «diversidad de sentidos no excluyentes», riqueza y apertura para la exégesis de su tiempo, es una de las contribuciones de Orígenes dirigida a los cristianos de cultura griega y orientada hacia el Antiguo Testamento: «El exégeta alejandrino se pone ante el texto santo como ante un manantial inextinguible de verdad, con una multitud ilimitada de significados que no tienen por qué ser exclusivos ni excluyentes» 
+
+41
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num41
+
+. Esta «exégesis creativa» permitió que la «Escritura judía no hubiese acabado lo mismo que la circuncisión, como un componente judío abandonado por la Iglesia o una premisa histórica superada completamente por la novedad cristiana. Basta con leer los tratados 
+
+In Ioannem
+
+ de Orígenes o San Agustín para valorar el inmenso caudal, que desborda el cauce del sentido literal, y que ha sido decisivo en la transmisión y configuración de la doctrina cristiana» 
+
+42
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num42
+
+.
+
+Con base en el contexto en el que desarrolla su labor exegética la exégesis de Orígenes se identifica abruptamente con la categoría 
+
+alegoría,
+
+ sobre la base de ser considerado el 
+
+alegórico por antonomasia,
+
+ sin embargo, al realizar un acercamiento a sus principios y procedimientos es quien «ha dado mucho más peso al sentido literal del texto sagrado respecto de lo que no se había hecho antes que él» 
+
+43
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num43
+
+. Este es uno de los indicativos para afirmar que la diversidad de sentidos en el texto no se puede considerar en la exégesis patrística con las características de disyunción, disgregación o exclusión. En Orígenes el sentido literal recubre, reviste como un velo, un cuerpo, el sentido espiritual, que en el origeniano se identifica con el sentido cristológico: «El sentido literal, en sí no es erróneo, no representa el fin último de la Escritura, sino sirve solo a un acercamiento propedéutico que debe direccionar al conocimiento del sentido más profundo» 
+
+44
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num44
+
+.
+
+El aporte sobre la unidad de la Escritura es relevante en el alejandrino no solo en la labor exegética, tarea muy bien realizada por Orígenes en la riqueza de sus comentarios a textos completos de la Biblia y su convicción de que solo por medio de la exégesis espiritual es posible ser fiel a la regla de fe que acepta tanto el Antiguo como el Nuevo Testamento 
+
+45
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num45
+
+, sino en su concepción del texto mismo, en la cual se defiende su coherencia interna y unidad, con base en su inspirador, el Espíritu: «A Orígenes le interesa mostrar que la Escritura es coherente consigo misma, coherencia que era negada por Marción (que, a partir de una lectura literal de los textos, buscaba mostrar que hay contradicción entre A.T. y N.T.) y por Celso (también sobre la base de una lectura literal). Por eso Orígenes busca la coherencia no a nivel de la letra, sino a nivel del espíritu» 
+
+46
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num46
+
+.
+
+La unidad de la Escritura se refleja en Orígenes no solo como principio hermenéutico sino como característica fundamental y distintiva de su exégesis. Según Simonetti, Orígenes ha dilatado o ampliado la exégesis cristiana en cuanto al objeto y a la forma. La amplitud del objeto en cuanto que su dedicación se ha extendido al estudio de toda la Escritura, más allá de textos y libros particulares del Antiguo o Nuevo Testamento. Con relación a la forma porque inició el comentario a libros completos tanto del Antiguo como del Nuevo Testamento, es el caso de la totalidad del salterio 
+
+47
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num47
+
+.
+
+En el escenario latino la concepción acerca de la unidad de la Escritura en Agustín se fundamenta en un principio cristológico, no solo porque toda ella se refiere a Cristo sino porque las mismas Escrituras se determinan como una prolongación de la encarnación 
+
+48
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num48
+
+. En el Maestro de Hipona la unidad de la Escritura es un principio hermenéutico que se puede sustentar a partir de un criterio negativo de interpretación 
+
+49
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num49
+
+, la unidad salvaguardada mediante la interpretación de los textos oscuros a la luz de los textos claros: «Dada la mezcla de pasos claros y oscuros, es necesario lógicamente leer la escritura "entera", pero solamente aquella canónica» 
+
+50
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num50
+
+.
+
+Un excelente aporte agustino a la exégesis en el contexto de la tradición latina es su aceptación de la polisemia de los textos. Unidad de la Biblia y pluralidad de sentidos en la Escritura también se consideran líneas fundamentales en la exégesis de este ámbito patrístico. Asimismo, la consideración del texto en su dimensión literaria y la necesidad del uso de las lenguas para la interpretación bíblica son aspectos que Agustín plantea como relevantes aun cuando él mismo para el Antiguo Testamento haya utilizado la versión de los LXX.
+
+En Orígenes se recogen y organizan las características exegéticas de sus antecesores, en él se encuentran presentes aspectos de Clemente y, más aún, para algunos investigadores de la patrística en él se marca el inicio de la exégesis bíblica, en todo el sentido de la expresión: «Orígenes ha hecho de la hermenéutica bíblica una verdadera y propia ciencia, y en tal sentido ha condicionado en modo decisivo toda la exégesis patrística sucesiva» 
+
+51
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num51
+
+. Este punto inicial en la exégesis demanda para el tratamiento y la interpretación del texto no solamente la necesidad de aspectos metodológicos sino la exigencia de otros elementos relacionados con las lenguas, la filología, los géneros y la teología misma. Las Escrituras, sin perder su carácter espiritual, se determinan como texto literario que se pueden abordar a partir de diversos elementos culturales y orientar hacia sectores más amplios que aquel delimitado por la liturgia. El trato de Orígenes al texto denota que «ha entendido poner a disposición de la lectura cristiana bíblica toda su vasta erudición y fineza cultural, acercándose a esa desde todos los puntos de vista correctamente utilizables a los fines hermenéuticos: desde el filológico y aquel teológico, desde el más técnicamente exegético al del pastor de almas y del asceta» 
+
+52
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num52
+
+. El IV Libro de la obra de Orígenes, 
+
+De Principiis,
+
+ contiene ya un primer tratamiento fundamental teórico, específico sobre criterios hermenéuticos 
+
+53
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num53
+
+.
+
+Sistematicidad en la interpretación espiritual de las narraciones bíblicas caracteriza el novedoso trabajo exegético de Orígenes y allí historicidad y alegoría son dos aspectos que se integran en el texto 
+
+54
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num54
+
+. Trascender el escenario litúrgico y catequético es una tarea lograda por algunos de los Padres cuando sistematizan el texto bíblico a través de comentarios que superan la homilética y los usos litúrgicos de la Escritura: «Hipólito y Orígenes, son en cambio de considerar entre los pioneros de este género literario. En efecto, fue su mérito haber dedicado a la exégesis bíblica comentarios sistemáticos, desvinculando así aquella de la simple utilización litúrgica, catequística y polémica» 
+
+55
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num55
+
+.
+
+Di Cristina subraya que Orígenes es el primer exégeta cristiano que ha querido distinguir cuidadosamente el género literario de las propias intervenciones sobre la Escritura según su destinación práctica. Según el autor es posteriormente Jerónimo quien en el prólogo a la traducción de las homilías de Orígenes sobre Ezequiel elenca tales generos en escolios, comentarios y homilías. Los escolios consistían en breves notas explicativas, dedicados a pasos o palabras particularmente difíciles de la Biblia; los comentarios eran continuos en el texto destinados a la escuela o un público culto; las homilías eran explicaciones de la Escritura, destinados a un público más amplio 
+
+56
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num56
+
+. Elementos de exégesis y hermenéutica en la labor de Orígenes se pueden considerar en sus homilías, en las cuales se visualizan algunas técnicas: «el recurso a la explicación de las variantes textuales, de los términos, de la etimología de los nombres, de las divergencias entre los evangelistas, de las tipologías, del simbolismo de los números y de los animales» 
+
+57
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num57
+
+.
+
+Con relación al horizonte del texto y al papel del lector en la tarea interpretativa, el pensamiento subyacente en la exégesis patrística es la convicción de la presencia en la Escritura de un segundo significado, más allá de aquel estrictamente literal y vinculado con el contexto vital de los Padres, como lectores reales de los textos: «La identificación de este segundo significado estaba conectada estrechamente, para cada uno de ellos, a la problemática apologética, teológica, espiritual del 
+
+hic et nunc
+
+ histórico-existencial en el cual los padres mismos venían concretamente a encontrarse» 
+
+58
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num58
+
+.
+
+La conexión del sentido espiritual con el lector supone otro vínculo que amplía el horizonte del texto, la relación texto y autor. Más allá del autor o escritor, ligado con el sentido literal, los Padres consideran la acción y el papel del Espíritu en la diversidad de los sentidos 
+
+supraliterales
+
+ del texto. Así la categoría autor supera no solamente el sentido literal sino que permite integrar y ampliar su horizonte en el ámbito de la revelación y de la identidad del texto como Escritura: «Ya en el prefacio de la misma obra 
+
+De Principiis
+
+ Orígenes había en realidad declarado 
+
+apertis verbis
+
+ que pertenecía a la predicación común de la Iglesia la convicción que la presencia de un significado ulterior en la Escritura fuese consecuencia lógica del hecho que esas habían sido escritas "per 
+
+spiritum",
+
+ es decir gracias al Espíritu» 
+
+59
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num59
+
+.
+
+El inicio de la exégesis con sus procedimientos literarios, filológicos, lingüísticos, no aisló el texto de su condición de revelación con lo que implica su denominación como Escritura y su sentido spiritual, sino que supuso la necesidad de plantear algunos presupuestos «precisos de la fe» para la labor hermenéutica. Para el Maestro alejandrino la interpretación de la Escritura 
+
+«secundum spiritalem sensum»
+
+ implica tres presupuestos 
+
+60
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num60
+
+: 1) Que las Escrituras provengan del Espíritu de Dios 
+
+(quod per spiritum dei scripturae sint)
+
+ y por tanto que sean «inspiradas»; 2) Que las Escrituras 
+
+(sensum habeant non eum solum qui in manifesto est),
+
+ y por tanto que tengan solamente el significado que aparece en lo externo; 3) Que el Dios del Antiguo Testamento es uno solo.
+
+La consideración del autor, su inspiración y la acción del Espíritu caracterizan el horizonte del texto y lo determinan con una identidad en el marco de la revelación que va más allá de su propia identidad literaria, lo cual no solo amplía la visión del autor hacia el papel del autor y del Espíritu sino que además condiciona el acercamiento y la interpretación de la Escritura a la interacción con estas nuevas categorías. Gargano refiere el pensamiento origeniano y lo que supone que el texto bíblico sea inspirado por la divinidad. Para Orígenes considerar el texto como inspirado significa que para entender un texto bíblico es necesario utilizar preciosos, indispensables y «particulares instrumentos cognoscitivos» que Salomón «define divinos». Se confirma de aquello «que constituye la cualidad necesaria que debe poseer el hermeneuta: 
+
+consanguineitatem quandam habere ad Deum.
+
+ Es decir «poseer cierta consanguinidad con Dios» 
+
+61
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num61
+
+. La explicación y presentación de los mencionados instrumentos se fundamentan en el mismo texto bíblico, de manera particular en los evangelios que los considera presentes «en modo sustancial» en Dios y que en el hombre «pueden estar presentes solo gracias al empeño y a la imitación de Dios». Orígenes expresa: «Cum in deo insint per substantiam, in homine possunt esse per industriam et imitationem dei, sicut et dominus designat in evangelio dicens: "Estote misericordes, sicut et pater vester misericors est" (Lc 6,36) et "Estote perfecti, sicut et pater vester perfectus est" (Mt 5,48)» 
+
+62
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num62
+
+.
+
+La tradición latina recogida por Agustín plantea también la relación autor-Espíritu-lector. El lector es «quien investiga los oráculos divinos» y debe alcanzar la intención del autor a través del Espíritu que habla: «ud 
+
+ad voluntatem perveniatur auctoris per quem Scriptu-ram illam Sanctus operatus est Spiritus» 63.
+
+ Para Grech este es el paso donde Agustín habla más claramente sobre los diversos sentidos de la Escritura y determina como uno de los criterios para interpretar el uso de la razón 
+
+(analogía rationis)
+
+ en el que se considera que un paso de la escritura sea avalado por otro, para permanecer en el pensamiento del autor divino. En palabras de Grech es evidente la grandísima utilidad de esta máxima, la cual, mientras abre la posibilidad de una interpretación, o de interpretaciones, que van más allá del preciso significado de las palabras, cierra la puerta a interpretaciones fantasiosas o arbitrarias que son extrañas al modo de hablar de la Escritura y de la Iglesia. El mismo Grech define que en el pluralismo de sentido se puede plantear un 
+
+sensus auctoris
+
+ y un 
+
+sensus textus
+
+ 
+
+64
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num64
+
+:
+
+Pero, primero que todo, el verdadero sentido de la Biblia es el 
+
+sensus auctoris
+
+ porque es propio aquel que inspira el Espíritu Santo y es a través de la intención consciente del autor que habla Dios. Si en la dificultad de encontrar el sentido original del autor permanecemos con dos o más diversas interpretaciones no nos debemos consternar porque no es 'imposible que también el autor humano, escribiendo, las haya previsto; pero las ha previsto ciertamente el autor divino, más aún, habrá también previsto que el lector las haya intuido 
+
+65
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num65
+
+.
+
+El rol y la labor del lector se dejan traslucir en su relación con el texto y el autor, con su intencionalidad y la del Espíritu. La relación autor-Espíritu no solo ilumina sino que determina también el vínculo lector-Espíritu que no se puede desligar en el trabajo exegético. Así como tenía necesidad del Espíritu quien escribía, asimismo era necesario para quien desea exponerlas: «Quomodo habebat opus Spiritu Sancto qui haec dicere jubebatur, sic eodem Spiritu opus est ei qui exponere cupit ea quae sunt latenter significata» 
+
+66
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num66
+
+. A la par de la cultura clásica, para Agustín «el orador cristiano es el portador de la palabra de Dios, el ministro de verdades salvíficas» 
+
+67
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num67
+
+.
+
+La dimensión contextual, sociohistórica, en la cual se encontraba el lector orienta la interpretación bíblica en la patrística hacia el sentido que un determinado texto poseía «para el hoy histórico, teológico o espiritual en que venía leído», más allá del significado del texto en su «objetividad» 
+
+68
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num68
+
+. Más aún, la interpretación bíblica en este contexto patrístico se conduce por un diálogo con la Escritura que se induce por el contexto y las circunstancias en el cual el texto se desarrolla. Es sugerente que algunos estudiosos de la patrística consideren que la exégesis de los Padres se oriente a partir de interrogantes dirigidos al texto que no nacían del texto mismo sino de algunos aspectos relacionados con sus lectores: «nacían por ejemplo: o de una provocación herética, en la medida en que esta última turbaba el disfrute sereno de la fe tradicional; o de una situación histórica nueva, determinada en la sociedad; o también en fin de la experiencia personal de un camino de fe particular, que se sentía la necesidad de iluminar» 
+
+69
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num69
+
+.
+
+El principio origeniano de que en la Escritura misma se descubre un método exegético denota la necesidad de una estrecha relación entre lector-texto, más aún, un diálogo entre los dos a partir de los contenidos mismos de los textos bíblicos: «Creemos que el modo correcto para comprender las Escrituras y para investigar las ideas que las contienen es que las mismas Escrituras nos enseñan a emplearlas» 
+
+70
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num70
+
+.
+
+En el maestro de Hipona, por su parte, los principios relacionados con el papel del lector o escucha de la escritura son sugerentes para la relación autor-Espíritu y para la hermenéutica del texto con relación al rol de lector en la tarea exegética: «En aquellas mismas palabras que deseamos comprender tal vez ya el autor mismo ve nuestra interpretación (...) el Espíritu Santo que por medio del autor ha compuesto tales pasos prevé que también tal interpretación llegaría a la mente del lector o escucha (Dei 
+
+Spiritus, qui per eum haec operatus est, etiam ipsam occursuram lectori vel auditori)»
+
+ 
+
+71
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num71
+
+.
+
+Considerar la estructura de la carta agustiniana, 
+
+De Doctrina Christiana 72
+
+, en la cual se plantean los principios exegéticos es su-gerente para la filosofía hermenéutica hodierna. El trabajo exegético propuesto por Agustín se organiza en dos momentos, articulados y cohesionados por la dinámica comprender y expresar, comprender y comunicar, comprender y explicar. Los dos momentos se determinan por el doble objetivo de la obra agustiniana: «comprender y expresar la Escritura». Esta composición de la obra delinea la filosofía del trabajo en relación con estos dos momentos: «Los primeros tres libros ayudan a comprender la Escritura, el cuarto indica cómo debe expresarse aquel que la ha comprendido» 
+
+73
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num73
+
+.
+
+Al criterio negativo de interpretación basado en la unidad de la Escritura, textos oscuros interpretados a la luz de los textos claros, Agustín considera un doble criterio positivo de interpretación de la Escritura que se relaciona explícitamente con el lector. La agudeza de la inteligencia y la llama de la caridad son aspectos necesarios para el lector en su tarea exegética 
+
+74
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num74
+
+. Un principio fundamental para la hermenéutica agustiniana es «la distinción entre 
+
+res
+
+ y 
+
+signa,
+
+ el signo en efecto es una realidad que, más allá de la imagen que transmite a los sentidos de sí mismo, hace venir a la mente con su presencia, cualquier otra cosa». De ahí que la agudeza de la inteligencia juega un papel importante para afrontar la «confusión de signos que es la fuente de la oscuridad de la Escritura» 
+
+75
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num75
+
+. En el Libro Tercero de 
+
+De Doctrina Christiana
+
+ se referencian las siete reglas de Ticonio y se incluye el papel del lector al considerar en la interpretación la segunda regla que en la tarea interpretativa se «exige un lector atento» 
+
+76
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num76
+
+.
+
+A modo de conclusión: exégesis narrativa «en el espíritu de los padres»
+
+Aporte, soporte, fundamento, son términos que se podrían considerar para presentar la relación entre exégesis patrística y exégesis narrativa, los cuales supondrían en cierto modo retomar u orientar la exégesis moderna por los caminos del trabajo de los Padres, sin embargo, para no abrir la posibilidad de discusiones el cierre del artículo acoge la propuesta de De la Potterie: «Recomendar el estudio de los padres en la exégesis bíblica no significa que sería necesario retomar sus métodos, sino más bien que debemos aprender a leer la Sagrada Escritura en el espíritu de los padres» 
+
+77
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num77
+
+. Así, el camino conclusivo se orienta a señalar algunos elementos a partir de las tres categorías consideradas: autor-texto-lector, que podrían orientar el trabajo exegético hacia la hermenéutica del texto, de manera particular lo que se podría «aprender» y apropiar para una exégesis narrativa en el «espíritu de los padres».
+
+Para la exégesis narrativa el diálogo 
+
+autor-texto-lector
+
+ señala un círculo interpretativo que posibilita el paso de la exégesis a la hermenéutica. De ahí que sea fundamental considerar el horizonte de cada una de estas categorías para evitar reducciones: del texto a un 
+
+objeto
+
+ arqueológico, del autor a un simple redactor o del lector a un simple curioso.
+
+El horizonte del 
+
+texto
+
+ en la exégesis narrativa como en el trabajo de los Padres se determina más allá de su valor histórico-literal, hasta llegar a la superación del 
+
+autor
+
+ que plasmó y arribar al Espíritu que actúa en la comunidad y en su experiencia de fe. La Escritura no contiene solo una verdad histórica (sentido literal) sino además una verdad salvífica (sentidos supraliterales) que muestran la dinámica de la revelación (progresiva, continua en la discontinuidad, novedosa en muchos momentos):
+
+Todos los padres comparten la convicción de la presencia de un segundo significado, más allá del estrictamente literal, en la Escritura inspirada. La identificación de este segundo significado estaba estrictamente conexo, para cada uno de ellos, con la problemática apologética, teológica, o espiritual del 
+
+hic et nunc
+
+ histórico-existencial en el cual los mismos padres se encontraban 
+
+78
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num78
+
+.
+
+En este sentido, tanto la exégesis narrativa como la exégesis patrística consideran en su labor interpretativa este horizonte revelador del texto que supone un 
+
+Autor
+
+ que no puede quedar al margen del ejercicio exegético. El Concilio Vaticano II nos ha dejado el llamado a revalorar la Palabra de Dios como revelación permanente mediante la cual Dios quiere hablar con sus hijos, los hombres de todos los tiempos:
+
+Quiso Dios en su bondad y sabiduría revelarse a sí mismo y dar a conocer el misterio de su voluntad, (Cf. Ef 1,9) mediante el cual los hombres, por medio de Cristo, Verbo encarnado, tienen acceso al Padre en el Espíritu Santo y se hacen partícipes de la naturaleza divina (Cf. Ef 2,18; 2Pe 1,4). En consecuencia, por esta revelación Dios invisible (Cf. Col 1,15; 1Tim 1,17) habla a los hombres como amigos, movidos por su gran amor (Cf. Ex 33,11; Jn 15,14-15) y mora con ellos (Cf. Bar 3,38), para invitarlos a su comunicación y recibirlos en su compañía. Este plan de la revelación se realiza con palabras y gestos intrínsecamente conexos entre sí (...) 
+
+79
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num79
+
+.
+
+El horizonte del 
+
+texto
+
+ bíblico no se puede desligar del horizonte de su 
+
+autor,
+
+ lo cual permite, en este círculo hermenéutico, caminar por senderos que trascienden el sentido literal, la intención del 
+
+autor
+
+ con las palabras escritas, hacia sentidos supraliterales que entran en la esfera del 
+
+autor
+
+ y enmarcan la Escritura en la categoría revelación, en el Espíritu en que fue escrita y en la comunidad 
+
+(eklessia)
+
+ como su cuna original: «Esto nos permite llamar la atención sobre un criterio fundamental de la hermenéutica bíblica: 
+
+el lugar originario de la interpretación escriturística es la vida de la
+
+ Iglesia. Esta afirmación no pone la referencia eclesial como un criterio extrínseco al que los exégetas deben plegarse, sino que es requerida por la realidad misma de las Escrituras y por cómo se han ido formando con el tiempo» 
+
+80
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num80
+
+.
+
+Cuando se considera el horizonte del texto se pasa del 
+
+objeto
+
+ de estudio al 
+
+sujeto
+
+ que tiene su propia voz, con un papel protagónico en la labor hermenéutica. El ejercicio hermenéutico debe conducir a la comunidad lectora, entre los cuales se resaltan los exégetas, a dialogar con el 
+
+texto,
+
+ con la posibilidad de que la Escritura interpele, cuestione, controvierta y hasta cambie sus conceptos, percepciones, valores y criterios.
+
+Sentido literal y sentidos 
+
+supraliterales
+
+ no son desconocidos ni para la exégesis patrística como tampoco para la exégesis narrativa. El pluralismo de sentidos y la complementariedad entre sentido literal y sentidos supraliterales en el trabajo exegético denota una exégesis «en el espíritu de los Padres». Una de las características distintivas de la exégesis cristiana, particularmente, la de Alejandría es «la tendencia a atribuir diversos sentidos alegóricos a un paso de la Escritura» 
+
+81
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num81
+
+, lo cual no está lejos del pluralismo de sentidos hacia los cuales camina la exégesis narrativa. Con estos presupuestos, la Instrucción sobre el estudio de los Padres plantea la posibilidad de considerar estas dimensiones y sentidos del texto como elementos de complementariedad entre los acercamientos literarios y la exégesis histórico-crítica, en otras palabras, entre exégesis y hermenéutica, exégesis y teología: «La exégesis de los padres (...) podría abrirnos los ojos a otras dimensiones de la exégesis espiritual y de la hermenéutica que completarían aquella histórico-crítica, enriqueciéndola de intuiciones profundamente teológicas» 
+
+82
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num82
+
+.
+
+La tarea exegética patrística y narrativa no se identifica con abordar el texto como un 
+
+objeto
+
+ de estudio, un documento histórico o arqueológico sino que la consideración del 
+
+texto
+
+ como un sujeto posibilita el diálogo con la Escritura, con su horizonte y su mensaje. Más allá de las operaciones históricas o literarias aplicadas al 
+
+objeto
+
+ de estudio, la tarea hermenéutica considera estos elementos histórico-contextuales y crítico-literarios, esenciales para llegar al sentido literal, como fundamentales para la tarea interpretativa que permite arribar a los sentidos supraliterales y considerar los efectos del texto.
+
+Considerar el horizonte del 
+
+texto
+
+ y los 
+
+autores
+
+ que se involucran en su historia, composición y mensaje, implica redimensionar la tarea exegética. La exégesis patrística y narrativa no desconocen el estudio histórico, literario, lingüístico, pero van más allá, hasta su interpretación, pasan de la explicación científica a su comprensión existencial. La labor exegética no puede quedarse en un ejercicio de 
+
+estudiar
+
+ el texto como un objeto del pasado, que considera su origen, formación, redacción, o como un objeto literario, que se ocupa de la filología, semántica, estructura, sino que debe conducir a los nuevos lectores al paso de la interpretación. En la crítica narrativa este ejercicio hermenéutico conduce al lector a 
+
+entrar en el mundo del texto,
+
+ lo que le permite iluminar, criticar y direccionar su situación vital. Los estudios crítico históricos y literarios son esenciales para no utilizar textos con el propósito de justificar lecturas sociales sino de interpretar el texto a través de las categorías y criterios que el horizonte histórico-literario del texto propone.
+
+En relación con la multiplicidad de sentidos del 
+
+texto,
+
+ otro de los aspectos relevantes de la exégesis alejandrina oreginiana es que en la interpretación del texto el 
+
+lector
+
+ que lo recibe desempeña un rol fundamental. Para la exégesis narrativa la categoría 
+
+lector
+
+ es determinante en la tarea interpretativa. Es precisamente este método de la escuela de Alejandría «el que ahora es apreciado por los estudiosos semánticos y por la filosofía hermenéutica, al demostrar cuánto del significado de un texto depende del sujeto que lo recibe y cómo tal significado se forma en la relación intersubjetiva. (...) La filosofía hermenéutica y la semántica están descubriendo ahora que el texto está abierto, según la actitud del sujeto. He aquí la modernidad de los Padres» 
+
+83
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num83
+
+.
+
+La nueva hermenéutica ha ubicado en un puesto relevante la función del 
+
+lector
+
+ en la labor interpretativa y con ello no solo ha dimensionado el texto bíblico, de un 
+
+objeto
+
+ de estudio a un 
+
+sujeto
+
+ con el que se puede dialogar, sino que ha abierto la posibilidad del paso del sentido literal a los sentidos supraliterales que se vinculan también con el horizonte del 
+
+lector,
+
+ no desconocido por la exégesis patrística cuando considera las situaciones teológicas, apologéticas, espirituales, 
+
+hic et nunc,
+
+ en las cuales se encontraban los Padres en el momento de su labor interpretativa. Este horizonte del lector posibilita que el diálogo 
+
+lector-texto, autor-lector,
+
+ se realice en todos los momentos de la historia y el mensaje de la Escritura tampoco se convierta en una voz arqueológica sino que ilumine cualquier realidad social, en cualquier momento.
+
+En el círculo hermenéutico 
+
+texto-autor-lector
+
+ el 
+
+texto
+
+ se considera un sujeto y ayuda al 
+
+lector
+
+ no solo a reconocerlo sino que desempeña un papel fundamental en marcarle su ruta interpretativa. El 
+
+lector,
+
+ por su parte, además de interpretar el 
+
+texto,
+
+ con esa labor interpretativa concede nueva vida a ese ser 
+
+incompleto
+
+ que es el 
+
+texto.
+
+ La 
+
+operación de lectura
+
+, es la acción por la cual el lector logra reconstruir y habitar el universo, con sus valores y criterios que le propone el 
+
+texto.
+
+La labor exegética no se puede reducir al ámbito 
+
+academicista
+
+ de la Biblia, que en muchas ocasiones obvia y no permite la confrontación de la situación vital con el 
+
+texto.
+
+ La interacción o diálogo de la Escritura con sus lectores conduce el paso de su estudio, que permite ubicar su proceso de formación y redacción, al involucramiento del 
+
+lector
+
+ y sus horizontes, y conduce a una labor hermenéutica contextualizada en el mundo del 
+
+lector.
+
+ Esta labor de la exégesis patrística se propone en la crítica narrativa que involucra al 
+
+lector,
+
+ en la búsqueda no solo de transmitir un mensaje sino de encarnarlo en su vida, busca también cambiar, o al menos cuestionar, sus posiciones y valores para asumir los del 
+
+texto.
+
+ Este aporte se puede resaltar en consonancia con una teología que no sea una simple «reflexión» sino que pase de una «adherencia intelectual» a un «abarcamiento vital del don de la Palabra como escucha en la comunidad eclesial, como un encuentro con Dios, y como amor por el hermano y la hermana. Es decir acerca de la existencia total» 
+
+84
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num84
+
+.
+
+Un presupuesto fundamental para la exégesis narrativa es que los relatos se componen con el objeto de entrar al lector en el mundo del relato, de imbuir la existencia del lector en el mundo del 
+
+texto.
+
+ Esta función interpretativa sumerge al lector en un verdadero diálogo con el 
+
+texto,
+
+ para lo cual su competencia es factor esencial. Un 
+
+lector competente
+
+ no solo es quien tiene los elementos fundamentales para dialogar con el texto sino quien está en capacidad de completar los textos, es decir, de interpretarlos en su realidad personal y en su contexto comunitario:
+
+La Escritura es una obra de arte literaria, producto de muchos siglos de experiencia histórica en el contexto de la revelación, y ubicada hoy en el contexto latinoamericano. El lector latinoamericano, el exégeta y el lector competente de las nuevas comunidades, poseen un «horizonte» propio, a partir del cual se debe entablar la fusión con el «horizonte del texto» y a partir del cual se establece el diálogo 
+
+85
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#num85
+
+.
+
+El lector competente no solo es el que lee y dialoga con el texto en su contexto específico sino que es quien se ha acercado al 
+
+lector implícito
+
+ para descubrir los valores, criterios y mensaje del texto y poder realizar el ejercicio hermenéutico de iluminar, orientar, criticar y proponer ese mensaje a su contexto vital. El Maestro de Hipona desarrolla dos aspectos fundamentales en relación con el lector y su labor exegética. La competencia del lector para Agustín se determina específicamente por su preparación, «la agudeza de su inteligencia», y por la llama que lo debe inflamar, la caridad.
+
+La tarea de los exégetas bíblicos será incompleta si no arriban a la dimensión hermenéutica, al mensaje del texto como Palabra de Dios para el mundo de hoy. La exégesis bíblica ha comenzado y debe consolidar elaboraciones en el marco de la 
+
+exégesis teológica,
+
+ para que la Escritura pueda llegar a sus destinatarios y no quedarse en las aulas como un objeto arqueológico o un texto meramente histórico.
+
+Notas
+
+ 
+
+1
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu1
+
+Jean-Noél Aletti, 
+
+LArt de raconter Jésus-Christ: l'écriture narrative de l'évangile de Luc
+
+ (Paris: Seuil, 1989); Robert Alter, 
+
+The Art of Biblical Narrative
+
+ (New York: Basic Books, 1981); Luis Alonso Schôkel, 
+
+Hermenéutica de la Palabra.
+
+ Vol. I-II-III (Madrid: Cristiandad, 1986); Luis Alonso Schôkel y José María Bravo, 
+
+Apuntes de hermenéutica
+
+ (Madrid: Trotta, 1994); Roland Barthes (ed.) 
+
+Exégese et Herméneutique
+
+ (Paris: Seuil, 1971); George A. Kennedy, 
+
+New Testament interpretation through Rhetorical Criticism
+
+ (Chapel Hill: The University of North Carolina Press, 1984); André Lacocque y Paul Ricoeur, 
+
+Pensar la Biblia. Estudios exegéticos y hermenéuticos
+
+ (Barcelona: Herder, 2001); Daniel Marguerat e Yvan Bourquin, 
+
+Cómo leer los relatos bíblicos, Iniciación al análisis narrativo
+
+ (Santander: Sal Terrae, 2000); Daniel Marguerat, André Wenin y Bernadette Escaffre, 
+
+En torno a los relatos bíblicos
+
+ (Estella: Verbo divino, 2005); César Mora Paz, Massimo Grilli y Rainer Dillmann, 
+
+Lectura pragmalingüistica de la Biblia, Teoría y aplicación
+
+ (Estella: Verbo Divino, 1999); Paul Ricoeur, 
+
+Erme-neutica filosofica ed ermeneutica biblica
+
+ (Brescia: Paideia, 1977); Bar-Efrat Shimon, 
+
+Narrative Art in the Bible
+
+ (Sheffield: Sheffield Academic Press, 1989). 
+
+2
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu2
+
+El primer autor se vincula con la exégesis patrística en el contexto griego y recoge labores significativas de sus predecesores que legaron propuestas sugerentes para la interpretación bíblica. En un período posterior, el segundo autor es representativo y recoge trabajos exegéticos del escenario de la Iglesia latina con autores caracterizados por la confrontación del mensaje bíblico con su contexto pastoral en el cual ejercen su ministerio. 
+
+3
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu3
+
+Ignace de la Potterie, «L'esegesi biblica scienza della fede», en 
+
+Lesegesi cristiana oggi
+
+ (Casale Mon-ferrato: Piemme, 1991), 130. 
+
+4
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu4
+
+Pontificia Comisión Bíblica, 
+
+La interpretación de la Biblia en la Iglesia
+
+ (Madrid: PPC, 1994), 100. 
+
+5
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu5
+
+François Dreyfus, «Exégèse en Sorbonne, exégèse en Église», 
+
+Revue Biblique
+
+ 82 (1975): 321-359. 
+
+6
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu6
+
+Benedicto XVI, 
+
+Verbum Domini
+
+ (Roma: Editrice Vaticana, 2010), n. 35. 
+
+7
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu7
+
+Pablo Richard, «RIBLA-19 años de trabajo y 50 números publicados. Síntesis de nuestros logros más significativos», 
+
+Revista de interpretación bíblica latinoamericana
+
+ 50 (2005): 7. 
+
+8
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu8
+
+Benedicto XVI, 
+
+op. cit.,
+
+ n. 75. 
+
+9
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu9
+
+Hernando Barrios Tao, «Racionalidades emergentes y texto bíblico. Hacia unas nuevas sendas en la interpretación», 
+
+Theologica Xaveriana
+
+ 53, Vol. 57 (2007): 386. 
+
+10
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu10
+
+Benedicto XVI, 
+
+op. cit.,
+
+ No 45. 
+
+11
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu11
+
+Ibíd.,
+
+ n. 23. 
+
+12
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu12
+
+Hernando Barrios Tao, 
+
+op. cit.,
+
+ 373. 
+
+13
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu13
+
+Pontificia Comisión Bíblica, op. 
+
+cit.,
+
+ 43. 
+
+14
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu14
+
+Wim Weren, 
+
+Métodos de exégesis de los evangelios
+
+ (Estella: Verbo divino, 2003), 105. 
+
+15
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu15
+
+Hernando Barrios Tao, 
+
+op. cit.,
+
+ 378. 
+
+16
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu16
+
+Wolfgang Iser, 
+
+El acto de leer. Teoría del efecto estético
+
+ (Madrid: Taurus 1987), 11. 
+
+17
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu17
+
+Jean-Louis, Ska, Jean-Pierre, Sonnet y André, Wenin, 
+
+Análisis de relatos del Antiguo Testamento
+
+ (Estella: Verbo Divino, 2001), 7-8. 
+
+18
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu18
+
+Luis Alonso Schó'kel y José María Bravo, 
+
+op. cit.,
+
+ 73. 
+
+19
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu19
+
+Daniel Marguerat, «L'exégèse biblique à l'heure du lecteur», en 
+
+La Bible en récits
+
+ (Genève: Labor et Fides, 2003), 16. 
+
+20
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu20
+
+Raymond Brown, «Hermenéutica», en Raymond Brown, Joseph Fitzmyer y Roland Murphy, 
+
+Nuevo comentario bíblico de San Jerónimo
+
+ (Estella: Verbo Divino, 2004), 837. 
+
+21
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu21
+
+Joseph Ratzinger, 
+
+Jesús de Nazaret, Desde el bautismo a la transfiguración
+
+ (Bogotá: Planeta, 2007), 16. 
+
+22
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu22
+
+Hernando Barrios Tao, 
+
+op. cit.,
+
+ 390. 
+
+23
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu23
+
+Severino Croatto, «Las nuevas hermenéuticas de la lectura bíblica», 
+
+Alternativas
+
+ 11 (1998): 15-16. 
+
+24
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu24
+
+Jean-Louis Ska, Jean-Pierre Sonnet y André Wenin, 
+
+op. cit.,
+
+ 5. 
+
+25
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu25
+
+Hernando Barrios Tao, 
+
+op. cit.,
+
+ 389. 
+
+26
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu26
+
+Luis Alonso Schókel y José María Bravo, 
+
+op. cit.
+
+ 56. 
+
+27
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu27
+
+Para un acercamiento a estas técnicas y su aplicación en las narrativas de la Biblia ver: Daniel Mar-guerat e Yvan Bourquin, 
+
+op. cit.;
+
+ Daniel Marguerat, André Wenin y Bernadette Escaffre, 
+
+En torno a los relatos bíblicos, op. cit.;
+
+ Bar-Efrat Shimon, 
+
+El arte de la narrativa en la Biblia
+
+ (Madrid: Cristiandad, 2003). 
+
+28
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu28
+
+El término que no está en el castellano se refiere a la otra parte que interactúa con el narrador, es decir, a quien se dirige la narración. El 
+
+narratario
+
+ es el lector que lee la narración, quien se acerca al texto. 
+
+29
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu29
+
+Hernando Barrios Tao, op. 
+
+cit.,
+
+ 387. 
+
+30
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu30
+
+Ignace de la Potterie, «I padri della Chiesa nello studio attuale della Sacra Scrittura», en Istituto Patristicum Agustinianum, 
+
+Lo studio dei Padri della Chiesa nella ricerca attuale
+
+ (Roma: Istituto Pa-tristico Agustinianum, 1991), 487. 
+
+31
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu31
+
+Bertrand de Margerie, 
+
+An Introduction the History of Exegesis. Vol. I, The Greek Fathers
+
+ (Petersham: St. Bede's Publications, 1993). 
+
+32
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu32
+
+Ignace de la Potterie, «I padri della Chiesa nello studio attuale della Sacra Scrittura», 
+
+op. cit.,
+
+ 488. 
+
+33
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu33
+
+Cf. Congregazione per l'educazione cattolica, 
+
+Istruzione sullo studio dei padri della Chiesa nella formazione sacerdotale
+
+ (Roma: Editrice Vaticana, 1989), n. 54. 
+
+34
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu34
+
+Pontificia Comisión Bíblica, 
+
+op. cit.,
+
+ 95. 
+
+35
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu35
+
+Ibíd,
+
+ 93. 
+
+36
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu36
+
+Guido Gargano, 
+
+II sapore dei padri della chiesa nell'esegesi biblica
+
+ (Milano: Edizioni San Paolo, 2009), 193-194. 
+
+37
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu37
+
+Bertrand de Margerie, «Origen, His Greatness-Typology, His Weakness-Allegorizing», en 
+
+Introduction the History of Exegesis.
+
+ Vol. I, The Greek Fathers (Petersham: St. Bede's Publications, 1993), 113. 
+
+38
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu38
+
+Princ
+
+ 4,3,15. Origéne. 
+
+Traité des principes. Introduction, texte critique, traduction, commentaire et fragments par Henri Crouzel et Manlio Simonetti.
+
+ Tomes I-IV. Sources chrétiennes, 252-253, 268-269. (Paris: Du Cerf, 1980). 
+
+39
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu39
+
+Salvatore Di Cristina, 
+
+Esegesi biblica dei Padri
+
+ (Palermo: Edizioni Lussografica, 2002), 60-61. 
+
+40
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu40
+
+Innocenzo Gargano, «La metodologia esegetica dei Padri», en 
+
+Metodologia dell'Antico Testamento,
+
+ editado por Horacio Simian-Yofre (Bologna: Edizioni Dehoniane, 1994), 198. 
+
+41
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu41
+
+Eduardo Torres Moreno, «Conversación en Roma con Manlio Simonetti», 
+
+Anuario de Historia de la
+
+ 
+
+Iglesia
+
+ 18 (2009): 353-354. 
+
+42
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu42
+
+Ibíd.,
+
+ 353-354. 
+
+43
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu43
+
+Manlio Simonetti. 
+
+Lettere e/o allegoria. Un contributo alla storia dell'esegesi patrística.
+
+ Studia Ephe-meridis Augustinianum (Roma: Institutum Patristicum Augustinianum, 1985), 84. 
+
+44
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu44
+
+Ibíd.,
+
+ 79. 
+
+45
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu45
+
+Samuel Fernández Eyzaguirre, «Pablo, maestro de exégesis bíblica, según Orígenes», 
+
+Teología y vida
+
+ 4, Vol. LIV (2013): 621. 
+
+46
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu46
+
+Ibíd.,
+
+ 615. 
+
+47
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu47
+
+Manlio Simonetti, 
+
+op. cit.,
+
+ 73-77. 
+
+48
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu48
+
+Bertrand De Margerie, 
+
+Introduction a l'histoire de l'exégèse.
+
+ Vol. III, Saint Augustin (Paris: Du Cerf, 1983), 56. 
+
+49
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu49
+
+Ibíd.,
+
+ 57. 
+
+50
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu50
+
+Prospero Grech, «I principi ermeneutici di Sant'Agostino: una valutazione», 
+
+Lateranum
+
+ 48 (1982): 210. 
+
+51
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu51
+
+Manlio Simonetti. 
+
+op. cit.,
+
+ 73. 
+
+52
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu52
+
+Salvatore Di Cristina, 
+
+op. cit.,
+
+ 56. 
+
+53
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu53
+
+Ídem. 
+
+54
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu54
+
+Samuel Fernández Eyzaguirre, 
+
+op. cit.,
+
+ 613-614. 
+
+55
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu55
+
+Salvatore Di Cristina, 
+
+op. cit.,
+
+ 51. 
+
+56
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu56
+
+Ibíd.,
+
+ 57. 
+
+57
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu57
+
+Celestino Corsato, 
+
+Letture patristiche della Scrittura
+
+ (Padova: Edizioni Messaggero, 2003), 28-29. 
+
+58
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu58
+
+Innocenzo Gargano, 
+
+op. cit.,
+
+ 200. 
+
+59
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu59
+
+Guido Gargano, 
+
+op. cit.,
+
+ 54-55. GCS, V, 14. 
+
+60
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu60
+
+Ídem. 
+
+61
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu61
+
+Ídem. 
+
+62
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu62
+
+Ídem. 
+
+63
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu63
+
+De Doctrina Christiana,
+
+ 3, 27,38. San Agustín, 
+
+La Dottrina Cristiana. Opere di Sant'Agostino
+
+ (Roma: Città Nuova Editrice, 1992). 
+
+64
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu64
+
+Prospero Grech, «Principi ermeneutici di Sant'Agostino nel 
+
+De Doctrina Christiana»,
+
+ en San Agustín. 
+
+La Dottrina Cristiana. Opere di Sant'Agostino
+
+ (Roma: Città Nuova Editrice, 1992), IXX. 
+
+65
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu65
+
+Ídem. 
+
+66
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu66
+
+Guido Gargano, 
+
+op. cit.,
+
+ 60. La referencia de Gargano en: 
+
+In Ez. Hom.,
+
+ II, 2, GCS, VIII. 
+
+67
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu67
+
+San Agustín, 
+
+La Dottrina Cristiana, op. cit.,
+
+ VII. 
+
+68
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu68
+
+Guido Gargano, 
+
+op. cit.,
+
+ 196-197. 
+
+69
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu69
+
+Ídem. 
+
+70
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu70
+
+De Princ.
+
+ IV 2, 4. Origéne. 
+
+Traité des principes. op. cit.
+
+ 
+
+71
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu71
+
+De Doct.
+
+ 27, 38. San Agustín, 
+
+La Dottrina Cristiana. Opere di Sant'Agostino, op. cit.
+
+ 
+
+72
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu72
+
+De las cuatro secciones del Primer Libro que conforma el texto agustiniano se destacan los «principios de exégesis bíblica» (1,35, 39-1, 40, 44). El Segundo Libro desarrolla tres secciones: observaciones y principios sobre los signos y sobre el canon de la Escritura (2,1,1-2,8,13); conocimiento de las lenguas bíblicas y valoración de las versiones de la Biblia (2,16,14-2,16,23); el auxilio de las ciencias naturales, de las disciplinas humanísticas y de la filosofía en el estudio de la Escritura (2,16,242,46,63). El Tercer Libro tiene como objeto la interpretación de la Escritura en sus tres secciones. ambigüedad del texto debido a causas de carácter gramatical (3,1,1-3,4,8); ambigüedad de la Escritura debido al uso traslaticio de los términos, la caridad como criterio hermenéutico (3,5,9-3,29,41); discusión sobre las siete reglas de Ticonio (3,30,42-3,37,56). El Cuarto Libro relacionado con el maestro y el predicador cristiano expone el modo de explicar y enseñar las verdades conocidas. 
+
+73
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu73
+
+San Agustín, 
+
+La Dottrina Cristiana. Opere di Sant'Agostino, op. cit.,
+
+ VII. 
+
+74
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu74
+
+Bertrand De Margerie, 
+
+Introduction a l'histoire de l'exégese, op. cit.,
+
+ 33. 
+
+75
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu75
+
+Prospero Grech, «Principi ermeneutici di Sant'Agostino nel 
+
+De Doctrina Christiana», op. cit.,
+
+ LXII. 
+
+76
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu76
+
+El Tercer libro tiene como objeto la interpretación de la Escritura en sus tres secciones: ambigüedad del texto debido a causas de carácter gramatical (3,1,1-3,4,8); ambigüedad de la Escritura debido al uso traslaticio de los términos, la caridad como criterio hermenéutico (3,5,9-3,29,41); discusión sobre las siete reglas de Ticonio (3,30,42-3,37,56). El cuarto libro se relaciona con el maestro y el predicador cristiano y su contenido expone el modo de explicar y enseñar las verdades conocidas. 
+
+77
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu77
+
+Ignace de la Potterie, «I padri della Chiesa nello studio attuale della Sacra Scrittura», 
+
+op. cit.,
+
+ 491. 
+
+78
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu78
+
+Guido Gargano, 
+
+op. cit.,
+
+ 196. 
+
+79
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu79
+
+Concilio Vaticano II, 
+
+Constitución Dogmática Dei Verbum,
+
+ consultada en abril 13, 2014. 
+
+http://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_sp.html
+
+http://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_sp.html
+
+. 
+
+80
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu80
+
+Benedicto XVI, 
+
+op. cit.,
+
+ n. 29. 
+
+81
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu81
+
+Manlio Simonetti, 
+
+op. cit.,
+
+ 19. 
+
+82
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu82
+
+Congregazione per l'educazione cattolica, 
+
+op. cit.,
+
+ n. 9. 
+
+83
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu83
+
+Eduardo Torres Moreno, 
+
+op. cit.,
+
+ 353-354. 
+
+84
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu84
+
+Gustavo Gutiérrez, «The Task and content of liberation theology», en Christopher Rowland, (ed.), 
+
+The Cambridge companion to liberation theology
+
+ (Cambridge University Press, 1999), 29. 
+
+85
+
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-14682015000200007#nu85
+
+Hernando Barrios Tao, op. cit., 390.
+
+Bibliografía
+
+Aletti, Jean-Noél. 
+
+L'Art de raconter Jésus-Christ: l'écriture narrative de l'évangile de Luc.
+
+ Paris: Seuil, 1989. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Alonso Schókel, Luis. 
+
+Hermenéutica de la Palabra.
+
+ Vol. I-II-III. Madrid: Cristiandad, 1986. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Alonso Schókel, Luis y Bravo, José María. 
+
+Apuntes de hermenéutica.
+
+ Madrid: Trotta, 1994. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Alter, Robert. 
+
+The Art of Biblical Narrative.
+
+ New York: Basic Books, 1981. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Barrios Tao, Hernando. «Racionalidades emergentes y texto bíblico. Hacia unas nuevas sendas en la interpretación». 
+
+Theologica Xaveriana
+
+ 53, Vol. 57 (2007): 371-398. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Barthes, Roland, ed. 
+
+Exégese et Herméneutique.
+
+ Paris: Seuil, 1971. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Basevi, Claudio. 
+
+San Agustín: la interpretación del Nuevo Testamento: criterios exegéticos propuestos por S. Agustín en el «De Doctrina Christiana», en el «contra Faustum»
+
+ y 
+
+en el «De
+
+ 
+
+Consensu Evangelistarum».
+
+ Pamplona: Ediciones Universidad de Navarra, 1977. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Benedicto XVI. 
+
+Verbum Domini.
+
+ Roma: Editrice Vaticana, 2010. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Brown, Raymond; Fitzmyer, Joseph y Murphy, Roland. 
+
+Nuevo comentario bíblico de San Jerónimo.
+
+ Estella: Verbo Divino, 2004. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Concilio Vaticano II. 
+
+Constitución Dogmática Dei Verbum.
+
+ Consultada en abril 13, 2014. 
+
+http://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_sp.html
+
+http://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_sp.html
+
+ (DV 2). [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Congregazione per l'educazione cattolica. 
+
+Istruzione sullo studio dei padri della Chiesa nella formazione sacerdotale.
+
+ Roma: Editrice Vaticana, 1989. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Corsato, Celestino. 
+
+Letture patristiche della Scrittura.
+
+ Padova: Edizioni Messaggero, 2003. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Croatto, Severino. «Las nuevas hermenéuticas de la lectura bíblica». 
+
+Alternativas
+
+ 11 (1998): 15-36. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+De la Potterie, Ignace. «I padri della Chiesa nello studio attuale della Sacra Scrittura». En Istituto Patristico Agustinianum, 
+
+Lo studio dei Padri della Chiesa nella ricerca attuale.
+
+ Roma: Istituto Patristico Agustinianum, 1991, 486-494. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+_____. «L'esegesi biblica scienza della fede». En AA.VV 
+
+Lesegesi
+
+ 
+
+cristiana oggi.
+
+ Casale Monferrato: Piemme, 1991. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+De Margerie, Bertrand. 
+
+An Introduction the History of Exegesis. Vol. I, The Greek Fathers.
+
+ Petersham: St. Bede's Publications, 1993. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+_____. 
+
+Introduction a l'histoire de l'exégèse.
+
+ Vol. III, Saint Augustin. Paris: Du Cerf, 1983. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+_____. «Origen, His Greatness-Typology, His Weakness-Allegorizing». En 
+
+Introduction the History of Exegesis.
+
+ Vol. I, The Greek Fathers, 95-116. Petersham: St. Bede's Publications, 1993. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Di Cristina, Salvatore. 
+
+Esegesi biblica dei Padri.
+
+ Palermo: Edizioni Lussografica, 2002. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Dreyfus, François. «Exégèse en Sorbonne, exégèse en Église». 
+
+Revue Biblique
+
+ 82 (1975): 321-359. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Fernández Eyzaguirre, Samuel. «Pablo, maestro de exégesis bíblica, según Orígenes». 
+
+Teología y vida
+
+ 4, Vol. LIV (2013) : 605-623. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Gargano, Guido. 
+
+Il sapore dei padri della chiesa nell'esegesi biblica.
+
+ Milano: Edizioni San Paolo, 2009. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Gargano, Innocenzo. «Alle fonti del metodo esegetico dei Padri: Origene». 
+
+Didaskalia
+
+ XXXIX, 2 (2009): 51-66. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+_____. «La metodologia esegetica dei Padri». En 
+
+Metodologia
+
+ 
+
+dell'Antico Testamento.
+
+ Editado por Horacio Simian-Yofre, 197-222. Bologna: Edizioni Dehoniane, 1994. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Grech, Prospero. «I principi ermeneutici di Sant'Agostino: una valu-tazione». 
+
+Lateranum
+
+ 48 (1982): 209-223. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+_____. «Principi ermeneutici di Sant'Agostino nel 
+
+De Doctrina
+
+ 
+
+Christiana».
+
+ En San Agustín. 
+
+La Dottrina Cristiana. Opere di Sant'Agostino.
+
+ XLI-LXXII. Roma: Città Nuova Editrice, 1992. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Gutierrez, Gustavo. «The Task and content of liberation theology». En 
+
+The Cambridge companion to liberation theology,
+
+ editado por Christopher Rowland, 19-38. Cambridge: Cambridge University Press, 1999. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Iser, Wolfgang. 
+
+El acto de leer, Teoría del efecto estético.
+
+ Madrid: Taurus, 1987. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Kennedy, George A. 
+
+New Testament interpretation through Rhetorical Criticism.
+
+ Chapel Hill: The University of North Carolina Press, 1984. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Lacocque, André y Ricoeur, Paul. 
+
+Pensar la Biblia. Estudios exegéticos y hermenéuticos.
+
+ Barcelona: Herder, 2001. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Marguerat, Daniel. «L'exégèse biblique à l'heure du lecteur». En 
+
+La Bible en récits.
+
+ Genève: Labor et Fides, 2003, 13-39. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Marguerat, Daniel y Bourquin, Yvan. 
+
+Cómo leer los relatos bíblicos, Iniciación al análisis narrativo.
+
+ Santander: Sal Terrae, 2000. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Marguerat, Daniel, Wenin André y Escaffre, Bernadette. 
+
+En torno a los relatos bíblicos.
+
+ Estella: Verbo Divino, 2005. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Mora Paz, César; Grilli, Massimo y Dillmann, Rainer. 
+
+Lectura prag-malingüistica de la Biblia, Teoría y aplicación.
+
+ Estella: Verbo Divino, 1999. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Origène. 
+
+Traité des principes. Introduction, texte critique, traduction, commentaire et fragments par Henri Crouzel et Manlio Si-monetti.
+
+ Tomes I-IV. Sources chrétiennes, 252-253, 268-269. Paris: Du Cerf, 1980. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Pontificia Comisión Bíblica. 
+
+La interpretación de la Biblia en la Iglesia.
+
+ Madrid: PPC, 1994. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Ratzinger, Joseph. 
+
+Jesús de Nazaret, Desde el bautismo a la transfiguración.
+
+ Bogotá: Planeta, 2007. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Richard, Pablo. «RIBLA-19 años de trabajo y 50 números publicados. Síntesis de nuestros logros más significativos». 
+
+Revista de interpretación bíblica latinoamericana
+
+ 50 (2005): 7-13. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Ricoeur, Paul. 
+
+Ermeneutica filosofica ed ermeneutica bíblica.
+
+ Brescia: Paideia, 1977. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+San Agustín. 
+
+La Dottrina Cristiana. Opere di Sant'Agostino.
+
+ Roma: Città Nuova Editrice, 1992. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Shimon, Bar-Efrat. 
+
+El arte de la narrativa en la Biblia.
+
+ Madrid: Cristiandad, 2003. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+_____. 
+
+Narrative Art in the Bible.
+
+ Sheffield: Sheffield Academic Press, 1989. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Simonetti, Manlio. 
+
+Lettere e/o allegoria. Un contributo alla storia dell'esegesi patrística.
+
+ Studia Ephemeridis Augustinianum. Roma: Institutum Patristicum Augustinianum, 1985. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Simonetti, Manlio y Vian, Giovanni Maria. «L'esegesi patrística nella ricerca contemporánea». 
+
+Anuario de Historia de la Iglesia
+
+ 6 (1997): 241-267. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Ska, Jean-Louis, Sonnet, Jean-Pierre y Wenin, André. 
+
+Análisis de relatos del Antiguo Testamento.
+
+ Estella: Verbo Divino, 2001. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Torres Moreno, Eduardo. «Conversación en Roma con Manlio Simonetti». 
+
+Anuario de Historia de la Iglesia,
+
+ 18 (2009): 349-359. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Weren, Wim. 
+
+Métodos de exégesis de los evangelios.
+
+ Estella: Verbo divino, 2003. [ 
+
+Links
+
+javascript:void(0);
+
+ ]
+
+Franciscanum. Revista de las Ciencias del Espíritu
+
+Facultad de Filosofía y Facultad de Teología
+
+Universidad de San Buenaventura, Bogotá, Colombia
+
+Carrera 8 H No. 172-20
+
+Tel. (57-1) 6671090 Fax. (57-1) 6773003
+
+ 
+
+franciscanum@usbbog.edu.co
+
+mailto:franciscanum@usbbog.edu.co

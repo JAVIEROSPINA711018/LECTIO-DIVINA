@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ordo Vivo - El Ciclo Litúrgico</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#aa0e0e",
+                        "primary-light": "#d44a4a",
+                        "background-light": "#f9f5ef", // Vellum-like
+                        "background-dark": "#221010",
+                        "surface-light": "#fffdf9", // Bleached parchment
+                        "surface-dark": "#2c1a1a",
+                        "gold": "#d4af37",
+                        "liturgical-green": "#2d6a4f",
+                        "liturgical-purple": "#5e3a8c",
+                        "liturgical-white": "#f0f0f0",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"]
+                    },
+                    backgroundImage: {
+                        'paper-texture': "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIi8+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNjY2MiIG9wYWNpdHk9IjAuMSIvPgo8L3N2Zz4=')",
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased min-h-screen flex flex-col relative overflow-hidden">
+<!-- Header Section -->
+<header class="pt-8 pb-4 px-6 bg-background-light dark:bg-background-dark sticky top-0 z-20 border-b border-primary/10">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h1 class="text-3xl font-bold text-primary dark:text-primary-light italic tracking-tight">El Ciclo Litúrgico</h1>
+<p class="text-sm text-slate-500 dark:text-slate-400 font-medium uppercase tracking-widest mt-1">Año B • Tiempo Ordinario</p>
+</div>
+<button class="flex items-center justify-center size-10 rounded-full bg-surface-light dark:bg-surface-dark shadow-sm border border-primary/10 text-primary hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined">calendar_today</span>
+</button>
+</div>
+<!-- Season Selector (Tabs) -->
+<div class="flex gap-2 overflow-x-auto no-scrollbar pb-2 mask-linear-fade">
+<button class="flex-shrink-0 px-4 py-2 rounded-full bg-primary text-white text-sm font-semibold shadow-md shadow-primary/20">
+                Octubre
+            </button>
+<button class="flex-shrink-0 px-4 py-2 rounded-full bg-surface-light dark:bg-surface-dark border border-primary/10 text-slate-600 dark:text-slate-300 text-sm font-medium hover:bg-primary/5 transition-colors">
+                Noviembre
+            </button>
+<button class="flex-shrink-0 px-4 py-2 rounded-full bg-surface-light dark:bg-surface-dark border border-primary/10 text-slate-600 dark:text-slate-300 text-sm font-medium hover:bg-primary/5 transition-colors">
+                Adviento
+            </button>
+<button class="flex-shrink-0 px-4 py-2 rounded-full bg-surface-light dark:bg-surface-dark border border-primary/10 text-slate-600 dark:text-slate-300 text-sm font-medium hover:bg-primary/5 transition-colors">
+                Navidad
+            </button>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto pb-24 px-4 bg-paper-texture">
+<!-- Visual Timeline / Wheel Segment -->
+<div class="py-6 relative">
+<div class="absolute top-1/2 left-0 w-full h-px bg-primary/20 -z-10"></div>
+<div class="flex justify-between items-center px-2">
+<!-- Past Day -->
+<div class="flex flex-col items-center gap-2 opacity-50 scale-90">
+<div class="size-3 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<span class="text-xs font-medium text-slate-500">22</span>
+</div>
+<!-- Past Day -->
+<div class="flex flex-col items-center gap-2 opacity-75 scale-95">
+<div class="size-3 rounded-full bg-slate-400 dark:bg-slate-600"></div>
+<span class="text-xs font-medium text-slate-500">23</span>
+</div>
+<!-- Current Day (Highlighted) -->
+<div class="flex flex-col items-center gap-2 scale-110 transform transition-transform">
+<div class="size-12 rounded-full bg-surface-light dark:bg-surface-dark border-2 border-primary shadow-lg shadow-primary/20 flex items-center justify-center relative z-10">
+<span class="text-lg font-bold text-primary">24</span>
+</div>
+<span class="text-xs font-bold text-primary uppercase tracking-wider">Hoy</span>
+</div>
+<!-- Future Day -->
+<div class="flex flex-col items-center gap-2 opacity-75 scale-95">
+<div class="size-3 rounded-full bg-slate-300 dark:bg-slate-600"></div>
+<span class="text-xs font-medium text-slate-500">25</span>
+</div>
+<!-- Future Day -->
+<div class="flex flex-col items-center gap-2 opacity-50 scale-90">
+<div class="size-3 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<span class="text-xs font-medium text-slate-500">26</span>
+</div>
+</div>
+</div>
+<!-- Agenda List -->
+<div class="space-y-4 mt-2">
+<!-- Today Card -->
+<div class="relative group">
+<div class="absolute -left-1 top-4 bottom-4 w-1 bg-primary rounded-full"></div>
+<article class="ml-3 bg-surface-light dark:bg-surface-dark rounded-xl p-5 shadow-sm border border-primary/10 relative overflow-hidden">
+<!-- Ornamental corner watermark -->
+<div class="absolute -right-4 -top-4 text-primary/5 dark:text-primary/10 pointer-events-none">
+<span class="material-symbols-outlined text-8xl">church</span>
+</div>
+<div class="flex justify-between items-start mb-2 relative z-10">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-liturgical-green/10 text-liturgical-green border border-liturgical-green/20">Tiempo Ordinario</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-gold/10 text-yellow-700 border border-gold/20">Memoria</span>
+</div>
+<span class="text-xs font-semibold text-primary">Martes</span>
+</div>
+<div class="relative z-10">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-1 leading-tight">San Antonio María Claret</h2>
+<p class="text-sm text-slate-600 dark:text-slate-400 italic">Obispo y Fundador</p>
+</div>
+<div class="mt-4 pt-4 border-t border-primary/10 flex items-center justify-between relative z-10">
+<div class="flex gap-3">
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span class="text-xs font-medium">Lc 12, 35-38</span>
+</div>
+</div>
+<button class="text-primary hover:text-primary-light transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</article>
+</div>
+<!-- Tomorrow -->
+<div class="relative group opacity-80 hover:opacity-100 transition-opacity">
+<div class="absolute -left-1 top-4 bottom-4 w-1 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+<article class="ml-3 bg-white dark:bg-surface-dark/50 rounded-lg p-4 border border-slate-100 dark:border-white/5 flex items-center gap-4">
+<div class="flex flex-col items-center justify-center min-w-[3rem] border-r border-slate-100 dark:border-white/5 pr-4">
+<span class="text-2xl font-bold text-slate-300 dark:text-slate-600">25</span>
+<span class="text-[10px] uppercase font-bold text-slate-400">Mié</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<div class="size-2 rounded-full bg-liturgical-green"></div>
+<span class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Feria</span>
+</div>
+<h3 class="text-lg font-semibold text-slate-700 dark:text-slate-200">Semana XXIX del T. Ordinario</h3>
+</div>
+<span class="material-symbols-outlined text-slate-300 dark:text-slate-600">chevron_right</span>
+</article>
+</div>
+<!-- Thursday -->
+<div class="relative group opacity-80 hover:opacity-100 transition-opacity">
+<div class="absolute -left-1 top-4 bottom-4 w-1 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+<article class="ml-3 bg-white dark:bg-surface-dark/50 rounded-lg p-4 border border-slate-100 dark:border-white/5 flex items-center gap-4">
+<div class="flex flex-col items-center justify-center min-w-[3rem] border-r border-slate-100 dark:border-white/5 pr-4">
+<span class="text-2xl font-bold text-slate-300 dark:text-slate-600">26</span>
+<span class="text-[10px] uppercase font-bold text-slate-400">Jue</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<div class="size-2 rounded-full bg-liturgical-green"></div>
+<span class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Feria</span>
+</div>
+<h3 class="text-lg font-semibold text-slate-700 dark:text-slate-200">Semana XXIX del T. Ordinario</h3>
+</div>
+<span class="material-symbols-outlined text-slate-300 dark:text-slate-600">chevron_right</span>
+</article>
+</div>
+<!-- Friday (Feast highlighted slightly) -->
+<div class="relative group opacity-90 hover:opacity-100 transition-opacity">
+<div class="absolute -left-1 top-4 bottom-4 w-1 bg-gold rounded-full"></div>
+<article class="ml-3 bg-surface-light dark:bg-surface-dark rounded-lg p-4 border border-primary/5 shadow-sm flex items-center gap-4">
+<div class="flex flex-col items-center justify-center min-w-[3rem] border-r border-primary/10 pr-4">
+<span class="text-2xl font-bold text-slate-800 dark:text-slate-200">27</span>
+<span class="text-[10px] uppercase font-bold text-slate-500">Vie</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<div class="size-2 rounded-full bg-liturgical-white border border-slate-200"></div>
+<span class="text-xs font-semibold text-yellow-700 uppercase tracking-wide">Fiesta</span>
+</div>
+<h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100">Jesucristo Sumo y Eterno Sacerdote</h3>
+</div>
+<span class="material-symbols-outlined text-primary/40">star</span>
+</article>
+</div>
+<!-- Sunday Preview -->
+<div class="pt-4">
+<div class="flex items-center gap-4 mb-2 opacity-60">
+<div class="h-px bg-slate-300 dark:bg-slate-700 flex-1"></div>
+<span class="text-xs uppercase font-bold text-slate-400 tracking-widest">Domingo</span>
+<div class="h-px bg-slate-300 dark:bg-slate-700 flex-1"></div>
+</div>
+<div class="relative group">
+<div class="absolute -left-1 top-4 bottom-4 w-1 bg-liturgical-green rounded-full"></div>
+<article class="ml-3 bg-surface-light dark:bg-surface-dark rounded-xl p-5 shadow-sm border border-slate-200 dark:border-slate-700 relative overflow-hidden">
+<div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-liturgical-green/5 to-transparent pointer-events-none"></div>
+<div class="flex justify-between items-start mb-2 relative z-10">
+<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-liturgical-green/10 text-liturgical-green border border-liturgical-green/20">Dominica</span>
+<span class="text-xs font-semibold text-slate-500">29 Oct</span>
+</div>
+<div class="relative z-10">
+<h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-1 leading-tight">XXX Domingo del Tiempo Ordinario</h2>
+<p class="text-sm text-slate-600 dark:text-slate-400 italic">"Amarás al Señor tu Dios..."</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<div class="absolute bottom-24 right-4 z-30">
+<button class="bg-primary hover:bg-primary-light text-white rounded-full p-4 shadow-lg shadow-primary/30 flex items-center justify-center transition-all hover:scale-105 active:scale-95">
+<span class="material-symbols-outlined">today</span>
+</button>
+</div>
+<!-- Bottom Navigation Component (Reused from input) -->
+<nav class="relative z-30 bg-surface-light dark:bg-surface-dark border-t border-slate-200 dark:border-slate-800 pb-safe pt-2">
+<div class="flex justify-around items-end px-2 pb-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:-translate-y-0.5 transition-transform">cottage</span>
+<p class="text-[10px] font-medium tracking-wide">Inicio</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:-translate-y-0.5 transition-transform">menu_book</span>
+<p class="text-[10px] font-medium tracking-wide">Lecturas</p>
+</a>
+<!-- Active State -->
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<div class="bg-primary/10 rounded-full px-4 py-1 mb-1">
+<span class="material-symbols-outlined text-[24px]">calendar_month</span>
+</div>
+<p class="text-[10px] font-bold tracking-wide">Calendario</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:-translate-y-0.5 transition-transform">child_care</span>
+<p class="text-[10px] font-medium tracking-wide">Niños</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:-translate-y-0.5 transition-transform">person</span>
+<p class="text-[10px] font-medium tracking-wide">Perfil</p>
+</a>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+  fetch('https://feed.evangelizo.org/v2/reader.php?date=20260227&type=xml&lang=SP')
+    .then(r => r.text())
+    .then(t => console.log("SUCCESS", t.substr(0, 50)))
+    .catch(e => console.error("ERROR", e));
+</script>
+</body>
+</html>

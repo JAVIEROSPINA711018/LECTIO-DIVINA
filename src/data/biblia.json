@@ -1,0 +1,25 @@
+{
+  "version": "Biblia de Jerusalén (Ejemplo)",
+  "testamentos": [
+    {
+      "nombre": "Antiguo Testamento",
+      "libros": [
+        {
+          "nombre": "Génesis",
+          "abreviatura": "Gn",
+          "capitulos": [
+            {
+              "numero": 1,
+              "versiculos": [
+                {
+                  "numero": 1,
+                  "texto": "En el principio creó Dios los cielos y la tierra."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

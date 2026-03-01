@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #8B2E2E;
+  --color-background-light: #F9F5EF;
+  --color-background-dark: #221010;
+  --color-surface: #FFFDF9;
+  --color-ink: #2C2424;
+  --color-gold: #D4AF37;
+  --color-marian-blue: #4A6FA5;
+  --color-stone: #8C8580;
+
+  --font-display: 'Young Serif', serif;
+  --font-body: 'Lora', serif;
+  --font-ui: 'Newsreader', serif;
+
+  --background-image-vellum-texture: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjRjlGNUVGIi8+CjxyZWN0IHdpZHRoPSI0IiBoZWlnaHQ9IjQiIGZpbGw9IiM4QzI4MjgiIG9wYWNpdHk9IjAuMDIiLz4KPC9zdmc+');
+}
+
+/* Custom scrollbar hiding for clean reading */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Drop cap styling */
+.drop-cap::first-letter {
+    float: left;
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    line-height: 0.85;
+    padding-right: 0.5rem;
+    padding-top: 0.1rem;
+    color: var(--color-primary);
+}
+
+/* Dotted underline for interactive terms */
+.interactive-term {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: var(--color-marian-blue);
+    text-decoration-thickness: 2px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.interactive-term:hover {
+    color: var(--color-marian-blue);
+}
+
+body {
+  min-height: max(884px, 100dvh);
+}
