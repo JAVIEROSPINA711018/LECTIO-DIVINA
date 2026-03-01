@@ -541,12 +541,28 @@ app.get('/api/cache-status', (req, res) => {
     });
 });
 
-// Health check
+// Health check / Debug
 app.get('/api/health', (req, res) => {
+    let sourceFilesCount = -1;
+    try {
+        sourceFilesCount = fs.existsSync(SOURCES_DIR) ? fs.readdirSync(SOURCES_DIR).length : -1;
+    } catch (err) { }
+
+    const debugInfo = {
+        hasApiKey: !!apiKey,
+        apiKeyLength: apiKey ? apiKey.length : 0,
+        sourcesPath: SOURCES_DIR,
+        cwd: process.cwd(),
+        dirname: __dirname,
+        sourceFilesCount: sourceFilesCount,
+        cachedEntries: Object.keys(diskCache).length,
+        NODE_ENV: process.env.NODE_ENV,
+    };
+
     if (genAI && fileManager) {
-        res.json({ status: 'ok', usingLocalSources: true, connected: true, cachedEntries: Object.keys(diskCache).length });
+        res.json({ status: 'ok', usingLocalSources: true, connected: true, ...debugInfo });
     } else {
-        res.json({ status: 'degraded', usingLocalSources: false, connected: false, cachedEntries: Object.keys(diskCache).length });
+        res.json({ status: 'degraded', usingLocalSources: false, connected: false, ...debugInfo });
     }
 });
 
