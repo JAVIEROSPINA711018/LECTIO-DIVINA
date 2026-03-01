@@ -24,12 +24,14 @@ function dedup(key, fn) {
 }
 
 // ─── Backend query (single source of truth) ───────────────────
-async function queryBackend(verseText, readingRef, type) {
+async function queryBackend(verseText, readingRef, type, isImage = false) {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 120000); // 2 min max
 
+    const endpoint = isImage ? `${BACKEND_URL}/api/image` : `${BACKEND_URL}/api/context`;
+
     try {
-        const response = await fetch(`${BACKEND_URL}/api/context`, {
+        const response = await fetch(endpoint, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ verseText, readingRef, type }),
@@ -37,11 +39,35 @@ async function queryBackend(verseText, readingRef, type) {
         });
         clearTimeout(timeoutId);
 
-        if (!response.ok) throw new Error(`Backend ${response.status}`);
+        if (!response.ok) {
+            // Check if backend returned 500 (could be encapsulating a 429 from Gemini)
+            if (response.status === 500 || response.status === 429) {
+                const errText = await response.text();
+                throw new Error(`QuotaError: ${response.status} - ${errText}`);
+            }
+            throw new Error(`Backend ${response.status}`);
+        }
         return await response.json();
     } catch (err) {
         clearTimeout(timeoutId);
         throw err;
+    }
+}
+
+async function retryQueryBackend(verseText, readingRef, type, isImage = false, maxRetries = 2) {
+    let attempt = 0;
+    while (attempt < maxRetries) {
+        try {
+            return await queryBackend(verseText, readingRef, type, isImage);
+        } catch (error) {
+            attempt++;
+            if (error.message.includes('QuotaError') && attempt < maxRetries) {
+                console.warn(`⏳ Rate limit hit. Retrying in ${attempt * 4} seconds...`);
+                await new Promise(res => setTimeout(res, attempt * 4000));
+            } else {
+                throw error;
+            }
+        }
     }
 }
 
@@ -55,7 +81,7 @@ export const geminiService = {
 
         return dedup(cacheKey, async () => {
             try {
-                const data = await queryBackend(verseText, readingRef, 'historico_cultural');
+                const data = await retryQueryBackend(verseText, readingRef, 'historico_cultural');
                 const result = {
                     historico: data.historico || '',
                     cultural: data.cultural || '',
@@ -82,7 +108,7 @@ export const geminiService = {
 
         return dedup(cacheKey, async () => {
             try {
-                const data = await queryBackend(verseText, readingRef, 'teologico');
+                const data = await retryQueryBackend(verseText, readingRef, 'teologico');
                 const result = {
                     teologico: data.teologico || '',
                     source: 'gemini',
@@ -106,19 +132,7 @@ export const geminiService = {
 
         return dedup(cacheKey, async () => {
             try {
-                const controller = new AbortController();
-                const timeoutId = setTimeout(() => controller.abort(), 60000); // 1 min max
-
-                const response = await fetch(`${BACKEND_URL}/api/image`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ verseText, readingRef }),
-                    signal: controller.signal,
-                });
-                clearTimeout(timeoutId);
-
-                if (!response.ok) throw new Error(`Backend ${response.status}`);
-                const data = await response.json();
+                const data = await retryQueryBackend(verseText, readingRef, 'image', true);
 
                 const result = {
                     imageUrl: data.imageUrl || '/images/home_hero.png',

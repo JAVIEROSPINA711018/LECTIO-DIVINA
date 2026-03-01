@@ -481,6 +481,7 @@ async function getImageContext(verseText, readingRef, contextType = 'image') {
     try {
         const payload = {
             contents: [{ parts: [{ text: promptQuery }] }],
+            // Removed contentsParts with files to save quota 
         };
 
         const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent?key=${apiKey}`, {
