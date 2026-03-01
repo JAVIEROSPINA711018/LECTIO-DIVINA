@@ -197,20 +197,33 @@ export default function AppReading() {
                     <span className="material-symbols-outlined font-thin text-[40px] text-primary animate-pulse">psychiatry</span>
                     <p className="text-stone font-ui font-medium animate-pulse text-sm text-center">Analizando contexto histórico y cultural...</p>
                   </div>
+                ) : historicoCultural?.error ? (
+                  <div className="flex flex-col items-center justify-center p-8 gap-3 text-center">
+                    <span className="material-symbols-outlined text-gold text-4xl">schedule</span>
+                    <p className="text-ink font-bold text-base">Contexto en preparación</p>
+                    <p className="text-stone text-sm leading-relaxed">
+                      El contexto histórico-cultural de esta lectura estará disponible pronto. El sistema lo generará esta noche automáticamente.
+                    </p>
+                    <p className="text-stone/60 text-xs mt-2">Mientras tanto, puedes leer la <span className="font-bold text-primary">Reflexión Apostólica</span> en la pestaña Teológico.</p>
+                  </div>
                 ) : historicoCultural ? (
                   <div className="space-y-4">
-                    {historicoCultural.error && <div className="p-3 bg-red-50 text-red-800 text-sm rounded-lg border border-red-200">{historicoCultural.error}</div>}
-                    <h4 className="font-ui font-bold text-primary text-sm flex items-center gap-1"><span className="material-symbols-outlined text-[16px]">history_edu</span> Histórico</h4>
-                    <p className="text-sm leading-relaxed text-ink/90 text-justify bg-surface-light p-3 rounded-xl border border-[#E5E0D8]">{historicoCultural.historico}</p>
+                    {historicoCultural.historico && <>
+                      <h4 className="font-ui font-bold text-primary text-sm flex items-center gap-1"><span className="material-symbols-outlined text-[16px]">history_edu</span> Histórico</h4>
+                      <p className="text-sm leading-relaxed text-ink/90 text-justify bg-surface-light p-3 rounded-xl border border-[#E5E0D8]">{historicoCultural.historico}</p>
+                    </>}
 
-                    <h4 className="font-ui font-bold text-primary text-sm flex items-center gap-1 mt-6"><span className="material-symbols-outlined text-[16px]">public</span> Cultural</h4>
-                    <p className="text-sm leading-relaxed text-ink/90 text-justify bg-surface-light p-3 rounded-xl border border-[#E5E0D8]">{historicoCultural.cultural}</p>
+                    {historicoCultural.cultural && <>
+                      <h4 className="font-ui font-bold text-primary text-sm flex items-center gap-1 mt-6"><span className="material-symbols-outlined text-[16px]">public</span> Cultural</h4>
+                      <p className="text-sm leading-relaxed text-ink/90 text-justify bg-surface-light p-3 rounded-xl border border-[#E5E0D8]">{historicoCultural.cultural}</p>
+                    </>}
                   </div>
                 ) : (
                   <p className="text-sm text-stone italic text-center p-4 py-8">
                     No se encontró contexto disponible.
                   </p>
                 )}
+
               </div>
             )}
 
