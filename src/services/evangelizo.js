@@ -21,8 +21,9 @@ export const evangelizoService = {
             fetchDate = this.getTodayDateString();
         }
 
-        const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || '';
-        const url = `${BACKEND_URL}/api/evangelizo?date=${fetchDate}`;
+        // Use a secure CORS proxy to bypass browsers blocking HTTP requests from HTTPS Vercel apps
+        const targetUrl = encodeURIComponent(`http://feed.evangelizo.org/v2/reader.php?date=${fetchDate}&type=xml&lang=SP`);
+        const url = `https://corsproxy.io/?${targetUrl}`;
 
         try {
             const response = await fetch(url);
