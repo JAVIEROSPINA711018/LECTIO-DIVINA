@@ -5,6 +5,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { GoogleAIFileManager } from '@google/generative-ai/server';
+import { createClient } from '@supabase/supabase-js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -86,6 +87,49 @@ function setDiskCache(verseRef, type, data) {
     const key = getCacheKey(verseRef, type);
     diskCache[key] = { data, date: new Date().toISOString() };
     saveCache();
+}
+
+// ─── DB Cache (Supabase) ──────────────────────────────────────
+const supabaseUrl = process.env.SUPABASE_URL || '';
+const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
+const supabase = (supabaseUrl && supabaseKey) ? createClient(supabaseUrl, supabaseKey) : null;
+
+async function getSupabaseContext(readingRef, type) {
+    if (!supabase || !readingRef) return null;
+    const colName = type === 'image' ? 'image_json' : `${type}_json`;
+    try {
+        const { data, error } = await supabase
+            .from('daily_contexts')
+            .select('*')
+            .eq('reading_ref', readingRef)
+            .single();
+        if (error || !data) return null;
+        return data[colName] || null;
+    } catch (err) {
+        return null;
+    }
+}
+
+async function saveSupabaseContext(readingRef, type, payload) {
+    if (!supabase || !readingRef) return;
+    const colName = type === 'image' ? 'image_json' : `${type}_json`;
+    try {
+        const { data: existing } = await supabase.from('daily_contexts').select('*').eq('reading_ref', readingRef).single();
+        if (existing) {
+            await supabase.from('daily_contexts').update({
+                [colName]: payload,
+                updated_at: new Date().toISOString()
+            }).eq('reading_ref', readingRef);
+        } else {
+            await supabase.from('daily_contexts').insert({
+                reading_ref: readingRef,
+                [colName]: payload,
+                updated_at: new Date().toISOString()
+            });
+        }
+    } catch (err) {
+        console.error('Supabase Save Error for', readingRef, type, ':', err.message);
+    }
 }
 
 // ─── Document Upload & Management ─────────────────────────────
@@ -236,11 +280,19 @@ Respond WITH ONLY THE ENGLISH PROMPT TEXT. No explanations, no markdown, no quot
 
 // ─── Query + cache a single context ───────────────────────────
 async function getContext(verseText, readingRef, contextType) {
-    // Check disk cache first
+    // Check local disk cache first
     const cached = getCached(readingRef, contextType);
     if (cached) {
-        console.log(`⚡ [${contextType}] Cache hit: ${readingRef}`);
+        console.log(`⚡ [${contextType}] Disk Cache hit: ${readingRef}`);
         return cached;
+    }
+
+    // Check Supabase edge DB
+    const supaCached = await getSupabaseContext(readingRef, contextType);
+    if (supaCached) {
+        console.log(`☁️ [${contextType}] Supabase hit: ${readingRef}`);
+        setDiskCache(readingRef, contextType, supaCached); // Sync down
+        return supaCached;
     }
 
     if (!apiKey) {
@@ -293,20 +345,24 @@ async function getContext(verseText, readingRef, contextType) {
         if (contextType === 'historico_cultural' && parsed.historico) {
             console.log(`✅ [${contextType}] OK: ${readingRef}`);
             setDiskCache(readingRef, contextType, parsed);
+            saveSupabaseContext(readingRef, contextType, parsed);
             return parsed;
         }
         if (contextType === 'teologico' && parsed.teologico) {
             console.log(`✅ [${contextType}] OK: ${readingRef}`);
             setDiskCache(readingRef, contextType, parsed);
+            saveSupabaseContext(readingRef, contextType, parsed);
             return parsed;
         }
         if (contextType === 'kids' && parsed.cards) {
             console.log(`✅ [${contextType}] OK: ${readingRef} (${parsed.cards.length} cards)`);
             setDiskCache(readingRef, contextType, parsed);
+            saveSupabaseContext(readingRef, contextType, parsed);
             return parsed;
         }
 
         console.warn(`⚠️ [${contextType}] JSON parsed but missing expected keys:`, parsed);
+        saveSupabaseContext(readingRef, contextType, parsed);
         return parsed;
 
     } catch (err) {
@@ -436,6 +492,8 @@ app.post('/api/context', async (req, res) => {
     const contextType = type || 'teologico';
     try {
         const result = await getContext(verseText, readingRef, contextType);
+        // Vercel Edge caching - cache this API response aggressively for the rest of the day
+        res.setHeader('Cache-Control', 's-maxage=86400, stale-while-revalidate=43200');
         res.json(result);
     } catch (error) {
         console.error(`❌ [${contextType}] Error:`, error.message);
@@ -451,16 +509,46 @@ app.post('/api/context', async (req, res) => {
     }
 });
 
-// Prefetch all readings for today + tomorrow
+// Secure Cron Job to prefetch and save everything to Supabase
+app.get('/api/cron', async (req, res) => {
+    // Basic Bearer token auth for the cron
+    const authHeader = req.headers.authorization;
+    const CRON_SECRET = process.env.CRON_SECRET;
+
+    if (CRON_SECRET && authHeader !== `Bearer ${CRON_SECRET}`) {
+        return res.status(401).json({ error: 'Unauthorized CRON endpoint' });
+    }
+
+    const today = getDateString(0);
+    const tomorrow = getDateString(1);
+
+    // Run in background to avoid Vercel edge timeout.
+    res.json({ status: 'running_cron_sync', dates: [today, tomorrow] });
+
+    prefetchDate(today).then(() => {
+        const readings = fetchReadings(today);
+        readings.then(r => {
+            const gospel = r.find(x => x.name === 'Evangelio');
+            if (gospel) getImageContext(gospel.text, gospel.ref);
+        }).catch(() => { });
+        return prefetchDate(tomorrow);
+    }).then(() => {
+        const readings = fetchReadings(tomorrow);
+        readings.then(r => {
+            const gospel = r.find(x => x.name === 'Evangelio');
+            if (gospel) getImageContext(gospel.text, gospel.ref);
+        }).catch(() => { });
+    }).catch(console.error);
+});
+
+// User-triggered async prefetch
 app.post('/api/prefetch', async (req, res) => {
     const today = getDateString(0);
     const tomorrow = getDateString(1);
 
-    // Run in background, respond immediately
     res.json({ status: 'prefetching', dates: [today, tomorrow] });
 
     prefetchDate(today).then(() => {
-        // Also prefetch the image for today
         const readings = fetchReadings(today);
         readings.then(r => {
             const gospel = r.find(x => x.name === 'Evangelio');
@@ -473,8 +561,15 @@ app.post('/api/prefetch', async (req, res) => {
 async function getImageContext(verseText, readingRef, contextType = 'image') {
     const cached = getCached(readingRef, contextType);
     if (cached) {
-        console.log(`⚡ [${contextType}] Cache hit: ${readingRef}`);
+        console.log(`⚡ [${contextType}] Disk Cache hit: ${readingRef}`);
         return cached;
+    }
+
+    const supaCached = await getSupabaseContext(readingRef, contextType);
+    if (supaCached) {
+        console.log(`☁️ [${contextType}] Supabase hit: ${readingRef}`);
+        setDiskCache(readingRef, contextType, supaCached);
+        return supaCached;
     }
 
     if (!apiKey) {
@@ -518,6 +613,7 @@ async function getImageContext(verseText, readingRef, contextType = 'image') {
 
         const payloadObj = { imageUrl };
         setDiskCache(readingRef, contextType, payloadObj);
+        saveSupabaseContext(readingRef, contextType, payloadObj);
         return payloadObj;
 
     } catch (err) {
@@ -583,6 +679,7 @@ app.get('/api/health', (req, res) => {
 
     const debugInfo = {
         hasApiKey: !!apiKey,
+        hasSupabase: !!supabase,
         apiKeyLength: apiKey ? apiKey.length : 0,
         sourcesPath: SOURCES_DIR,
         cwd: process.cwd(),
