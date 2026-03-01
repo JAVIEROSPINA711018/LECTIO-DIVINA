@@ -98,4 +98,41 @@ export const geminiService = {
             }
         });
     },
+
+    async getGospelImage(verseText, readingRef) {
+        const cacheKey = `img:${readingRef}`;
+        const cached = getCached(cacheKey);
+        if (cached) return cached;
+
+        return dedup(cacheKey, async () => {
+            try {
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 60000); // 1 min max
+
+                const response = await fetch(`${BACKEND_URL}/api/image`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ verseText, readingRef }),
+                    signal: controller.signal,
+                });
+                clearTimeout(timeoutId);
+
+                if (!response.ok) throw new Error(`Backend ${response.status}`);
+                const data = await response.json();
+
+                const result = {
+                    imageUrl: data.imageUrl || '/images/home_hero.png',
+                    source: 'gemini',
+                };
+                setCache(cacheKey, result);
+                return result;
+            } catch (err) {
+                console.error('❌ Error fetching gospel image:', err.message);
+                return {
+                    imageUrl: '/images/home_hero.png', // Fallback to safe static image
+                    source: 'error',
+                };
+            }
+        });
+    },
 };

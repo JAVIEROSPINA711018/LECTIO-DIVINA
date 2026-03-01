@@ -16,7 +16,8 @@ app.use(express.json());
 const PORT = process.env.PORT || 3001;
 
 // ─── Local File Management for Gemini ─────────────────────────
-const CACHE_DIR = path.join(__dirname, '..', '.cache');
+const isProduction = process.env.NODE_ENV === 'production';
+const CACHE_DIR = isProduction ? path.join('/tmp', '.cache') : path.join(__dirname, '..', '.cache');
 const CACHE_FILE = path.join(CACHE_DIR, 'contexts.json');
 // Where the raw text sources live
 const SOURCES_DIR = path.join(__dirname, '..', 'src', 'data', 'fuentes_teologicas');
@@ -231,6 +232,13 @@ Responde en formato JSON puro (sin markdown ni backticks):
     }
 }
 
+function buildImagePrompt(verseText, readingRef) {
+    return `Create a highly detailed, extremely beautiful painting visualizing this biblical scene: "${verseText}". 
+Reference: ${readingRef || 'Gospel'}.
+Style: Cinematic lighting, masterpiece, classical renaissance or baroque painting style, dramatic, sacred, vibrant colors.
+Respond WITH ONLY THE ENGLISH PROMPT TEXT. No explanations, no markdown, no quotes. Just the prompt string suitable for an image generator.`;
+}
+
 // ─── Query + cache a single context ───────────────────────────
 async function getContext(verseText, readingRef, contextType) {
     // Check disk cache first
@@ -438,7 +446,84 @@ app.post('/api/prefetch', async (req, res) => {
     // Run in background, respond immediately
     res.json({ status: 'prefetching', dates: [today, tomorrow] });
 
-    prefetchDate(today).then(() => prefetchDate(tomorrow)).catch(console.error);
+    prefetchDate(today).then(() => {
+        // Also prefetch the image for today
+        const readings = fetchReadings(today);
+        readings.then(r => {
+            const gospel = r.find(x => x.name === 'Evangelio');
+            if (gospel) getImageContext(gospel.text, gospel.ref);
+        }).catch(() => { });
+        return prefetchDate(tomorrow);
+    }).catch(console.error);
+});
+
+async function getImageContext(verseText, readingRef, contextType = 'image') {
+    const cached = getCached(readingRef, contextType);
+    if (cached) {
+        console.log(`⚡ [${contextType}] Cache hit: ${readingRef}`);
+        return cached;
+    }
+
+    if (!apiKey) {
+        throw new Error('Gemini API key not configured');
+    }
+
+    // 1. Ask Gemini to build a prompt in English
+    const promptQuery = buildImagePrompt(verseText, readingRef);
+    console.log(`🎨 [${contextType}] Generating prompt with Gemini for: ${readingRef || verseText.substring(0, 40)}...`);
+
+    try {
+        const payload = {
+            contents: [{ parts: [{ text: promptQuery }] }],
+        };
+
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent?key=${apiKey}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+            const errBody = await response.text();
+            throw new Error(`Gemini API Error ${response.status}: ${errBody}`);
+        }
+
+        const result = await response.json();
+        let englishPrompt = result.candidates[0].content.parts[0].text.trim();
+        // Remove surrounding quotes if Gemini added them
+        if (englishPrompt.startsWith('"') && englishPrompt.endsWith('"')) {
+            englishPrompt = englishPrompt.slice(1, -1);
+        }
+
+        console.log(`✅ Gemini Prompt: "${englishPrompt}"`);
+
+        // 2. Build URL for pollinations.ai
+        const encodedPrompt = encodeURIComponent(englishPrompt);
+        // Using flux model, high quality, no logo
+        const imageUrl = `https://image.pollinations.ai/prompt/${encodedPrompt}?width=800&height=1000&nologo=true&seed=${Math.floor(Math.random() * 100000)}`;
+
+        const payloadObj = { imageUrl };
+        setDiskCache(readingRef, contextType, payloadObj);
+        return payloadObj;
+
+    } catch (err) {
+        console.error(`❌ [${contextType}] Gemini REST query failed:`, err.message);
+        throw err;
+    }
+}
+
+// Get or Generate image for the daily gospel
+app.post('/api/image', async (req, res) => {
+    const { verseText, readingRef } = req.body;
+    if (!verseText) return res.status(400).json({ error: 'verseText is required' });
+
+    try {
+        const result = await getImageContext(verseText, readingRef, 'image');
+        res.json(result);
+    } catch (error) {
+        console.error(`❌ [image] Error:`, error.message);
+        res.status(500).json({ imageUrl: '/images/home_hero.png' }); // Fallback to static
+    }
 });
 
 // Check cache status
@@ -469,6 +554,7 @@ if (process.env.NODE_ENV !== 'production') {
         console.log(`\n🕯️  Lectio Divina Backend running on http://localhost:${PORT}\n`);
         console.log(`Endpoints:`);
         console.log(`  POST /api/context   — Query verse context`);
+        console.log(`  POST /api/image     — Query AI image generator`);
         console.log(`  POST /api/prefetch  — Prefetch today + tomorrow`);
         console.log(`  GET  /api/cache-status — View cached entries`);
         console.log(`  GET  /api/health    — Health check\n`);

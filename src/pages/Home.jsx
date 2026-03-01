@@ -1,11 +1,27 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useOrdo } from '../contexts/OrdoContext'
 import { Link } from 'react-router-dom'
 import SaintBioOverlay from '../components/SaintBioOverlay'
+import { geminiService } from '../services/gemini'
 
 export default function Home() {
     const { ordoData, isLoading, error } = useOrdo();
     const [isSaintOpen, setIsSaintOpen] = useState(false);
+    const [heroImage, setHeroImage] = useState('/images/home_hero.png');
+
+    useEffect(() => {
+        let mounted = true;
+        if (ordoData?.gospel_text) {
+            geminiService.getGospelImage(ordoData.gospel_text, ordoData.gospel_ref)
+                .then(res => {
+                    if (mounted && res.imageUrl) {
+                        setHeroImage(res.imageUrl);
+                    }
+                })
+                .catch(console.error);
+        }
+        return () => { mounted = false; };
+    }, [ordoData]);
 
     if (isLoading) {
         return (
@@ -69,7 +85,12 @@ export default function Home() {
                 <Link to="/lectura?tipo=evangelio" className="block mb-8 group cursor-pointer relative">
                     <div className="aspect-[4/3] w-full rounded-xl overflow-hidden shadow-soft relative bg-gray-200">
                         <div className="absolute inset-0 bg-gray-200 animate-pulse z-0"></div>
-                        <img alt="Evangelio" className="w-full h-full object-cover z-10 relative transition-transform duration-700 group-hover:scale-105" src="/images/home_hero.png" />
+                        <img
+                            key={heroImage}
+                            alt="Evangelio"
+                            className="w-full h-full object-cover z-10 relative transition-transform duration-700 group-hover:scale-105"
+                            src={heroImage}
+                        />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-20"></div>
                         <div className="absolute bottom-0 left-0 p-6 z-30 w-full">
                             <span className="font-ui text-gold text-xs font-bold tracking-wider uppercase mb-1 block">Evangelio del Día</span>
