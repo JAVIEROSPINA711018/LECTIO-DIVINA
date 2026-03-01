@@ -19,8 +19,10 @@ const PORT = process.env.PORT || 3001;
 const isProduction = process.env.NODE_ENV === 'production';
 const CACHE_DIR = isProduction ? path.join('/tmp', '.cache') : path.join(__dirname, '..', '.cache');
 const CACHE_FILE = path.join(CACHE_DIR, 'contexts.json');
-// Where the raw text sources live
-const SOURCES_DIR = path.join(__dirname, '..', 'src', 'data', 'fuentes_teologicas');
+// Where the raw text sources live. In Vercel serverless, process.cwd() points to the project root.
+const SOURCES_DIR = isProduction
+    ? path.join(process.cwd(), 'src', 'data', 'fuentes_teologicas')
+    : path.join(__dirname, '..', 'src', 'data', 'fuentes_teologicas');
 
 // Initialize Gemini
 // Try to get API key from .env file or environment variables
