@@ -21,9 +21,9 @@ export const evangelizoService = {
             fetchDate = this.getTodayDateString();
         }
 
-        // Use a secure CORS proxy to bypass browsers blocking HTTP requests from HTTPS Vercel apps
+        // Use AllOrigins secure CORS proxy to bypass browsers blocking HTTP requests from HTTPS Vercel apps
         const targetUrl = encodeURIComponent(`http://feed.evangelizo.org/v2/reader.php?date=${fetchDate}&type=xml&lang=SP`);
-        const url = `https://corsproxy.io/?${targetUrl}`;
+        const url = `https://api.allorigins.win/raw?url=${targetUrl}`;
 
         try {
             const response = await fetch(url);
