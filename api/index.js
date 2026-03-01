@@ -404,6 +404,23 @@ async function prefetchDate(dateString) {
 
 // ─── API Routes ───────────────────────────────────────────────
 
+// Evangelizo Proxy Route
+app.get('/api/evangelizo', async (req, res) => {
+    const { date } = req.query;
+    if (!date) return res.status(400).json({ error: 'date query parameter is required' });
+
+    try {
+        const url = `https://feed.evangelizo.org/v2/reader.php?date=${date}&type=xml&lang=SP`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`Evangelizo HTTP ${response.status}`);
+        const xmlText = await response.text();
+        res.type('application/xml').send(xmlText);
+    } catch (error) {
+        console.error('❌ Error in /api/evangelizo proxy:', error.message);
+        res.status(500).json({ error: 'Failed to fetch from Evangelizo' });
+    }
+});
+
 // Single context query (used by frontend)
 app.post('/api/context', async (req, res) => {
     const { verseText, readingRef, type } = req.body;
