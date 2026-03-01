@@ -18,6 +18,7 @@ export function OrdoProvider({ children }) {
                 if (data) {
                     setOrdoData(data);
                     // Prefetch deactivated to prevent Gemini quota exhaustion (Error 429) on Vercel Serverless
+                } else {
                     setError("No se pudieron obtener los datos litúrgicos de hoy.");
                 }
             } catch (err) {

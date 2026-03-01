@@ -29,7 +29,8 @@ export default function KidsMode() {
         async function fetchKidsStory() {
             setIsLoading(true);
             try {
-                const response = await fetch(`${BACKEND_URL}/api/context`, {
+                const endpoint = BACKEND_URL ? `${BACKEND_URL}/api/context` : `/api/context`;
+                const response = await fetch(endpoint, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
