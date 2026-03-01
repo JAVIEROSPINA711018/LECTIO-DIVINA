@@ -435,11 +435,11 @@ app.post('/api/context', async (req, res) => {
 
         const errMsg = 'No se pudo obtener el contexto del Estudio Bíblico.';
         if (contextType === 'historico_cultural') {
-            res.status(500).json({ historico: errMsg, cultural: '' });
+            res.status(500).json({ historico: errMsg, cultural: '', debug: error.message, stack: error.stack });
         } else if (contextType === 'kids') {
-            res.status(500).json({ cards: [], titulo: 'Error', dato_curioso: '' });
+            res.status(500).json({ cards: [], titulo: 'Error', dato_curioso: '', debug: error.message, stack: error.stack });
         } else {
-            res.status(500).json({ teologico: errMsg });
+            res.status(500).json({ teologico: errMsg, debug: error.message, stack: error.stack });
         }
     }
 });
@@ -529,7 +529,7 @@ app.post('/api/image', async (req, res) => {
         res.json(result);
     } catch (error) {
         console.error(`❌ [image] Error:`, error.message);
-        res.status(500).json({ imageUrl: '/images/home_hero.png' }); // Fallback to static
+        res.status(500).json({ imageUrl: '/images/home_hero.png', debug: error.message, stack: error.stack }); // Fallback to static
     }
 });
 
