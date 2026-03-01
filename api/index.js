@@ -106,10 +106,13 @@ async function syncDocuments() {
             return;
         }
 
-        const files = fs.readdirSync(SOURCES_DIR).filter(f => f.endsWith('.txt')).slice(0, 50); // Limit to 50 to avoid quota issues initially if needed
-        console.log(`📚 Found ${files.length} theological source files. Preparing context...`);
+        // Vercel Serverless has a strict 10-second timeout on Hobby plan.
+        // Reading and uploading 50 files synchronously takes way too long.
+        // We will restrict to fewer files or just pick a few for now to prevent 500 timeouts.
+        const allFiles = fs.readdirSync(SOURCES_DIR).filter(f => f.endsWith('.txt'));
+        const files = allFiles.slice(0, 15);
+        console.log(`📚 Found ${allFiles.length} docs. Preparing context with top ${files.length}...`);
 
-        // Check already uploaded files
         let existingFiles = [];
         try {
             const listResult = await fileManager.listFiles();
@@ -118,47 +121,31 @@ async function syncDocuments() {
             console.warn('Could not list existing Gemini files. Assuming none.');
         }
 
-        const existingNames = new Set(existingFiles.map(f => f.displayName));
-
-        // We will collect active URIs to pass to the model
         uploadedFileUris = [];
 
-        for (let i = 0; i < files.length; i++) {
-            const filename = files[i];
+        // Speed up using limited concurrency
+        const uploadPromises = files.map(async (filename) => {
             const filePath = path.join(SOURCES_DIR, filename);
-            const displayName = filename;
+            const existing = existingFiles.find(f => f.displayName === filename);
 
-            // Find if already exists
-            const existing = existingFiles.find(f => f.displayName === displayName);
             if (existing) {
-                uploadedFileUris.push({
-                    fileData: {
-                        mimeType: existing.mimeType,
-                        fileUri: existing.uri
-                    }
-                });
-                continue;
+                return { mimeType: existing.mimeType, fileUri: existing.uri };
             }
 
-            // Upload new file
-            console.log(`[${i + 1}/${files.length}] Uploading ${filename} to Gemini...`);
             try {
                 const uploadResponse = await fileManager.uploadFile(filePath, {
                     mimeType: 'text/plain',
-                    displayName: displayName
+                    displayName: filename
                 });
-                uploadedFileUris.push({
-                    fileData: {
-                        mimeType: uploadResponse.file.mimeType,
-                        fileUri: uploadResponse.file.uri
-                    }
-                });
-                // Small delay to prevent rate limiting
-                await new Promise(resolve => setTimeout(resolve, 500));
+                return { mimeType: uploadResponse.file.mimeType, fileUri: uploadResponse.file.uri };
             } catch (err) {
                 console.error(`Failed to upload ${filename}:`, err.message);
+                return null;
             }
-        }
+        });
+
+        const results = await Promise.all(uploadPromises);
+        uploadedFileUris = results.filter(r => r !== null).map(r => ({ fileData: r }));
 
         console.log(`✅ Successfully mapped ${uploadedFileUris.length} source documents to Gemini.`);
 
