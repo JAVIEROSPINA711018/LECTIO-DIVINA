@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "server": "node api/index.js",
-    "dev:all": "node api/index.js & vite",
+    "dev:all": "node api/index.js & vite --host",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"

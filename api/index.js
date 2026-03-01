@@ -27,10 +27,10 @@ let apiKey = process.env.VITE_GEMINI_API_KEY;
 if (!apiKey) {
     try {
         let envFile = '';
-        if (fs.existsSync(path.join(__dirname, '.env.local'))) {
-            envFile = fs.readFileSync(path.join(__dirname, '.env.local'), 'utf8');
-        } else if (fs.existsSync(path.join(__dirname, '.env'))) {
-            envFile = fs.readFileSync(path.join(__dirname, '.env'), 'utf8');
+        if (fs.existsSync(path.join(__dirname, '..', '.env.local'))) {
+            envFile = fs.readFileSync(path.join(__dirname, '..', '.env.local'), 'utf8');
+        } else if (fs.existsSync(path.join(__dirname, '..', '.env'))) {
+            envFile = fs.readFileSync(path.join(__dirname, '..', '.env'), 'utf8');
         }
 
         const match = envFile.match(/VITE_GEMINI_API_KEY=(.+)/);
