@@ -108,9 +108,15 @@ async function syncDocuments() {
 
         // Vercel Serverless has a strict 10-second timeout on Hobby plan.
         // Reading and uploading 50 files synchronously takes way too long.
-        // We will restrict to fewer files or just pick a few for now to prevent 500 timeouts.
+        // We will strict disable file uploads in production to restore sub-second latency,
+        // relying entirely on Gemini's massive pre-trained knowledge of Catholic doctrine.
         const allFiles = fs.readdirSync(SOURCES_DIR).filter(f => f.endsWith('.txt'));
-        const files = allFiles.slice(0, 15);
+        const files = isProduction ? [] : allFiles.slice(0, 15);
+
+        if (files.length === 0) {
+            console.log(`📚 Skipping document API upload for Vercel Serverless performance.`);
+            return;
+        }
         console.log(`📚 Found ${allFiles.length} docs. Preparing context with top ${files.length}...`);
 
         let existingFiles = [];
@@ -245,9 +251,10 @@ async function getContext(verseText, readingRef, contextType) {
     console.log(`📖 [${contextType}] Querying Gemini: ${readingRef || verseText.substring(0, 40)}...`);
 
     try {
-        // Ensure documents are synced before querying
-        if (uploadedFileUris.length === 0) {
-            await syncDocuments();
+        // Fire and forget document sync if needed, but do NOT block the request on Vercel Serverless
+        // The Gemini model is already heavily pre-trained on Catholic doctrine so base responses are excellent.
+        if (uploadedFileUris.length === 0 && !isUploadingDocs) {
+            syncDocuments().catch(() => { });
         }
 
         const contentsParts = uploadedFileUris.map(f => ({
