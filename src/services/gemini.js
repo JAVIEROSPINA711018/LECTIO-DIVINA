@@ -30,7 +30,7 @@ async function queryBackend(verseText, readingRef, type, isImage = false) {
 
     const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || '';
     const endpoint = isImage
-        ? (BACKEND_URL ? `${BACKEND_URL}/api/image` : `/api/image`)
+        ? (BACKEND_URL ? `${BACKEND_URL}/api/image?raw=true` : `/api/image?raw=true`)
         : (BACKEND_URL ? `${BACKEND_URL}/api/context` : `/api/context`);
 
     try {
@@ -49,6 +49,12 @@ async function queryBackend(verseText, readingRef, type, isImage = false) {
             }
             throw new Error(`Backend ${response.status}`);
         }
+
+        if (isImage) {
+            const blob = await response.blob();
+            return { imageUrl: URL.createObjectURL(blob) };
+        }
+
         return await response.json();
     } catch (err) {
         clearTimeout(timeoutId);

@@ -521,12 +521,33 @@ async function getImageContext(verseText, readingRef, contextType = 'image') {
 
 // Get or Generate image for the daily gospel
 app.post('/api/image', async (req, res) => {
-    const { verseText, readingRef } = req.body;
+    const { verseText, readingRef, rawImage } = req.body;
     if (!verseText) return res.status(400).json({ error: 'verseText is required' });
 
     try {
         const result = await getImageContext(verseText, readingRef, 'image');
-        res.json(result);
+
+        if (rawImage || req.query.raw === 'true') {
+            // Act as a proxy to bypass strict browser CORS/ORB
+            console.log(`🖼️ Proxying image from: ${result.imageUrl}`);
+            const imageResponse = await fetch(result.imageUrl);
+
+            if (!imageResponse.ok) {
+                console.error('Pollinations fetch failed:', imageResponse.status);
+                // Redirecting tells the browser to try itself as a fallback if proxy fails
+                return res.redirect(result.imageUrl);
+            }
+
+            // Forward headers and binary stream
+            res.set('Content-Type', imageResponse.headers.get('content-type') || 'image/jpeg');
+            const arrayBuffer = await imageResponse.arrayBuffer();
+            const buffer = Buffer.from(arrayBuffer);
+            res.send(buffer);
+        } else {
+            // Default behavior just returns the URL
+            res.json(result);
+        }
+
     } catch (error) {
         console.error(`❌ [image] Error:`, error.message);
         res.status(500).json({ imageUrl: '/images/home_hero.png', debug: error.message, stack: error.stack }); // Fallback to static
