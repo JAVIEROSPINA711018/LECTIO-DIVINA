@@ -28,7 +28,10 @@ async function queryBackend(verseText, readingRef, type, isImage = false) {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 120000); // 2 min max
 
-    const endpoint = isImage ? `${BACKEND_URL}/api/image` : `${BACKEND_URL}/api/context`;
+    const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || '';
+    const endpoint = isImage
+        ? (BACKEND_URL ? `${BACKEND_URL}/api/image` : `/api/image`)
+        : (BACKEND_URL ? `${BACKEND_URL}/api/context` : `/api/context`);
 
     try {
         const response = await fetch(endpoint, {
@@ -40,7 +43,6 @@ async function queryBackend(verseText, readingRef, type, isImage = false) {
         clearTimeout(timeoutId);
 
         if (!response.ok) {
-            // Check if backend returned 500 (could be encapsulating a 429 from Gemini)
             if (response.status === 500 || response.status === 429) {
                 const errText = await response.text();
                 throw new Error(`QuotaError: ${response.status} - ${errText}`);
@@ -69,6 +71,7 @@ async function retryQueryBackend(verseText, readingRef, type, isImage = false, m
             }
         }
     }
+    throw new Error('Retries exhausted');
 }
 
 // ─── Exported Service ─────────────────────────────────────────

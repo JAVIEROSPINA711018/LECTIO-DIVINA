@@ -22,7 +22,7 @@ export const evangelizoService = {
         }
 
         const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || '';
-        const url = `${BACKEND_URL}/api/evangelizo?date=${fetchDate}`;
+        const url = BACKEND_URL ? `${BACKEND_URL}/api/evangelizo?date=${fetchDate}` : `/api/evangelizo?date=${fetchDate}`;
 
         try {
             const response = await fetch(url);
