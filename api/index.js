@@ -50,7 +50,7 @@ const genAI = apiKey ? new GoogleGenerativeAI(apiKey) : null;
 const fileManager = apiKey ? new GoogleAIFileManager(apiKey) : null;
 
 // The model we will use
-const MODEL_NAME = 'gemini-2.5-flash-lite';
+const MODEL_NAME = 'gemini-1.5-flash';
 
 // ─── Disk Cache ───────────────────────────────────────────────
 let diskCache = {};
