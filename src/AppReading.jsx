@@ -5,9 +5,9 @@ import { geminiService } from './services/gemini'
 
 // ─── Qué tabs muestra cada tipo de lectura ──────────────────────
 const TABS_BY_TYPE = {
-  primera_lectura: ['historico_cultural'],
-  segunda_lectura: ['historico_cultural'],
-  salmo:           ['teologico'],
+  primera_lectura: ['historico_cultural', 'teologico'],
+  segunda_lectura: ['historico_cultural', 'teologico'],
+  salmo:           ['historico_cultural', 'teologico'],
   evangelio:       ['historico_cultural', 'teologico'],
 }
 
@@ -109,7 +109,7 @@ export default function AppReading() {
   // ─── Etiquetas de tab ─────────────────────────────────────────
   const TAB_LABELS = {
     historico_cultural: 'Histórico · Cultural',
-    teologico:          tipoLectura === 'salmo' ? 'Reflexión' : 'Teológico',
+    teologico:          'Teológico',
   }
 
   return (
@@ -249,7 +249,7 @@ export default function AppReading() {
                 <div className="flex items-center gap-2 mb-4">
                   <span className="material-symbols-outlined text-primary">lightbulb</span>
                   <h3 className="font-display text-xl font-bold text-ink">
-                    {tipoLectura === 'salmo' ? 'Reflexión del Salmo' : 'Reflexión Apostólica'}
+                    Reflexión Teológica
                   </h3>
                 </div>
 
@@ -257,7 +257,7 @@ export default function AppReading() {
                   <div className="flex flex-col items-center justify-center p-8 gap-4">
                     <span className="material-symbols-outlined text-[40px] text-primary animate-pulse">psychiatry</span>
                     <p className="text-stone font-ui font-medium animate-pulse text-sm text-center">
-                      {tipoLectura === 'salmo' ? 'Preparando la reflexión del salmo...' : 'Consultando el Estudio Bíblico...'}
+                      Consultando el Estudio Bíblico...
                     </p>
                   </div>
                 ) : teologico?.error && !teologico?.teologico ? (
