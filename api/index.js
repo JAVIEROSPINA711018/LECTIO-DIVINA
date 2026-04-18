@@ -6,15 +6,47 @@ import { fileURLToPath } from 'url';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { GoogleAIFileManager } from '@google/generative-ai/server';
 import { createClient } from '@supabase/supabase-js';
+import dotenv from 'dotenv';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// Load environment variables for local development
+dotenv.config({ path: path.join(__dirname, '..', '.env.local') });
+dotenv.config({ path: path.join(__dirname, '..', '.env') });
 
 const app = express();
 app.use(cors({ origin: true }));
 app.use(express.json());
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 4000;
+
+// ─── Utilities ────────────────────────────────────────────────
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+async function executeWithRetry(fn, maxRetries = 3, initialDelay = 2000) {
+    let lastError;
+    for (let i = 0; i < maxRetries; i++) {
+        try {
+            return await fn();
+        } catch (err) {
+            lastError = err;
+            const isRetryable = err.message.includes('429') || 
+                               err.message.includes('RESOURCE_EXHAUSTED') ||
+                               err.message.includes('503') ||
+                               err.message.includes('UNAVAILABLE');
+                               
+            if (isRetryable && i < maxRetries - 1) {
+                const delay = initialDelay * Math.pow(2, i);
+                console.warn(`⏳ Temporary Gemini error. Retrying in ${delay / 1000}s... (Attempt ${i + 1}/${maxRetries})`);
+                await sleep(delay);
+                continue;
+            }
+            throw err;
+        }
+    }
+    throw lastError;
+}
 
 // ─── Local File Management for Gemini ─────────────────────────
 const isProduction = process.env.NODE_ENV === 'production';
@@ -24,6 +56,9 @@ const CACHE_FILE = path.join(CACHE_DIR, 'contexts.json');
 const SOURCES_DIR = isProduction
     ? path.join(process.cwd(), 'src', 'data', 'fuentes_teologicas')
     : path.join(__dirname, '..', 'src', 'data', 'fuentes_teologicas');
+const PATCHES_FILE = isProduction
+    ? path.join(process.cwd(), 'src', 'data', 'ordo_patch.json')
+    : path.join(__dirname, '..', 'src', 'data', 'ordo_patch.json');
 
 // Initialize Gemini
 // Try to get API key from .env file or environment variables
@@ -37,8 +72,14 @@ if (!apiKey) {
             envFile = fs.readFileSync(path.join(__dirname, '..', '.env'), 'utf8');
         }
 
-        const match = envFile.match(/VITE_GEMINI_API_KEY=(.+)/);
-        if (match) apiKey = match[1].trim();
+        const matchGemini = envFile.match(/VITE_GEMINI_API_KEY=(.+)/);
+        if (matchGemini) apiKey = matchGemini[1].trim();
+        
+        const matchSupaUrl = envFile.match(/SUPABASE_URL=(.+)/);
+        if (matchSupaUrl) process.env.SUPABASE_URL = matchSupaUrl[1].trim().replace(/"/g, '');
+        
+        const matchSupaKey = envFile.match(/SUPABASE_SERVICE_ROLE_KEY=(.+)/);
+        if (matchSupaKey) process.env.SUPABASE_SERVICE_ROLE_KEY = matchSupaKey[1].trim().replace(/"/g, '');
     } catch (e) { }
 }
 
@@ -49,8 +90,34 @@ if (!apiKey) {
 const genAI = apiKey ? new GoogleGenerativeAI(apiKey) : null;
 const fileManager = apiKey ? new GoogleAIFileManager(apiKey) : null;
 
-// The model we will use
+// The model we will use (using latest stable flash for better quota)
 const MODEL_NAME = 'gemini-2.5-flash';
+
+// ─── Sacred Art Gallery (Fallback Level 3) ────────────────────
+const SACRED_ART_GALLERY = [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Caravaggio_-_La_vocazione_di_san_Matteo.jpg/1280px-Caravaggio_-_La_vocazione_di_san_Matteo.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/The_Transfiguration_by_Raphael.jpg/800px-The_Transfiguration_by_Raphael.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/L%27Ultima_Cena_-_Da_Vinci_5.jpg/1280px-L%27Ultima_Cena_-_Da_Vinci_5.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/The_Return_of_the_Prodigal_Son_Rembrandt.jpg/800px-The_Return_of_the_Prodigal_Son_Rembrandt.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/The_Incredulity_of_Saint_Thomas-Caravaggio_%281601-2%29.jpg/1280px-The_Incredulity_of_Saint_Thomas-Caravaggio_%281601-2%29.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/El_Greco_-_Christ_as_Saviour_-_WGA10521.jpg/800px-El_Greco_-_Christ_as_Saviour_-_WGA10521.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Peter_Paul_Rubens_-_The_Adoration_of_the_Magi_-_Google_Art_Project.jpg/1280px-Peter_Paul_Rubens_-_The_Adoration_of_the_Magi_-_Google_Art_Project.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Fra_Angelico_-_The_Annunciation_-_WGA00431.jpg/800px-Fra_Angelico_-_The_Annunciation_-_WGA00431.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/The_Storm_on_the_Sea_of_Galilee_Rembrandt.jpg/800px-The_Storm_on_the_Sea_of_Galilee_Rembrandt.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Vel%C3%A1zquez_-_Cristo_crucificado.jpg/800px-Vel%C3%A1zquez_-_Cristo_crucificado.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Sandro_Botticelli_050.jpg/800px-Sandro_Botticelli_050.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Michelangelo_-_Creation_of_Adam.jpg/1280px-Michelangelo_-_Creation_of_Adam.jpg"
+];
+
+function getGalleryImage() {
+    // Pick an image based on the day of the month in Colombia so it changes daily
+    const d = new Date();
+    const day = parseInt(new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/Bogota',
+        day: 'numeric'
+    }).format(d));
+    return SACRED_ART_GALLERY[day % SACRED_ART_GALLERY.length];
+}
 
 // ─── Disk Cache ───────────────────────────────────────────────
 let diskCache = {};
@@ -101,7 +168,7 @@ async function getSupabaseContext(readingRef, type) {
         const { data, error } = await supabase
             .from('daily_contexts')
             .select('*')
-            .eq('reading_ref', readingRef)
+            .eq('reading_ref', readingRef.trim())
             .single();
         if (error || !data) return null;
         return data[colName] || null;
@@ -114,107 +181,97 @@ async function saveSupabaseContext(readingRef, type, payload) {
     if (!supabase || !readingRef) return;
     const colName = type === 'image' ? 'image_json' : `${type}_json`;
     try {
-        const { data: existing } = await supabase.from('daily_contexts').select('*').eq('reading_ref', readingRef).single();
-        if (existing) {
-            await supabase.from('daily_contexts').update({
+        // Use upsert for atomic operation
+        const { error } = await supabase
+            .from('daily_contexts')
+            .upsert({
+                reading_ref: readingRef.trim(),
                 [colName]: payload,
                 updated_at: new Date().toISOString()
-            }).eq('reading_ref', readingRef);
-        } else {
-            await supabase.from('daily_contexts').insert({
-                reading_ref: readingRef,
-                [colName]: payload,
-                updated_at: new Date().toISOString()
-            });
-        }
+            }, { onConflict: 'reading_ref' });
+        
+        if (error) throw error;
     } catch (err) {
-        console.error('Supabase Save Error for', readingRef, type, ':', err.message);
+        console.error(`❌ [Supabase Save] Failed for ${readingRef} (${type}):`, err.message);
     }
 }
 
-// ─── Document Upload & Management ─────────────────────────────
-let uploadedFileUris = [];
-let isUploadingDocs = false;
+// ─── Document Management (Smart Context Selection) ────────────
+let sourceFilesIndex = [];
+let baseSourceSnippets = "";
 
 async function syncDocuments() {
-    if (!fileManager) {
-        console.warn('Cannot sync documents: No API key');
-        return;
-    }
-    if (isUploadingDocs) return;
-
-    isUploadingDocs = true;
     try {
         if (!fs.existsSync(SOURCES_DIR)) {
             console.warn(`No sources directory found at ${SOURCES_DIR}`);
             return;
         }
 
-        // Vercel Serverless has a strict 10-second timeout on Hobby plan.
-        // Reading and uploading 50 files synchronously takes way too long.
-        // We will strict disable file uploads in production to restore sub-second latency,
-        // relying entirely on Gemini's massive pre-trained knowledge of Catholic doctrine.
         const allFiles = fs.readdirSync(SOURCES_DIR).filter(f => f.endsWith('.txt'));
-        const files = isProduction ? [] : allFiles.slice(0, 15);
+        sourceFilesIndex = allFiles.map(f => ({
+            name: f,
+            lowerName: f.toLowerCase().replace(/_/g, ' ')
+        }));
 
-        if (files.length === 0) {
-            console.log(`📚 Skipping document API upload for Vercel Serverless performance.`);
-            return;
-        }
-        console.log(`📚 Found ${allFiles.length} docs. Preparing context with top ${files.length}...`);
+        // Load "Base Documents" that provide global context if they exist
+        const baseFiles = allFiles.filter(f => 
+            f.toLowerCase().includes('vatican') || 
+            f.toLowerCase().includes('dei verbum') || 
+            f.toLowerCase().includes('navarra') ||
+            f.toLowerCase().includes('verbum domini')
+        );
 
-        let existingFiles = [];
-        try {
-            const listResult = await fileManager.listFiles();
-            existingFiles = listResult.files || [];
-        } catch (e) {
-            console.warn('Could not list existing Gemini files. Assuming none.');
-        }
-
-        uploadedFileUris = [];
-
-        // Speed up using limited concurrency
-        const uploadPromises = files.map(async (filename) => {
-            const filePath = path.join(SOURCES_DIR, filename);
-            const existing = existingFiles.find(f => f.displayName === filename);
-
-            if (existing) {
-                return { mimeType: existing.mimeType, fileUri: existing.uri };
-            }
-
+        baseSourceSnippets = "";
+        for (const filename of baseFiles.slice(0, 3)) {
             try {
-                const uploadResponse = await fileManager.uploadFile(filePath, {
-                    mimeType: 'text/plain',
-                    displayName: filename
-                });
-                return { mimeType: uploadResponse.file.mimeType, fileUri: uploadResponse.file.uri };
-            } catch (err) {
-                console.error(`Failed to upload ${filename}:`, err.message);
-                return null;
-            }
-        });
+                const content = fs.readFileSync(path.join(SOURCES_DIR, filename), 'utf8');
+                baseSourceSnippets += `\n--- SOURCE: ${filename} ---\n${content.substring(0, 5000)}\n`;
+            } catch (e) {}
+        }
 
-        const results = await Promise.all(uploadPromises);
-        uploadedFileUris = results.filter(r => r !== null).map(r => ({ fileData: r }));
-
-        console.log(`✅ Successfully mapped ${uploadedFileUris.length} source documents to Gemini.`);
-
+        console.log(`✅ Indexed ${allFiles.length} source documents. Loaded ${baseFiles.length} base snippets.`);
     } catch (err) {
-        console.error('Error syncing documents to Gemini:', err);
-    } finally {
-        isUploadingDocs = false;
+        console.error('Error indexing documents:', err);
     }
 }
 
+async function getRelevantContextSnippets(readingRef = "") {
+    if (!readingRef) return baseSourceSnippets;
+    
+    // Extract book name/abbr (e.g. "Gn", "Génesis", "Jn")
+    const match = readingRef.match(/^([A-Za-zÁÉÍÓÚñáéíóú]+)/);
+    const bookKey = match ? match[1].toLowerCase() : "";
+    
+    // Find relevant files based on filename keywords
+    const relevantFiles = sourceFilesIndex.filter(f => 
+        (bookKey && f.lowerName.includes(bookKey)) ||
+        (readingRef.toLowerCase().includes('evangelio') && f.lowerName.includes('evangelio'))
+    ).slice(0, 4); // Limit to top 4 matches to keep prompt size reasonable
+    
+    let snippets = baseSourceSnippets;
+    for (const f of relevantFiles) {
+        try {
+            const content = fs.readFileSync(path.join(SOURCES_DIR, f.name), 'utf8');
+            // We take a significant chunk of each relevant file
+            snippets += `\n--- SOURCE: ${f.name} ---\n${content.substring(0, 8000)}\n`;
+        } catch (e) {}
+    }
+    
+    return snippets;
+}
+
 // ─── Build query prompt ───────────────────────────────────────
-function buildSystemInstruction() {
+function buildSystemInstruction(contextSnippets = "") {
     return `Eres un erudito católico experto en Sagradas Escrituras, exégesis, y patrística. Tu tarea es proporcionar contextos y reflexiones basados ESTRICTA Y EXCLUSIVAMENTE en los documentos bibliográficos proporcionados (la biblioteca de OrdoVivo).
     
 REGLAS MANDATORIAS:
-1. SIEMPRE fundamenta tus respuestas en los textos proporcionados. No inventes doctrina ni historia que no esté soportada por la tradición de la Iglesia Católica.
-2. Si los documentos proporcionados no mencionan un tema específico, responde usando tu conocimiento general pero SIEMPRE bajo el prisma del Catecismo de la Iglesia Católica y el Magisterio.
-3. El formato de salida debe ser el JSON exacto que el usuario solicita, no uses markdown de código \`\`\`json. Solo el objeto JSON.
-4. El estilo de redacción debe ser pastoral, formativo, y reverente.`;
+1. SIEMPRE fundamenta tus respuestas en los textos de las fuentes proporcionadas a continuación. No inventes doctrina ni historia que no esté soportada por la tradición de la Iglesia Católica y específicamente por estos textos.
+2. Cita o menciona ideas de las fuentes si son especialmente relevantes (ej: mención a la Biblia de Navarra, Joseph Ratzinger o los Padres de la Iglesia según los textos).
+3. Si los documentos proporcionados no mencionan un tema específico, responde usando tu conocimiento general pero SIEMPRE bajo el prisma del Catecismo de la Iglesia Católica y el Magisterio.
+4. El formato de salida debe ser el JSON exacto que el usuario solicita, no uses markdown de código \`\`\`json. Solo el objeto JSON.
+
+FUENTES BIBLIOGRÁFICAS DISPONIBLES PARA ESTA CONSULTA:
+${contextSnippets || "No se han proporcionado archivos específicos, usa el conocimiento magisterial general."}`;
 }
 
 function buildPrompt(verseText, readingRef, contextType) {
@@ -272,10 +329,18 @@ Responde en formato JSON puro (sin markdown ni backticks):
 }
 
 function buildImagePrompt(verseText, readingRef) {
-    return `Create a highly detailed, extremely beautiful painting visualizing this biblical scene: "${verseText}". 
-Reference: ${readingRef || 'Gospel'}.
-Style: Cinematic lighting, masterpiece, classical renaissance or baroque painting style, dramatic, sacred, vibrant colors.
-Respond WITH ONLY THE ENGLISH PROMPT TEXT. No explanations, no markdown, no quotes. Just the prompt string suitable for an image generator.`;
+    return `Eres un director de arte sacro experto en estética clásica. Tu tarea es generar un prompt de imagen en INGLÉS (para DALL-E/Midjourney/Flux) que capture la belleza y divinidad de esta escena bíblica: "${verseText}".
+
+REGLAS PARA EL PROMPT EN INGLÉS:
+1. DESCRIPCIÓN: Describe la escena con lujo de detalle (personajes, túnicas, expresiones, entorno histórico).
+2. ENCUADRE (CRÍTICO): Especifica un "Wide shot" o "Medium shot" con los personajes centrados. Asegúrate de que el rostro de Jesús esté COMPLETAMENTE VISIBLE y nunca cortado por los bordes.
+3. DETALLE FACIAL (MÁXIMA PRIORIDAD): Usa "hyper-realistic and anatomically correct faces", "sharp focus on facial features", "detailed eyes and skin textures", "perfect human anatomy". Especifica que los rostros deben ser hermosos, nítidos y con expresiones claras.
+4. ESTILO: Pintura épica al óleo, estilo Maestro del Barroco o Renacimiento (influencia de Caravaggio o Rembrandt). Iluminación cinemática dramática (tenebrism/chiaroscuro), colores profundos y sagrados.
+5. CALIDAD: Ultra-HD, masterpiece, 8k, texturas ricas de lienzo y pintura.
+
+INSTRUCCIÓN NEGATIVA (INTEGRADA): Evita "blurry faces, distorted eyes, extra fingers, cartoonish style, or cut-off heads".
+
+SALIDA: Responde únicamente con el texto del prompt en inglés. Sin citas, sin explicaciones ni markdown.`;
 }
 
 // ─── Query + cache a single context ───────────────────────────
@@ -303,69 +368,61 @@ async function getContext(verseText, readingRef, contextType) {
     console.log(`📖 [${contextType}] Querying Gemini: ${readingRef || verseText.substring(0, 40)}...`);
 
     try {
-        // Fire and forget document sync if needed, but do NOT block the request on Vercel Serverless
-        // The Gemini model is already heavily pre-trained on Catholic doctrine so base responses are excellent.
-        if (uploadedFileUris.length === 0 && !isUploadingDocs) {
-            syncDocuments().catch(() => { });
+        // Ensure index is ready (only takes a few ms)
+        if (sourceFilesIndex.length === 0) {
+            await syncDocuments();
         }
 
-        const contentsParts = uploadedFileUris.map(f => ({
-            fileData: { mimeType: f.fileData.mimeType, fileUri: f.fileData.fileUri }
-        }));
-
-        contentsParts.push({ text: query });
+        const snippets = await getRelevantContextSnippets(readingRef);
 
         const payload = {
-            systemInstruction: { parts: [{ text: buildSystemInstruction() }] },
-            contents: [{ parts: contentsParts }],
+            systemInstruction: { parts: [{ text: buildSystemInstruction(snippets) }] },
+            contents: [{ parts: [{ text: query }] }],
             generationConfig: {
                 responseMimeType: "application/json"
             }
         };
 
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent?key=${apiKey}`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
+        const result = await executeWithRetry(async () => {
+            const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent?key=${apiKey}`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            if (!response.ok) {
+                const errBody = await response.text();
+                // Special handling for 429 (Quota) to return a graceful fallback instead of error
+                if (response.status === 429) {
+                    throw new Error('QUOTA_EXHAUSTED');
+                }
+                throw new Error(`Gemini API Error ${response.status}: ${errBody}`);
+            }
+
+            return await response.json();
         });
 
-        if (!response.ok) {
-            const errBody = await response.text();
-            throw new Error(`Gemini API Error ${response.status}: ${errBody}`);
-        }
-
-        const result = await response.json();
         const answerText = result.candidates[0].content.parts[0].text;
-
-        console.log('✅ Got response from Gemini REST API');
-
-        // Parse JSON
         const parsed = JSON.parse(answerText);
-
-        if (contextType === 'historico_cultural' && parsed.historico) {
-            console.log(`✅ [${contextType}] OK: ${readingRef}`);
-            setDiskCache(readingRef, contextType, parsed);
-            saveSupabaseContext(readingRef, contextType, parsed);
-            return parsed;
-        }
-        if (contextType === 'teologico' && parsed.teologico) {
-            console.log(`✅ [${contextType}] OK: ${readingRef}`);
-            setDiskCache(readingRef, contextType, parsed);
-            saveSupabaseContext(readingRef, contextType, parsed);
-            return parsed;
-        }
-        if (contextType === 'kids' && parsed.cards) {
-            console.log(`✅ [${contextType}] OK: ${readingRef} (${parsed.cards.length} cards)`);
-            setDiskCache(readingRef, contextType, parsed);
-            saveSupabaseContext(readingRef, contextType, parsed);
-            return parsed;
-        }
-
-        console.warn(`⚠️ [${contextType}] JSON parsed but missing expected keys:`, parsed);
+        
+        // Cache and return successful results
+        setDiskCache(readingRef, contextType, parsed);
         saveSupabaseContext(readingRef, contextType, parsed);
         return parsed;
 
     } catch (err) {
+        if (err.message === 'QUOTA_EXHAUSTED') {
+            console.warn(`⏳ [${contextType}] Quota exhausted. Returning temporary standby response.`);
+            const standby = {
+                historico: "Nuestra IA de contexto histórico está descansando un momento (límite de cuota alcanzado). Por favor, vuelve a intentar en unos segundos para obtener la reflexión completa.",
+                cultural: "Estamos consultando las fuentes bibliográficas. El sistema generará este contexto automáticamente en breve.",
+                teologico: "La reflexión apostólica completa se está terminando de procesar. Estará disponible en unos instantes.",
+                cards: [],
+                titulo: "Reflexión en camino...",
+                dato_curioso: "¡Vuelve a intentar en un momento! 💡"
+            };
+            return standby;
+        }
         console.error(`❌ [${contextType}] Gemini REST query failed:`, err.message);
         throw err;
     }
@@ -407,13 +464,26 @@ async function fetchReadings(dateString) {
 function getDateString(daysOffset = 0) {
     const d = new Date();
     d.setDate(d.getDate() + daysOffset);
-    const y = d.getFullYear();
-    const m = String(d.getMonth() + 1).padStart(2, '0');
-    const dd = String(d.getDate()).padStart(2, '0');
-    return `${y}${m}${dd}`;
+    
+    // Force Colombia Timezone (America/Bogota)
+    try {
+        const formatter = new Intl.DateTimeFormat('en-CA', {
+            timeZone: 'America/Bogota',
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit'
+        });
+        return formatter.format(d).replace(/-/g, '');
+    } catch (err) {
+        console.warn('⚠️ Timezone formatting failed, falling back to local:', err.message);
+        const y = d.getFullYear();
+        const m = String(d.getMonth() + 1).padStart(2, '0');
+        const dd = String(d.getDate()).padStart(2, '0');
+        return `${y}${m}${dd}`;
+    }
 }
 
-// ─── Prefetch all contexts for a date ─────────────────────────
+// ─── Prefetch all contexts for a date (Sequential with throttling) ──
 async function prefetchDate(dateString) {
     console.log(`\n🔄 Prefetching contexts for ${dateString}...`);
     let readings;
@@ -426,35 +496,42 @@ async function prefetchDate(dateString) {
 
     let fetched = 0, cached = 0, errors = 0;
 
+    // Process readings sequentially to avoid hitting Free Tier RPM limits
     for (const reading of readings) {
+        console.log(`  -> Processing: ${reading.name} (${reading.ref})`);
+        
         // Standard contexts for all readings
         for (const type of ['historico_cultural', 'teologico']) {
-            const existing = getCached(reading.ref, type);
+            const existing = getCached(reading.ref, type) || await getSupabaseContext(reading.ref, type);
             if (existing) {
                 cached++;
-                continue;
-            }
-
-            try {
-                await getContext(reading.text, reading.ref, type);
-                fetched++;
-            } catch (err) {
-                console.error(`❌ Failed: ${reading.ref} [${type}]: ${err.message}`);
-                errors++;
+                console.log(`     ⚡ [${type}] Skip (Cached)`);
+            } else {
+                try {
+                    await getContext(reading.text, reading.ref, type);
+                    fetched++;
+                    // Add a larger delay to stay under Rate Limits (RPM)
+                    await sleep(3000);
+                } catch (err) {
+                    console.error(`     ❌ Failed: [${type}]: ${err.message}`);
+                    errors++;
+                }
             }
         }
 
-        // Kids context ONLY for the gospel (last reading, name = 'Evangelio')
+        // Kids context ONLY for the gospel
         if (reading.name === 'Evangelio') {
-            const kidsExisting = getCached(reading.ref, 'kids');
+            const kidsExisting = getCached(reading.ref, 'kids') || await getSupabaseContext(reading.ref, 'kids');
             if (kidsExisting) {
                 cached++;
+                console.log(`     ⚡ [kids] Skip (Cached)`);
             } else {
                 try {
                     await getContext(reading.text, reading.ref, 'kids');
                     fetched++;
+                    await sleep(3000);
                 } catch (err) {
-                    console.error(`❌ Failed: ${reading.ref} [kids]: ${err.message}`);
+                    console.error(`     ❌ Failed: [kids]: ${err.message}`);
                     errors++;
                 }
             }
@@ -467,16 +544,42 @@ async function prefetchDate(dateString) {
 
 // ─── API Routes ───────────────────────────────────────────────
 
-// Evangelizo Proxy Route
+// Evangelizo Proxy Route with Regional Patching
 app.get('/api/evangelizo', async (req, res) => {
     const { date } = req.query;
     if (!date) return res.status(400).json({ error: 'date query parameter is required' });
 
     try {
+        // 1. Fetch from standard source
         const url = `https://feed.evangelizo.org/v2/reader.php?date=${date}&type=xml&lang=SP`;
         const response = await fetch(url);
         if (!response.ok) throw new Error(`Evangelizo HTTP ${response.status}`);
-        const xmlText = await response.text();
+        let xmlText = await response.text();
+
+        // 2. Apply Colombian/Regional Patches if exist
+        try {
+            if (fs.existsSync(PATCHES_FILE)) {
+                const patchData = JSON.parse(fs.readFileSync(PATCHES_FILE, 'utf8'));
+                // Format date as YYYY-MM-DD from YYYYMMDD
+                const formattedDate = `${date.substring(0, 4)}-${date.substring(4, 6)}-${date.substring(6, 8)}`;
+                const patch = patchData.patches.find(p => p.date === formattedDate);
+
+                if (patch && patch.override) {
+                    console.log(`💎 Applying patch for ${formattedDate}: ${patch.override.title}`);
+                    // Crude but effective XML patching for common fields
+                    if (patch.override.title) {
+                        xmlText = xmlText.replace(/<title><!\[CDATA\[.*?\]\]><\/title>/, `<title><![CDATA[${patch.override.title}]]></title>`);
+                    }
+                    if (patch.override.rank) {
+                        // Assuming your UI or Gemini uses this, Evangelizo doesn't have a direct rank tag usually 
+                        // but we can inject it or use specific titles.
+                    }
+                }
+            }
+        } catch (patchErr) {
+            console.warn('⚠️ Patching failed:', patchErr.message);
+        }
+
         res.type('application/xml').send(xmlText);
     } catch (error) {
         console.error('❌ Error in /api/evangelizo proxy:', error.message);
@@ -522,23 +625,63 @@ app.get('/api/cron', async (req, res) => {
     const today = getDateString(0);
     const tomorrow = getDateString(1);
 
-    // Run in background to avoid Vercel edge timeout.
-    res.json({ status: 'running_cron_sync', dates: [today, tomorrow] });
+    console.log(`🚀 Starting Cron Sync for ${today} and ${tomorrow} (Colombia time)`);
 
-    prefetchDate(today).then(() => {
-        const readings = fetchReadings(today);
-        readings.then(r => {
-            const gospel = r.find(x => x.name === 'Evangelio');
-            if (gospel) getImageContext(gospel.text, gospel.ref);
-        }).catch(() => { });
-        return prefetchDate(tomorrow);
-    }).then(() => {
-        const readings = fetchReadings(tomorrow);
-        readings.then(r => {
-            const gospel = r.find(x => x.name === 'Evangelio');
-            if (gospel) getImageContext(gospel.text, gospel.ref);
-        }).catch(() => { });
-    }).catch(console.error);
+    try {
+        console.log('📡 Fetching readings...');
+        const readingsToday = await fetchReadings(today).catch(e => {
+            console.error(`❌ Failed to fetch readings for ${today}:`, e.message);
+            return [];
+        });
+        const readingsTomorrow = await fetchReadings(tomorrow).catch(e => {
+            console.error(`❌ Failed to fetch readings for ${tomorrow}:`, e.message);
+            return [];
+        });
+
+        if (readingsToday.length === 0 && readingsTomorrow.length === 0) {
+            throw new Error('Could not fetch readings for any date. Check Evangelizo API.');
+        }
+
+        // 1. Prefetch Text Contexts
+        const summaryToday = await prefetchDate(today);
+        const summaryTomorrow = await prefetchDate(tomorrow);
+
+        // 2. Prefetch Images for Gospel (Sequential to avoid race conditions with Supabase)
+        const imageLog = [];
+        
+        const gospelToday = readingsToday.find(x => x.name === 'Evangelio');
+        if (gospelToday) {
+            console.log(`🎨 Prefetching image for TODAY: ${gospelToday.ref}`);
+            await getImageContext(gospelToday.text, gospelToday.ref)
+                .then(() => imageLog.push(`Today image OK: ${gospelToday.ref}`))
+                .catch(e => imageLog.push(`Today image FAILED: ${e.message}`));
+        }
+
+        const gospelTomorrow = readingsTomorrow.find(x => x.name === 'Evangelio');
+        if (gospelTomorrow) {
+            console.log(`🎨 Prefetching image for TOMORROW: ${gospelTomorrow.ref}`);
+            await getImageContext(gospelTomorrow.text, gospelTomorrow.ref)
+                .then(() => imageLog.push(`Tomorrow image OK: ${gospelTomorrow.ref}`))
+                .catch(e => imageLog.push(`Tomorrow image FAILED: ${e.message}`));
+        }
+
+        res.json({
+            status: 'success',
+            timezone: 'America/Bogota',
+            today: { date: today, ...summaryToday },
+            tomorrow: { date: tomorrow, ...summaryTomorrow },
+            images: imageLog,
+            supabase: !!supabase
+        });
+    } catch (err) {
+        console.error('❌ Cron Execution Failed:', err);
+        res.status(500).json({ 
+            error: 'Cron execution failed', 
+            details: err.message,
+            supabase: !!supabase,
+            apiKeyExists: !!apiKey
+        });
+    }
 });
 
 // User-triggered async prefetch
@@ -572,44 +715,50 @@ async function getImageContext(verseText, readingRef, contextType = 'image') {
         return supaCached;
     }
 
-    if (!apiKey) {
-        throw new Error('Gemini API key not configured');
+    // LEVEL 1: Attempt Gemini-optimized generation
+    let englishPrompt = "";
+    try {
+        if (apiKey) {
+            const promptQuery = buildImagePrompt(verseText, readingRef);
+            console.log(`🎨 [image-L1] Generating prompt with Gemini for: ${readingRef || verseText.substring(0, 40)}...`);
+
+            const result = await executeWithRetry(async () => {
+                const payload = { contents: [{ parts: [{ text: promptQuery }] }] };
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent?key=${apiKey}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                if (!response.ok) {
+                    const errBody = await response.text();
+                    throw new Error(`Gemini API Error ${response.status}: ${errBody}`);
+                }
+                return await response.json();
+            });
+
+            englishPrompt = result.candidates[0].content.parts[0].text.trim();
+            if (englishPrompt.startsWith('"') && englishPrompt.endsWith('"')) englishPrompt = englishPrompt.slice(1, -1);
+            console.log(`✅ [image-L1] Gemini Prompt: "${englishPrompt.substring(0, 50)}..."`);
+        }
+    } catch (err) {
+        console.warn(`⚠️ [image-L1] Gemini failed, falling back to L2. Error: ${err.message}`);
     }
 
-    // 1. Ask Gemini to build a prompt in English
-    const promptQuery = buildImagePrompt(verseText, readingRef);
-    console.log(`🎨 [${contextType}] Generating prompt with Gemini for: ${readingRef || verseText.substring(0, 40)}...`);
+    // LEVEL 2: Emergency Direct Prompt (No Gemini)
+    if (!englishPrompt) {
+        console.log(`🎨 [image-L2] Building emergency prompt for: ${readingRef}`);
+        // Simple but high-quality prompt construction
+        englishPrompt = `A sacred masterpiece painting illustrating the biblical scene: ${readingRef || verseText.substring(0, 50)}. Epic classical oil painting style, Baroque chiaroscuro lighting, centered characters, hyper-realistic anatomically correct faces, sharp focus on facial features, detailed skin and eyes, high definition, 8k, inspired by Caravaggio and Rembrandt. Avoid blurry or distorted faces.`;
+    }
 
+    // Attempt Pollinations with the prompt (L1 or L2)
     try {
-        const payload = {
-            contents: [{ parts: [{ text: promptQuery }] }],
-            // Removed contentsParts with files to save quota 
-        };
-
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent?key=${apiKey}`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-        });
-
-        if (!response.ok) {
-            const errBody = await response.text();
-            throw new Error(`Gemini API Error ${response.status}: ${errBody}`);
-        }
-
-        const result = await response.json();
-        let englishPrompt = result.candidates[0].content.parts[0].text.trim();
-        // Remove surrounding quotes if Gemini added them
-        if (englishPrompt.startsWith('"') && englishPrompt.endsWith('"')) {
-            englishPrompt = englishPrompt.slice(1, -1);
-        }
-
-        console.log(`✅ Gemini Prompt: "${englishPrompt}"`);
-
-        // 2. Build URL for pollinations.ai
         const encodedPrompt = encodeURIComponent(englishPrompt);
-        // Using flux model, high quality, no logo
         const imageUrl = `https://image.pollinations.ai/prompt/${encodedPrompt}?width=800&height=1000&nologo=true&seed=${Math.floor(Math.random() * 100000)}`;
+        
+        // Quick verification of the image URL
+        const check = await fetch(imageUrl, { method: 'HEAD' });
+        if (!check.ok) throw new Error(`Pollinations returned ${check.status}`);
 
         const payloadObj = { imageUrl };
         setDiskCache(readingRef, contextType, payloadObj);
@@ -617,9 +766,16 @@ async function getImageContext(verseText, readingRef, contextType = 'image') {
         return payloadObj;
 
     } catch (err) {
-        console.error(`❌ [${contextType}] Gemini REST query failed:`, err.message);
-        throw err;
+        console.warn(`⚠️ [image-L2] Pollinations failed, falling back to L3 gallery. Error: ${err.message}`);
     }
+
+    // LEVEL 3: Premium Static Gallery (Guaranteed Variety)
+    console.log(`🎨 [image-L3] Returning masterpiece from gallery for: ${readingRef}`);
+    const galleryImageUrl = getGalleryImage();
+    const finalPayload = { imageUrl: galleryImageUrl, isGallery: true };
+    
+    // We don't necessarily cache L3 permanently so that it rotates daily if checked again
+    return finalPayload;
 }
 
 // Get or Generate image for the daily gospel

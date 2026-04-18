@@ -3,7 +3,7 @@
     "crons": [
         {
             "path": "/api/cron",
-            "schedule": "1 0 * * *"
+            "schedule": "0 5 * * *"
         }
     ],
     "rewrites": [
@@ -18,7 +18,8 @@
     ],
     "functions": {
         "api/index.js": {
-            "includeFiles": "src/data/fuentes_teologicas/**"
+            "includeFiles": "src/data/fuentes_teologicas/**",
+            "maxDuration": 300
         }
     }
 }

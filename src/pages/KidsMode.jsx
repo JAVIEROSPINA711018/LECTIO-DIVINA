@@ -4,7 +4,7 @@ import { useOrdo } from '../contexts/OrdoContext'
 import { getInspiringImage } from '../utils/imageLogic'
 import { parseEvangelioForKids } from '../utils/kidsLogic'
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001';
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || '';
 
 export default function KidsMode() {
     const navigate = useNavigate()

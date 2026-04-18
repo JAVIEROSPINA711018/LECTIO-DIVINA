@@ -3,11 +3,24 @@ export const evangelizoService = {
      * Obtiene la fecha actual en formato YYYYMMDD según la zona horaria local.
      */
     getTodayDateString() {
-        const today = new Date();
-        const year = today.getFullYear();
-        const month = String(today.getMonth() + 1).padStart(2, '0');
-        const day = String(today.getDate()).padStart(2, '0');
-        return `${year}${month}${day}`;
+        // Force Colombia Timezone (America/Bogota) to ensure consistency with backend
+        try {
+            const today = new Date();
+            const formatter = new Intl.DateTimeFormat('en-CA', {
+                timeZone: 'America/Bogota',
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit'
+            });
+            return formatter.format(today).replace(/-/g, '');
+        } catch (err) {
+            console.warn('Timezone formatting failed, falling back to local date:', err);
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const day = String(today.getDate()).padStart(2, '0');
+            return `${year}${month}${day}`;
+        }
     },
 
     /**

@@ -5,13 +5,32 @@ const cache = new Map();
 const CACHE_TTL = 30 * 60 * 1000; // 30 minutes
 
 function getCached(key) {
+    // 1. Check in-memory first
     const entry = cache.get(key);
     if (entry && (Date.now() - entry.time) < CACHE_TTL) return entry.data;
+    
+    // 2. Fallback to localStorage for cross-session persistence
+    try {
+        const stored = localStorage.getItem(`ordovivo_cache_${key}`);
+        if (stored) {
+            const { data, time } = JSON.parse(stored);
+            if ((Date.now() - time) < CACHE_TTL * 48) { // 24h persistence for local storage
+                cache.set(key, { data, time }); // Hydrate memory cache
+                return data;
+            }
+        }
+    } catch (e) { /* ignore localStorage issues */ }
+    
     cache.delete(key);
     return null;
 }
+
 function setCache(key, data) {
-    cache.set(key, { data, time: Date.now() });
+    const time = Date.now();
+    cache.set(key, { data, time });
+    try {
+        localStorage.setItem(`ordovivo_cache_${key}`, JSON.stringify({ data, time }));
+    } catch (e) { /* ignore localStorage full */ }
 }
 
 // ─── In-flight dedup ──────────────────────────────────────────

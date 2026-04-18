@@ -2,7 +2,7 @@ import { createContext, useState, useEffect, useContext } from 'react';
 import { evangelizoService } from '../services/evangelizo';
 
 const OrdoContext = createContext();
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001';
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || '';
 
 export function OrdoProvider({ children }) {
     const [ordoData, setOrdoData] = useState(null);

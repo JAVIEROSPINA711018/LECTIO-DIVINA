@@ -1,0 +1,19 @@
+{
+  "description": "Correcciones manuales para el Ordo Colombiano. Los campos aquí definidos sobreescribirán los datos de Evangelizo.org.",
+  "patches": [
+    {
+      "date": "2026-07-09",
+      "override": {
+        "title": "Nuestra Señora de Chiquinquirá, Patrona de Colombia",
+        "rank": "Solemnidad"
+      }
+    },
+    {
+      "date": "2025-12-08",
+      "comment": "Ejemplo de cómo añadir un santo específico o cambiar el título",
+      "override": {
+        "title": "La Inmaculada Concepción (Patrona de Colombia)"
+      }
+    }
+  ]
+}
