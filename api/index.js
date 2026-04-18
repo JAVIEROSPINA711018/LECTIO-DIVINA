@@ -214,18 +214,22 @@ async function syncDocuments() {
         }));
 
         // Load "Base Documents" that provide global context if they exist
-        const baseFiles = allFiles.filter(f => 
-            f.toLowerCase().includes('vatican') || 
-            f.toLowerCase().includes('dei verbum') || 
-            f.toLowerCase().includes('navarra') ||
-            f.toLowerCase().includes('verbum domini')
-        );
+        const baseFiles = allFiles.filter(f => {
+            const n = f.toLowerCase();
+            return n.includes('catecismo') ||
+                   n.includes('dei_verbum') ||
+                   n.includes('verbum_domini') ||
+                   n.includes('divino_afflante') ||
+                   n.includes('providentissimus') ||
+                   n.includes('sacrosanctum') ||
+                   n.includes('navarra');
+        });
 
         baseSourceSnippets = "";
-        for (const filename of baseFiles.slice(0, 3)) {
+        for (const filename of baseFiles.slice(0, 6)) {
             try {
                 const content = fs.readFileSync(path.join(SOURCES_DIR, filename), 'utf8');
-                baseSourceSnippets += `\n--- SOURCE: ${filename} ---\n${content.substring(0, 5000)}\n`;
+                baseSourceSnippets += `\n--- SOURCE: ${filename} ---\n${content.substring(0, 4000)}\n`;
             } catch (e) {}
         }
 
