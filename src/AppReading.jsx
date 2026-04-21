@@ -150,8 +150,17 @@ export default function AppReading() {
             {renderGospelText(readingData.text)}
           </div>
           <div className="mt-12 pt-6 border-t border-stone/20 text-center mb-12">
-            <p className="text-stone text-sm font-ui uppercase tracking-widest">Palabra del Señor</p>
-            <p className="font-display text-primary font-bold text-xl mt-1">Gloria a ti, Señor Jesús</p>
+            {tipoLectura === 'evangelio' ? (
+              <>
+                <p className="text-stone text-sm font-ui uppercase tracking-widest">Palabra del Señor</p>
+                <p className="font-display text-primary font-bold text-xl mt-1">Gloria a ti, Señor Jesús</p>
+              </>
+            ) : tipoLectura === 'salmo' ? null : (
+              <>
+                <p className="text-stone text-sm font-ui uppercase tracking-widest">Palabra de Dios</p>
+                <p className="font-display text-primary font-bold text-xl mt-1">Te alabamos, Señor</p>
+              </>
+            )}
           </div>
         </article>
 

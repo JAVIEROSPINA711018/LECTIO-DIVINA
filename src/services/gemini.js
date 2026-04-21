@@ -154,14 +154,17 @@ export const geminiService = {
     },
 
     async getGospelImage(verseText, readingRef) {
+        // ── Imagen fija mientras se resuelve la generación dinámica ──
+        return { imageUrl: '/images/home_hero.png', source: 'static' };
+
+        // TODO: reactivar cuando la galería de 365 imágenes esté lista
         const cacheKey = `img:${readingRef}`;
         const cached = getCached(cacheKey);
-        if (cached) return cached;
+        if (cached && cached.imageUrl && !cached.imageUrl.startsWith('blob:')) return cached;
 
         return dedup(cacheKey, async () => {
             try {
                 const data = await retryQueryBackend(verseText, readingRef, 'image', true);
-
                 const result = {
                     imageUrl: data.imageUrl || '/images/home_hero.png',
                     source: 'gemini',
@@ -171,7 +174,7 @@ export const geminiService = {
             } catch (err) {
                 console.error('❌ Error fetching gospel image:', err.message);
                 return {
-                    imageUrl: '/images/home_hero.png', // Fallback to safe static image
+                    imageUrl: '/images/home_hero.png',
                     source: 'error',
                 };
             }

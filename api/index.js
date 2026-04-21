@@ -264,10 +264,171 @@ async function getRelevantContextSnippets(readingRef = "") {
     return snippets;
 }
 
+// ─── Fuentes web fidedignas para historico_cultural ───────────
+const BOOK_MAP = {
+    'Gn': 'Génesis', 'Ex': 'Éxodo', 'Lv': 'Levítico', 'Nm': 'Números',
+    'Dt': 'Deuteronomio', 'Jos': 'Josué', 'Jue': 'Jueces', 'Rt': 'Rut',
+    '1S': 'Primer libro de Samuel', '2S': 'Segundo libro de Samuel',
+    '1R': 'Primer libro de los Reyes', '2R': 'Segundo libro de los Reyes',
+    'Is': 'Isaías', 'Jr': 'Jeremías', 'Ez': 'Ezequiel', 'Dn': 'Daniel',
+    'Am': 'Amós', 'Os': 'Oseas', 'Mi': 'Miqueas', 'Za': 'Zacarías',
+    'Sal': 'Salmos', 'Sb': 'Libro de la Sabiduría', 'Si': 'Eclesiástico',
+    'Pr': 'Proverbios', 'Job': 'Libro de Job', 'Qo': 'Eclesiastés',
+    'Mt': 'Evangelio de Mateo', 'Mc': 'Evangelio de Marcos',
+    'Lc': 'Evangelio de Lucas', 'Jn': 'Evangelio de Juan',
+    'Hch': 'Hechos de los Apóstoles', 'Ac': 'Hechos de los Apóstoles',
+    'Rm': 'Epístola a los Romanos', 'Ro': 'Epístola a los Romanos',
+    '1Co': 'Primera Epístola a los Corintios', '2Co': 'Segunda Epístola a los Corintios',
+    'Ga': 'Epístola a los Gálatas', 'Ef': 'Epístola a los Efesios',
+    'Flp': 'Epístola a los Filipenses', 'Col': 'Epístola a los Colosenses',
+    '1Ts': 'Primera Epístola a los Tesalonicenses', '2Ts': 'Segunda Epístola a los Tesalonicenses',
+    '1Tm': 'Primera Epístola a Timoteo', '2Tm': 'Segunda Epístola a Timoteo',
+    'Hb': 'Epístola a los Hebreos', 'St': 'Epístola de Santiago',
+    '1Pe': 'Primera Epístola de Pedro', '1Jn': 'Primera Epístola de Juan',
+    'Ap': 'Apocalipsis',
+};
+
+function getBookName(readingRef) {
+    const abbr = readingRef?.match(/^([A-Za-z0-9]+)/)?.[1];
+    return abbr ? (BOOK_MAP[abbr] || abbr) : '';
+}
+
+// Helpers para extraer texto limpio de HTML
+function stripHtmlTags(html) {
+    return html
+        .replace(/<script[\s\S]*?<\/script>/gi, '')
+        .replace(/<style[\s\S]*?<\/style>/gi, '')
+        .replace(/<[^>]+>/g, ' ')
+        .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+        .replace(/&quot;/g, '"').replace(/&#(\d+);/gi, (_, n) => String.fromCharCode(n))
+        .replace(/\s{2,}/g, ' ').trim();
+}
+
+async function safeFetch(url, opts = {}) {
+    try {
+        const res = await fetch(url, {
+            headers: { 'User-Agent': 'OrdoVivo/1.0 (lectio-divina-app; educational)' },
+            signal: AbortSignal.timeout(8000),
+            ...opts,
+        });
+        if (!res.ok) return null;
+        return res;
+    } catch (_) { return null; }
+}
+
+// 1. Wikipedia en español (REST summary — JSON limpio)
+async function fetchWikipedia(query) {
+    const res = await safeFetch(`https://es.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(query)}`);
+    if (!res) return '';
+    const d = await res.json();
+    return d.extract ? `[Wikipedia ES — ${d.title}]\n${d.extract}` : '';
+}
+
+// 2. Wikipedia búsqueda full-text (cuando summary no existe)
+async function searchWikipedia(query) {
+    const url = `https://es.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(query)}&utf8=&format=json&srlimit=3&srprop=snippet`;
+    const res = await safeFetch(url);
+    if (!res) return '';
+    const d = await res.json();
+    return (d?.query?.search || [])
+        .map(r => `[Wikipedia ES — ${r.title}]\n${stripHtmlTags(r.snippet)}`)
+        .join('\n');
+}
+
+// 3. Catholic Encyclopedia (New Advent) — en inglés, excelente para historia bíblica
+async function fetchNewAdvent(query) {
+    const slug = query.toLowerCase().replace(/\s+/g, '_').replace(/[áéíóú]/g, c => ({á:'a',é:'e',í:'i',ó:'o',ú:'u'}[c]||c));
+    const url = `https://www.newadvent.org/cathen/${slug.substring(0, 2)}${slug}.htm`;
+    const res = await safeFetch(url);
+    if (!res) return '';
+    const html = await res.text();
+    const text = stripHtmlTags(html).substring(0, 1500);
+    return text.length > 200 ? `[Catholic Encyclopedia (New Advent) — ${query}]\n${text}` : '';
+}
+
+// 4. World History Encyclopedia (worldhistory.org) — historia del mundo antiguo
+async function fetchWorldHistory(query) {
+    const url = `https://www.worldhistory.org/api/v1/search/?q=${encodeURIComponent(query)}&lang=es&size=1`;
+    const res = await safeFetch(url);
+    if (!res) return '';
+    try {
+        const d = await res.json();
+        const item = d?.results?.[0];
+        if (!item?.description) return '';
+        return `[World History Encyclopedia — ${item.title}]\n${stripHtmlTags(item.description).substring(0, 1000)}`;
+    } catch (_) { return ''; }
+}
+
+// 5. Bible Gateway — introducción al libro bíblico (en español)
+async function fetchBibleGateway(bookName) {
+    const slug = bookName.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-');
+    const url = `https://www.biblegateway.com/resources/encyclopedia-of-the-bible/${slug}`;
+    const res = await safeFetch(url);
+    if (!res) return '';
+    const html = await res.text();
+    const text = stripHtmlTags(html).substring(0, 1500);
+    return text.length > 200 ? `[BibleGateway Encyclopedia — ${bookName}]\n${text}` : '';
+}
+
+// Orquestador principal: combina todas las fuentes en paralelo
+async function fetchWebHistoricalSources(verseText, readingRef) {
+    const bookName = getBookName(readingRef);
+    const searchQuery = bookName
+        ? `${bookName} Biblia historia`
+        : `${readingRef || verseText.substring(0, 50)} contexto histórico bíblico`;
+
+    console.log(`🌐 [historico_cultural] Buscando en fuentes web: "${searchQuery}"...`);
+
+    // Lanzar todas las fuentes en paralelo
+    const [
+        wikiBook,
+        wikiSearch,
+        worldHistory,
+    ] = await Promise.all([
+        bookName ? fetchWikipedia(bookName) : Promise.resolve(''),
+        searchWikipedia(searchQuery),
+        bookName ? fetchWorldHistory(bookName) : Promise.resolve(''),
+    ]);
+
+    // Concatenar lo que llegó
+    let combined = [wikiBook, wikiSearch, worldHistory]
+        .filter(s => s && s.length > 100)
+        .join('\n\n');
+
+    // Si llegó poco, ampliar con búsqueda en inglés (Wikipedia EN tiene más cobertura bíblica)
+    if (combined.length < 400 && bookName) {
+        const enBook = bookName.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        const resEn = await safeFetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(enBook + ' (Bible)')}`);
+        if (resEn) {
+            const d = await resEn.json();
+            if (d.extract) combined += `\n\n[Wikipedia EN — ${d.title}]\n${d.extract}`;
+        }
+    }
+
+    console.log(`✅ [historico_cultural] Fuentes web: ${combined.length} caracteres de contexto obtenidos`);
+    return combined;
+}
+
 // ─── Build query prompt ───────────────────────────────────────
-function buildSystemInstruction(contextSnippets = "") {
+function buildSystemInstruction(contextSnippets = "", contextType = "") {
+    if (contextType === 'historico_cultural') {
+        return `Eres un historiador y arqueólogo bíblico experto. Tu tarea es proporcionar el contexto HISTÓRICO y CULTURAL de los versículos usando las fuentes web reales proporcionadas (Wikipedia, enciclopedias bíblicas, fuentes académicas).
+
+REGLAS MANDATORIAS:
+1. Basa tu respuesta PRINCIPALMENTE en la información de las fuentes web proporcionadas a continuación.
+2. Describe hechos históricos concretos: fechas, lugares, pueblos, costumbres, contexto político y social de la época.
+3. Incluye datos arqueológicos, geográficos y culturales relevantes que enriquezcan la comprensión del texto.
+4. Si las fuentes web proporcionadas no tienen información suficiente, usa tu conocimiento académico general sobre historia bíblica.
+5. El formato de salida debe ser el JSON exacto que el usuario solicita. Solo el objeto JSON, sin markdown.
+
+FUENTES WEB CONSULTADAS:
+${contextSnippets || "Usa tu conocimiento académico general sobre historia bíblica."}`;
+    }
+
+    // teologico, kids, image — usan documentos del Magisterio
     return `Eres un erudito católico experto en Sagradas Escrituras, exégesis, y patrística. Tu tarea es proporcionar contextos y reflexiones basados ESTRICTA Y EXCLUSIVAMENTE en los documentos bibliográficos proporcionados (la biblioteca de OrdoVivo).
-    
+
 REGLAS MANDATORIAS:
 1. SIEMPRE fundamenta tus respuestas en los textos de las fuentes proporcionadas a continuación. No inventes doctrina ni historia que no esté soportada por la tradición de la Iglesia Católica y específicamente por estos textos.
 2. Cita o menciona ideas de las fuentes si son especialmente relevantes (ej: mención a la Biblia de Navarra, Joseph Ratzinger o los Padres de la Iglesia según los textos).
@@ -372,15 +533,19 @@ async function getContext(verseText, readingRef, contextType) {
     console.log(`📖 [${contextType}] Querying Gemini: ${readingRef || verseText.substring(0, 40)}...`);
 
     try {
-        // Ensure index is ready (only takes a few ms)
-        if (sourceFilesIndex.length === 0) {
-            await syncDocuments();
+        let snippets = '';
+
+        if (contextType === 'historico_cultural') {
+            // Fuentes web reales: Wikipedia, World History Encyclopedia, etc.
+            snippets = await fetchWebHistoricalSources(verseText, readingRef);
+        } else {
+            // Teológico / kids / image → documentos del Magisterio local
+            if (sourceFilesIndex.length === 0) await syncDocuments();
+            snippets = await getRelevantContextSnippets(readingRef);
         }
 
-        const snippets = await getRelevantContextSnippets(readingRef);
-
         const payload = {
-            systemInstruction: { parts: [{ text: buildSystemInstruction(snippets) }] },
+            systemInstruction: { parts: [{ text: buildSystemInstruction(snippets, contextType) }] },
             contents: [{ parts: [{ text: query }] }],
             generationConfig: {
                 responseMimeType: "application/json"
@@ -756,17 +921,29 @@ async function getImageContext(verseText, readingRef, contextType = 'image') {
     }
 
     // Attempt Pollinations with the prompt (L1 or L2)
+    // We do a full GET (not HEAD) so the image is generated and ready to stream
     try {
         const encodedPrompt = encodeURIComponent(englishPrompt);
         const imageUrl = `https://image.pollinations.ai/prompt/${encodedPrompt}?width=800&height=1000&nologo=true&seed=${Math.floor(Math.random() * 100000)}`;
-        
-        // Quick verification of the image URL
-        const check = await fetch(imageUrl, { method: 'HEAD' });
-        if (!check.ok) throw new Error(`Pollinations returned ${check.status}`);
 
-        const payloadObj = { imageUrl };
+        console.log(`🎨 [image] Fetching from Pollinations (may take up to 60s)...`);
+        const imgFetch = await fetch(imageUrl, {
+            headers: { 'User-Agent': 'Mozilla/5.0 (compatible; OrdoVivo/1.0)' },
+            signal: AbortSignal.timeout(90000),
+        });
+        if (!imgFetch.ok) throw new Error(`Pollinations returned ${imgFetch.status}`);
+
+        const imageBuffer = Buffer.from(await imgFetch.arrayBuffer());
+        const contentType = imgFetch.headers.get('content-type') || 'image/jpeg';
+
+        // Store bytes alongside the URL so the proxy can return them without re-fetching
+        const payloadObj = {
+            imageUrl,
+            _cachedBuffer: imageBuffer.toString('base64'),
+            _cachedContentType: contentType,
+        };
         setDiskCache(readingRef, contextType, payloadObj);
-        saveSupabaseContext(readingRef, contextType, payloadObj);
+        saveSupabaseContext(readingRef, contextType, { imageUrl });
         return payloadObj;
 
     } catch (err) {
@@ -791,23 +968,43 @@ app.post('/api/image', async (req, res) => {
         const result = await getImageContext(verseText, readingRef, 'image');
 
         if (rawImage || req.query.raw === 'true') {
-            // Act as a proxy to bypass strict browser CORS/ORB
-            console.log(`🖼️ Proxying image from: ${result.imageUrl}`);
-            const imageResponse = await fetch(result.imageUrl);
+            const isPollinations = result.imageUrl && result.imageUrl.includes('pollinations.ai');
 
-            if (!imageResponse.ok) {
-                console.error('Pollinations fetch failed:', imageResponse.status);
-                // Redirecting tells the browser to try itself as a fallback if proxy fails
-                return res.redirect(result.imageUrl);
+            // Non-Pollinations URLs (Wikipedia gallery, etc.) support CORS — redirect directly
+            if (!isPollinations) {
+                return res.redirect(302, result.imageUrl);
             }
 
-            // Forward headers and binary stream
+            // Pollinations: serve from buffer cached during generation
+            if (result._cachedBuffer) {
+                const buf = Buffer.from(result._cachedBuffer, 'base64');
+                res.set('Content-Type', result._cachedContentType || 'image/jpeg');
+                res.set('Cache-Control', 's-maxage=86400, stale-while-revalidate=43200');
+                return res.send(buf);
+            }
+
+            // Fallback: fetch on-demand with generous timeout (image already generated)
+            console.log(`🖼️ Re-fetching Pollinations image: ${result.imageUrl}`);
+            const imageResponse = await fetch(result.imageUrl, {
+                headers: { 'User-Agent': 'Mozilla/5.0 (compatible; OrdoVivo/1.0)' },
+                signal: AbortSignal.timeout(90000),
+            });
+
+            if (!imageResponse.ok) {
+                console.error('Pollinations re-fetch failed:', imageResponse.status);
+                return res.redirect(302, getGalleryImage());
+            }
+
+            const imgBuf = Buffer.from(await imageResponse.arrayBuffer());
+            if (imgBuf.length === 0) {
+                console.warn('⚠️ Pollinations returned empty body, falling back to gallery');
+                return res.redirect(302, getGalleryImage());
+            }
             res.set('Content-Type', imageResponse.headers.get('content-type') || 'image/jpeg');
-            const arrayBuffer = await imageResponse.arrayBuffer();
-            const buffer = Buffer.from(arrayBuffer);
-            res.send(buffer);
+            res.set('Cache-Control', 's-maxage=86400, stale-while-revalidate=43200');
+            return res.send(imgBuf);
         } else {
-            // Default behavior just returns the URL
+            // Devuelve solo la URL — el componente Hero la carga vía proxy con raw=true
             res.json(result);
         }
 

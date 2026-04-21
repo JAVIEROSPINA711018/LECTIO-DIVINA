@@ -7,7 +7,8 @@ import { geminiService } from '../services/gemini'
 export default function Home() {
     const { ordoData, isLoading, error } = useOrdo();
     const [isSaintOpen, setIsSaintOpen] = useState(false);
-    const [heroImage, setHeroImage] = useState('/images/home_hero.png');
+    const [heroImage, setHeroImage] = useState(null);
+    const [heroImageLoaded, setHeroImageLoaded] = useState(false);
 
     useEffect(() => {
         let mounted = true;
@@ -83,14 +84,24 @@ export default function Home() {
 
                 {/* Hero Card */}
                 <Link to="/lectura?tipo=evangelio" className="block mb-8 group cursor-pointer relative">
-                    <div className="aspect-[4/3] w-full rounded-xl overflow-hidden shadow-soft relative bg-gray-200">
-                        <div className="absolute inset-0 bg-gray-200 animate-pulse z-0"></div>
-                        <img
-                            key={heroImage}
-                            alt="Evangelio"
-                            className="w-full h-full object-cover z-10 relative transition-transform duration-700 group-hover:scale-105"
-                            src={heroImage}
-                        />
+                    <div className="aspect-[4/3] w-full rounded-xl overflow-hidden shadow-soft relative bg-stone/20">
+                        {/* Skeleton mientras carga la imagen del evangelio */}
+                        {!heroImageLoaded && (
+                            <div className="absolute inset-0 z-0 flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-stone/10 to-primary/5">
+                                <span className="material-symbols-outlined text-5xl text-primary/30 animate-pulse">imagesearch_roller</span>
+                                <span className="font-ui text-xs text-stone/60 animate-pulse tracking-wider">Generando imagen del Evangelio...</span>
+                            </div>
+                        )}
+                        {heroImage && (
+                            <img
+                                key={heroImage}
+                                alt="Evangelio del día"
+                                className={`w-full h-full object-cover z-10 relative transition-all duration-700 group-hover:scale-105 ${heroImageLoaded ? 'opacity-100' : 'opacity-0'}`}
+                                src={heroImage}
+                                onLoad={() => setHeroImageLoaded(true)}
+                                onError={() => setHeroImageLoaded(true)}
+                            />
+                        )}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-20"></div>
                         <div className="absolute bottom-0 left-0 p-6 z-30 w-full">
                             <span className="font-ui text-gold text-xs font-bold tracking-wider uppercase mb-1 block">Evangelio del Día</span>
