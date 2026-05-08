@@ -93,6 +93,8 @@ const fileManager = apiKey ? new GoogleAIFileManager(apiKey) : null;
 // The model we will use (using latest stable flash for better quota)
 const MODEL_NAME = 'gemini-2.5-flash';
 
+const ORDO_COLOMBIANO_API_URL = 'https://74j2tngwfd.execute-api.us-east-1.amazonaws.com/api-app/ediciones/obtener-contenido-principal';
+
 // ─── Sacred Art Gallery (Fallback Level 3) ────────────────────
 const SACRED_ART_GALLERY = [
     "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Caravaggio_-_La_vocazione_di_san_Matteo.jpg/1280px-Caravaggio_-_La_vocazione_di_san_Matteo.jpg",
@@ -760,12 +762,12 @@ app.get('/api/evangelizo', async (req, res) => {
 app.get('/api/ordo', async (req, res) => {
     const { date } = req.query; // YYYYMMDD
     if (!date) return res.status(400).json({ error: 'date query parameter is required' });
+    if (!/^\d{8}$/.test(date)) return res.status(400).json({ error: 'date must be in YYYYMMDD format' });
 
     const formattedDate = `${date.substring(0, 4)}-${date.substring(4, 6)}-${date.substring(6, 8)}`;
 
     try {
-        const url = 'https://74j2tngwfd.execute-api.us-east-1.amazonaws.com/api-app/ediciones/obtener-contenido-principal';
-        const response = await fetch(url, {
+        const response = await fetch(ORDO_COLOMBIANO_API_URL, {
             headers: {
                 'fecha': formattedDate,
                 'User-Agent': 'OrdoVivo/1.0 (lectio-divina-app; educational)',
