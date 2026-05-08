@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect, useContext } from 'react';
-import { evangelizoService } from '../services/evangelizo';
+import { ordoService } from '../services/ordo';
 
 const OrdoContext = createContext();
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || '';
@@ -14,7 +14,7 @@ export function OrdoProvider({ children }) {
             setIsLoading(true);
             setError(null);
             try {
-                const data = await evangelizoService.getDailyReadings();
+                const data = await ordoService.getDailyReadings();
                 if (data) {
                     setOrdoData(data);
                     // Prefetch deactivated to prevent Gemini quota exhaustion (Error 429) on Vercel Serverless
