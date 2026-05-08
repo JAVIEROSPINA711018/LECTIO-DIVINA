@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useOrdo } from '../contexts/OrdoContext';
 import SaintBioOverlay from '../components/SaintBioOverlay';
-import { evangelizoService } from '../services/evangelizo';
+import { ordoService } from '../services/ordo';
 
 export default function Calendar() {
     const { ordoData, isLoading, error } = useOrdo();
@@ -26,7 +26,7 @@ export default function Calendar() {
                     const day = String(nextDate.getDate()).padStart(2, '0');
                     const dateString = `${year}${month}${day}`;
 
-                    promises.push(evangelizoService.getDailyReadings(dateString));
+                    promises.push(ordoService.getDailyReadings(dateString));
                 }
 
                 const results = await Promise.all(promises);
