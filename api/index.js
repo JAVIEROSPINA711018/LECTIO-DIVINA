@@ -599,35 +599,31 @@ async function getContext(verseText, readingRef, contextType) {
     }
 }
 
-// ─── Fetch readings from Evangelizo ───────────────────────────
+// ─── Fetch readings from Colombian Ordo API ───────────────────────────
 async function fetchReadings(dateString) {
-    const url = `https://feed.evangelizo.org/v2/reader.php?date=${dateString}&type=xml&lang=SP`;
-    const response = await fetch(url);
-    const xmlText = await response.text();
+    const formattedDate = `${dateString.substring(0, 4)}-${dateString.substring(4, 6)}-${dateString.substring(6, 8)}`;
 
-    // Simple XML parsing (extract key fields)
-    const extract = (tag) => {
-        const match = xmlText.match(new RegExp(`<${tag}><!\\[CDATA\\[([\\s\\S]*?)\\]\\]></${tag}>`));
-        return match ? match[1].trim() : '';
-    };
+    const response = await fetch(ORDO_COLOMBIANO_API_URL, {
+        headers: {
+            'fecha': formattedDate,
+            'User-Agent': 'OrdoVivo/1.0 (lectio-divina-app; educational)',
+        },
+        signal: AbortSignal.timeout(15000),
+    });
+
+    const data = await response.json();
+    if (!data.success || !Array.isArray(data.data)) throw new Error('Invalid Ordo API response');
+
+    const item = data.data.find(i => i.fecha === formattedDate);
+    if (!item) throw new Error(`No data for date ${formattedDate} in Ordo response`);
+
+    const extractRef = (html) => html?.match(/<strong>([^<]+)<\/strong>/)?.[1]?.trim() || '';
 
     const readings = [];
-
-    const r1Text = extract('reading_text1');
-    const r1Ref = extract('reading_text1_st');
-    if (r1Text) readings.push({ text: r1Text, ref: r1Ref, name: 'Primera Lectura' });
-
-    const psText = extract('reading_text2');
-    const psRef = extract('reading_text2_st');
-    if (psText) readings.push({ text: psText, ref: psRef, name: 'Salmo' });
-
-    const r2Text = extract('reading_text3');
-    const r2Ref = extract('reading_text3_st');
-    if (r2Text) readings.push({ text: r2Text, ref: r2Ref, name: 'Segunda Lectura' });
-
-    const gText = extract('reading_gospel');
-    const gRef = extract('reading_gospel_st');
-    if (gText) readings.push({ text: gText, ref: gRef, name: 'Evangelio' });
+    if (item.primera_lectura) readings.push({ text: item.primera_lectura, ref: extractRef(item.primera_lectura), name: 'Primera Lectura' });
+    if (item.salmo)           readings.push({ text: item.salmo,           ref: extractRef(item.salmo),           name: 'Salmo' });
+    if (item.segunda_lectura) readings.push({ text: item.segunda_lectura, ref: extractRef(item.segunda_lectura), name: 'Segunda Lectura' });
+    if (item.evangelio)       readings.push({ text: item.evangelio,       ref: extractRef(item.evangelio),       name: 'Evangelio' });
 
     return readings;
 }
