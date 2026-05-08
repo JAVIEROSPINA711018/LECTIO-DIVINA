@@ -756,6 +756,38 @@ app.get('/api/evangelizo', async (req, res) => {
     }
 });
 
+// Ordo Colombiano Proxy Route
+app.get('/api/ordo', async (req, res) => {
+    const { date } = req.query; // YYYYMMDD
+    if (!date) return res.status(400).json({ error: 'date query parameter is required' });
+
+    const formattedDate = `${date.substring(0, 4)}-${date.substring(4, 6)}-${date.substring(6, 8)}`;
+
+    try {
+        const url = 'https://74j2tngwfd.execute-api.us-east-1.amazonaws.com/api-app/ediciones/obtener-contenido-principal';
+        const response = await fetch(url, {
+            headers: {
+                'fecha': formattedDate,
+                'User-Agent': 'OrdoVivo/1.0 (lectio-divina-app; educational)',
+            },
+            signal: AbortSignal.timeout(15000),
+        });
+        if (!response.ok) throw new Error(`Ordo API HTTP ${response.status}`);
+
+        const data = await response.json();
+        if (!data.success || !Array.isArray(data.data)) throw new Error('Invalid Ordo API response structure');
+
+        const item = data.data.find(i => i.fecha === formattedDate);
+        if (!item) throw new Error(`No data found for date ${formattedDate} in Ordo API response`);
+
+        res.setHeader('Cache-Control', 's-maxage=86400, stale-while-revalidate=43200');
+        res.json(item);
+    } catch (error) {
+        console.error('❌ Error in /api/ordo:', error.message);
+        res.status(500).json({ error: 'Failed to fetch from Ordo Colombiano API', details: error.message });
+    }
+});
+
 // Single context query (used by frontend)
 app.post('/api/context', async (req, res) => {
     const { verseText, readingRef, type } = req.body;
