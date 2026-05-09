@@ -43,14 +43,21 @@ function parseLiturgicTitle(encabezado) {
     return parts.join(' · ');
 }
 
-function parseSaint(celebracionSanto) {
-    if (!celebracionSanto) return '';
-    try {
-        const saints = JSON.parse(celebracionSanto);
-        if (Array.isArray(saints) && saints.length > 0) {
-            return saints.map(s => s.nombresanto).join(', ');
-        }
-    } catch (_) {}
+function parseSaint(celebracionSanto, preludio) {
+    // Try celebracion_santo JSON first
+    if (celebracionSanto) {
+        try {
+            const saints = JSON.parse(celebracionSanto);
+            if (Array.isArray(saints) && saints.length > 0) {
+                return saints.map(s => s.nombresanto).join(', ');
+            }
+        } catch (_) {}
+    }
+    // Fallback: extract plain text from the preludio HTML field
+    if (preludio) {
+        const text = preludio.replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').trim();
+        if (text) return text;
+    }
     return '';
 }
 
@@ -110,7 +117,7 @@ export const ordoService = {
             dayName: dateObj.toLocaleDateString('es-ES', { weekday: 'short' }),
             monthName: dateObj.toLocaleDateString('es-ES', { month: 'long' }),
             liturgicTitle: parseLiturgicTitle(item.encabezado),
-            saint: parseSaint(item.celebracion_santo),
+            saint: parseSaint(item.celebracion_santo, item.preludio),
             reading1_title: r1.title,
             reading1_ref:   r1.ref,
             reading1_text:  r1.text,
